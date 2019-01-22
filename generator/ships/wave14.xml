@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+<ships>
+	<tiereaper actions="FOCUS + EVADE + JAM" image="img/tie_reaper.png" name="TIE Reaper" faction="empire">
+		<simple>
+			<maneuver>F1</maneuver>
+			<maneuver>BL2</maneuver>
+			<maneuver>F2</maneuver>
+			<maneuver>BR2</maneuver>
+			<maneuver>F3</maneuver>
+		</simple>
+		<normal>
+			<maneuver>TL1</maneuver>
+			<maneuver>BL1</maneuver>
+			<maneuver>BR1</maneuver>
+			<maneuver>TR1</maneuver>
+		</normal>
+		<difficult>
+			<maneuver>F0</maneuver>
+			<maneuver>SLL1</maneuver>
+			<maneuver>SLR1</maneuver>
+			<maneuver>TL2</maneuver>
+			<maneuver>TR2</maneuver>
+			<maneuver>BL3</maneuver>
+			<maneuver>BR3</maneuver>
+		</difficult>
+	</tiereaper>
+</ships>
