@@ -1,0 +1,282 @@
+/*****************************************************************************/
+/* X-Wing Minitures AI 2nd Edition Cascading Style Sheet                                 */
+/*****************************************************************************/
+
+body
+{
+	background: black;
+	background-image: url('img/starry-night.jpg');
+	color: white;
+}
+
+
+/*****************************************************************************/
+/* Header Section */
+
+#header
+{
+	display: table;
+	width: 100%;
+}
+
+#logos
+{
+	display: table-cell;
+	text-align: center;
+}
+
+.company_logo
+{
+	display: inline-block;
+	width: 100px;
+	height: 100px;
+}
+.game_logo
+{
+	display: inline-block;
+	width: auto;
+	height: 100px;
+}
+
+.applet_logo
+{
+	display: inline-block;
+}
+
+#links
+{
+	display: table-cell;
+	text-align: right;
+	padding: 0;
+	border: 0;
+	margin: 0;
+	vertical-align: top;
+}
+
+#version
+{
+	display: inline;
+	font-size: small;
+	vertical-align: top;
+	text-align: right;
+}
+/*****************************************************************************/
+/* Main Section */
+
+#main
+{
+	display: table;
+}
+
+
+/*****************************************************************************/
+/* Ship Buttons */
+
+#ships
+{
+	display: table-cell;
+	vertical-align: top;
+	text-align: center;
+	width: 108px;
+}
+
+label
+{
+	display: table-cell;
+	cursor: pointer;
+	text-align: center;
+	width: 50px;
+	height: 50px;
+}
+
+label:hover {
+    background:#006699;   
+}
+
+img.faction_button
+{
+	margin: 2px;
+	width: 50px;
+	height: 50px;
+}
+
+img.ship_button
+{
+	margin: 2px;
+	width: 50px;
+	height: 50px;
+}
+
+
+/*****************************************************************************/
+/* Direction Grid */
+
+#diagram
+{
+	display: table-cell;
+	padding-left: 25px;
+	text-align: center;
+	width: 310px;
+}
+
+.direction_grid
+{
+	padding: 0;
+	border: 0px;
+	border-collapse: collapse;
+	border-spacing: 0;
+	display: block;
+	vertical-align: top;
+	margin: 0;
+	width: 310px;
+	height: 100px;
+}
+
+.direction_grid > input
+{
+	border: 0;
+	margin: 0;
+	padding: 0;
+	height: 100px;
+	width: 100px;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.ship_name 
+{
+	color: GoldenRod;
+	font-size: large;
+	font-weight: bold;
+}
+
+/*****************************************************************************/
+/* Maneuvers */
+
+#maneuvers
+{
+	display: table-cell;
+	padding-left: 25px;
+	vertical-align: top;
+	text-align: center;
+	width: 150px;
+}
+
+.maneuver_label
+{
+	color: silver;
+	font-size: medium;
+	font-weight: bold;
+}
+
+.maneuver_label_red
+{
+	color: red;
+	font-size: medium;
+	font-weight: bold;
+}
+
+.maneuver
+{
+	height: 50px;
+	width: 100px;
+}
+
+.output
+{
+	display: table-cell;
+	font-size: xx-large;
+	height: 50px;
+	width: 50px;
+	text-align: right;
+	vertical-align: middle;
+}
+
+
+/*****************************************************************************/
+/* Results */
+
+#results
+{
+	display: table-cell;
+	padding-left: 25px;
+	font-size: large;
+	font-weight: bold;
+	vertical-align: top;
+}
+
+#actions-text
+{
+	font-size: large;
+}
+
+/*****************************************************************************/
+/* Ship Details page */
+
+#details
+{
+	display: table-cell;	
+	padding-left: 50px;
+	text-align: left;
+}
+
+#detail_head 
+{
+	display: table;
+}
+
+#ship #faction #actions #table
+{
+	display: table-cell;
+}
+
+table.ship_table
+{
+	border-collapse: collapse;
+	border: 1px solid white;
+}
+
+td.ship_cell
+{
+	border-collapse: collapse;
+	border: 1px solid white;
+	height: 50px;
+	padding-left: 10px;
+}
+
+.table_num
+{
+	display: inline-block;
+	font-size: xx-large;
+	vertical-align: middle;
+	text-align: right;
+	padding: 0;
+}
+
+
+/*****************************************************************************/
+/* Footer */
+
+#footer
+{
+	text-align: center;
+}
+
+/*****************************************************************************/
+/* Misc */
+
+.label
+{
+	color: teal;
+	font-size: large;
+	font-weight: bold;
+}
+
+.seperator
+{
+	display: table-cell;
+	font-size: x-large;
+	text-align: center;
+	width: 100px;
+}
+
