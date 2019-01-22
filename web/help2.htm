@@ -1,0 +1,88 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>X-Wing Miniatures AI 2nd Edition - Help</title>
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+<link rel="stylesheet" type="text/css" href="style.css" />
+<script src="src/xwing_ai2.js">
+</script>
+</head>
+
+<body onload=set_version()>
+<div id="header">
+	<div id="logos">
+		<img class=company_logo src="img/ffglogoLQ.png" alt="Fantasy Flight Games">
+		<img class=game_logo src="img/game_logo.png" alt="StarWars: X-Wing Miniatures">
+		<img class=applet_logo src="img/applet_logo2.png" alt="AI 2nd Edition">
+	</div>
+	<div id="links">
+		<div id="version"></div><br>
+		<a href="index.htm"><img class=switch_icon src="img/applet_logo-64.png" alt="X-Wing_AI 1st Ed."></a>
+		<a href="index2.htm"><img class=index_icon src="img/star.png" alt="index"></a>
+		<a href="info2.htm"><img class=info_icon src="img/info.png" alt="info"></a>
+		<a href="ships2.htm"><img class=ships_icon src="img/ships.png" alt="ships"></a>
+	</div>
+</div>
+
+<div id="main">
+<h2>Purpose:</h2>
+
+Provide AI control of one or more ships for the X-Wing Miniatures Game, using FFG's 2nd Edition ruleset.
+
+<h2>Setup:</h2>
+Setup game per standard 2nd Edition rules, choosing any squadrons and or missions.
+
+<h2>Usage:</h2>
+
+For each AI controlled ship:
+<ol>
+<li>Select the faction of the the AI controlled ship</li>
+<li>Select the ship type for the AI controlled ship</li>
+<li>Pick a target (human-controlled) ship for the AI ship to attack</li>
+<li>Select the location on the targeting ring that matches the direction of target (human-controlled) ship</li>
+
+<li>Move the AI Ship using the displayed maneuver
+<ul>
+<li>Choose the "Closing" maneuver if the Target ship is <b>in range</b> and facing towards the the AI ship</li>
+<li>Choose the "Retreating" maneuver if the Target ship is <b>in range</b> and facing away from the AI ship</li>
+<li>Choose the "Out-of-Range" maneuver if the Target ship is further than range 3 from the AI ship</li>
+<li>Choose the "Stressed" maneuver if the AI ship has a <img src="img/Stress.png" alt="Stress"></li>
+</ul>
+<li>Choose Action</li>
+<li>Complete round per standard rules</li>
+</ol>
+
+<h2>Picking a Target:</h2>
+There are multiple options for picking a target:<br>
+<ol>
+<li>Always pick the nearest possible target, or</li>
+<li>Randomize target selection by rolling a 6-sided die:</li>
+<ul>
+	<li>1-2: take on the closest ship</li>
+	<li>3-4: take on the most damaged ship</li>
+	<li>5-6: take on the highest skilled pilot.</li>
+</ul>
+</ol>
+
+<h2>Choosing an action:</h2>
+Choose the first action that matches the criteria, based on the list of actions on the main page for the selected ship.<br>
+Optional: Select the action or actions from the list of available actions for the selected ship that would most benefit the AI ship.<br>
+If the selected ship can perform the Target Lock action, this is a <strong>free action</strong>. Choose this plus another action that is available in the list.
+
+<h2>NOTES:</h2>
+<ul>
+<li>Always choose the human controlled ship(s) maneuvers, before choosing AI maneuvers.</li>
+<li>AI ships never get a stress token as a result of executing a difficult maneuver, but do not perform any actions after a <span style="color:red">RED</span> maneuver.</li>
+<li>AI ships can get a stress token as a result of interacting with an obstacle (for example, space debris) or executing a <span style="color:red">RED</span> action.</li>
+<li>Always use secondary weapons, upgrade functions or optional pilot skills, when applicable.</li>
+</ul>
+</div>
+
+<div id="footer">
+<hr>
+Star Wars and all associated elements are &copy; 2015 Lucasfilm Ltd. & TM. All rights reserved.<br>
+Fantasy Flight Games, the FFG logo and X-Wing Miniatures Game are trademarks of Fantasy Flight Publishing, Inc.<br>
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/3.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">X-Wing Miniatures AI by Ralph Berrett;</span><a class=label xmlns:cc="http://creativecommons.org/ns#" href="mailto:colt.coltrain@gmail.com" property="cc:attributionName" rel="cc:attributionURL"> X-Wing_AI2, (2nd Edition) by Tom Stevenson</a> based on Ralph's X-Wing_AI, both licensed under a <a class=label rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">Creative Commons Attribution-ShareAlike 3.0 Unported License.</a>
+</div>
+</body>
+</html>
