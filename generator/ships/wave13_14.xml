@@ -1,0 +1,75 @@
+<?xml version="1.0" ?>
+<ships>
+	<mg100 actions="FOCUS + TARGET_LOCK + ROTATE_ARC + RELOAD" image="img/mg-100.png" name="MG-100 StarFortress B-SF17" faction="resistance">
+		<simple>
+			<maneuver>BL1</maneuver>
+			<maneuver>F1</maneuver>
+			<maneuver>BR1</maneuver>
+			<maneuver>F2</maneuver>
+		</simple>
+		<normal>
+			<maneuver>TL2</maneuver>
+			<maneuver>BL2</maneuver>
+			<maneuver>BR2</maneuver>
+			<maneuver>TR2</maneuver>
+			<maneuver>F3</maneuver>
+		</normal>
+		<difficult>
+			<maneuver>STA0</maneuver>
+			<maneuver>TL1</maneuver>
+			<maneuver>TR1</maneuver>
+			<maneuver>BL3</maneuver>
+			<maneuver>BR3</maneuver>
+		</difficult>
+	</mg100>
+	<tiereaper actions="FOCUS + EVADE + COORDINATE_D + JAM" image="img/tie_reaper.png" name="TIE Reaper" faction="empire">
+		<simple>
+			<maneuver>BL1</maneuver>
+			<maneuver>F1</maneuver>
+			<maneuver>BR1</maneuver>
+			<maneuver>F2</maneuver>
+			<maneuver>F3</maneuver>
+		</simple>
+		<normal>
+			<maneuver>BL2</maneuver>
+			<maneuver>BR2</maneuver>
+			<maneuver>BL3</maneuver>
+			<maneuver>BR3</maneuver>
+		</normal>
+		<difficult>
+			<maneuver>STA0</maneuver>
+			<maneuver>TL1</maneuver>
+			<maneuver>TR1</maneuver>
+			<maneuver>SLL1</maneuver>
+			<maneuver>SLR1</maneuver>
+			<maneuver>TL2</maneuver>
+			<maneuver>TR2</maneuver>
+			
+		</difficult>
+	</tiereaper>
+	<tiesilencer actions="BARREL_ROLL + FOCUS + TARGET_LOCK + BOOST" image="img/tie_silencer.png" name="TIE/vn Silencer" faction="1storder">
+		<simple>
+			<maneuver>TL2</maneuver>
+			<maneuver>BL2</maneuver>
+			<maneuver>F2</maneuver>
+			<maneuver>BR2</maneuver>
+			<maneuver>TR2</maneuver>
+			<maneuver>F3</maneuver>
+			<maneuver>F4</maneuver>
+			<maneuver>F5</maneuver>
+		</simple>
+		<normal>
+			<maneuver>TL1</maneuver>
+			<maneuver>TR1</maneuver>
+			<maneuver>TL3</maneuver>
+			<maneuver>BL3</maneuver>
+			<maneuver>BR3</maneuver>
+			<maneuver>TR3</maneuver>
+		</normal>
+		<difficult>
+			<maneuver>SLL3</maneuver>
+			<maneuver>SLR3</maneuver>
+			<maneuver>K4</maneuver>
+		</difficult>
+	</tiesilencer>
+</ships>

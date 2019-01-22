@@ -1,0 +1,66 @@
+<?xml version="1.0" ?>
+<ships>
+	<corvette actions="COORDINATE + RELOAD + REINFORCE + TARGET_LOCK" image="img/corvette.png" name="CR90 Corvette" faction="rebel">
+		<simple>
+		</simple>
+		<normal>
+		    <maneuver>BL1</maneuver>
+		    <maneuver>BR1</maneuver>
+		    <maneuver>BL2</maneuver>
+		    <maneuver>F2</maneuver>
+		    <maneuver>BR2</maneuver>
+		    <maneuver>F3</maneuver>
+		    <maneuver>F4</maneuver>
+		</normal>
+		<difficult>
+		</difficult>
+	</corvette>
+	<raider actions="RELOAD + REINFORCE + COORDINATE + TARGET_LOCK" image="img/raider.png" name="Imperial Raider" faction="empire">
+		<simple>
+		</simple>
+		<normal>
+            <maneuver>BL1</maneuver>
+            <maneuver>F1</maneuver>
+            <maneuver>BR1</maneuver>
+            <maneuver>BL2</maneuver>
+            <maneuver>F2</maneuver>
+            <maneuver>BR2</maneuver>
+            <maneuver>F3</maneuver>
+            <maneuver>F4</maneuver>
+		</normal>
+		<difficult>
+		</difficult>
+	</raider>
+	<carrier actions="RELOAD + REINFORCE + COORDINATE + TARGET_LOCK" image="img/carrier.png" name="Imperial Assault Carrier" faction="empire">
+		<simple>
+		</simple>
+		<normal>
+            <maneuver>BL1</maneuver>
+            <maneuver>F1</maneuver>
+            <maneuver>BR1</maneuver>
+            <maneuver>BL2</maneuver>
+            <maneuver>F2</maneuver>
+            <maneuver>BR2</maneuver>
+            <maneuver>F3</maneuver>
+            <maneuver>F4</maneuver>
+		</normal>
+		<difficult>
+		</difficult>
+	</carrier>
+	<transport actions="COORDINATE + JAM + RELOAD + REINFORCE" image="img/transport.png" name="Rebel Transport" faction="rebel">
+		<simple>
+		</simple>
+		<normal>
+		    <maneuver>BL1</maneuver>
+		    <maneuver>F1</maneuver>
+		    <maneuver>BR1</maneuver>
+		    <maneuver>BL2</maneuver>
+		    <maneuver>F2</maneuver>
+		    <maneuver>BR2</maneuver>
+		    <maneuver>F3</maneuver>
+		    <maneuver>F4</maneuver>
+		</normal>
+		<difficult>
+		</difficult>
+	</transport>
+</ships>
