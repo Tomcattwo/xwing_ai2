@@ -83,9 +83,17 @@ Email: rberrett4@gmail.com
 BoardGameGeek: wyzbang
 Source: https://github.com/Wyzbang/xwing_ai
 
+
 2nd Edition Update:
 Email: colt.coltrain@gmail.com
 BoardGameGeek: Tomcattwo
+Source: https://github.com/Tomcattwo/xwing_ai2
+
+----------
+Dedication
+----------
+
+The 2nd Edition AI and Combined fileset work is dedicated to the memory of my stepson, Chris Glidden,a devoted Star Wars fan and X-Wing player, who lost his year-long fight with pancreatic cancer in January 2019. Chris was a Jedi Knight, right to the very end. May the Force always be with you, son.
 
 -------
 Credits
