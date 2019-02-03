@@ -1,8 +1,8 @@
 // ****************************************************************************
 // X-Wing Miniatures AI - Ships 2nd Generation 
-// Generated: 2019-01-23 00:08:52
+// Generated: 2019-02-03 12:09:57
 
-var VERSION = "2.0.0";
+var VERSION = "2.0.1";
 
 
 // ****************************************************************************
@@ -836,58 +836,6 @@ fang.stressed[4] = [ TL(1), TL(1), TL(2), TL(2), TL(3), TL(3), TR(1), TR(1), TR(
 fang.stressed[5] = [ TL(1), TL(1), TL(1), TL(1), TL(2), TL(2), TL(2), TL(3), TL(3), TL(3) ];
 fang.stressed[6] = [ TL(1), TL(1), TL(1), TL(1), TL(2), TL(2), TL(2), TL(3), TL(3), TL(3) ];
 fang.stressed[7] = [ F(2), BL(2), BL(2), BL(2), BL(2), BL(3), BL(3), BL(3), TL(1), TL(2) ];
-
-// ****************************************************************************
-// Firespray-31 (Empire)
-
-var firespray = {};
-firespray.name = "Firespray-31 (Empire)";
-firespray.image = "img/slave1.png";
-firespray.faction = "empire";
-firespray.simple = [ F(1), F(2), F(3), BL(1), BR(1) ];
-firespray.normal = [ TL(1), TL(2), BL(2), BL(3), F(4), BR(2), BR(3), TR(1), TR(2) ];
-firespray.difficult = [ K(4), TRL(3), TRR(3) ];
-firespray.actions = (TARGET_LOCK + FOCUS + BOOST + REINFORCE_D);
-
-firespray.closing = [];
-firespray.closing[0] = [ BL(1), F(1), F(1), F(1), F(1), F(2), F(2), F(2), K(4), TRR(3) ];
-firespray.closing[1] = [ F(1), BR(1), BR(1), BR(1), BR(1), BR(2), BR(2), BR(2), TR(1), TR(1) ];
-firespray.closing[2] = [ TR(1), TR(1), TR(1), TR(1), TR(2), TR(2), TR(2), TR(2), K(4), TRR(3) ];
-firespray.closing[3] = [ BR(1), TR(1), TR(1), TR(1), TR(1), TR(2), TR(2), TR(2), K(4), TRR(3) ];
-firespray.closing[4] = [ TL(2), F(4), TR(2), K(4), K(4), TRL(3), TRL(3), TRR(3), TRR(3), TRR(3) ];
-firespray.closing[5] = [ BL(1), TL(1), TL(1), TL(1), TL(1), TL(2), TL(2), TL(2), K(4), TRL(3) ];
-firespray.closing[6] = [ TL(1), TL(1), TL(1), TL(1), TL(2), TL(2), TL(2), TL(2), K(4), TRL(3) ];
-firespray.closing[7] = [ F(1), BL(1), BL(1), BL(1), BL(1), BL(2), BL(2), BL(2), TL(1), TL(1) ];
-
-firespray.away = [];
-firespray.away[0] = [ F(3), F(3), F(3), F(3), F(3), F(4), F(4), F(4), F(4), F(4) ];
-firespray.away[1] = [ BR(2), BR(2), BR(2), BR(2), BR(3), BR(3), BR(3), BR(3), TR(1), TR(2) ];
-firespray.away[2] = [ BR(2), BR(3), BR(3), TR(1), TR(1), TR(1), TR(2), TR(2), TR(2), TR(2) ];
-firespray.away[3] = [ TR(1), TR(1), TR(1), TR(2), TR(2), TR(2), TR(2), K(4), TRL(3), TRR(3) ];
-firespray.away[4] = [ TL(2), TR(2), TR(2), K(4), K(4), TRL(3), TRL(3), TRR(3), TRR(3), TRR(3) ];
-firespray.away[5] = [ TL(1), TL(1), TL(1), TL(2), TL(2), TL(2), TL(2), K(4), TRR(3), TRL(3) ];
-firespray.away[6] = [ BL(2), BL(3), BL(3), TL(1), TL(1), TL(1), TL(2), TL(2), TL(2), TL(2) ];
-firespray.away[7] = [ BL(2), BL(2), BL(2), BL(2), BL(3), BL(3), BL(3), BL(3), TL(1), TL(2) ];
-
-firespray.far = [];
-firespray.far[0] = [ BL(3), F(3), F(3), F(3), F(3), F(4), F(4), F(4), F(4), BR(3) ];
-firespray.far[1] = [ BR(2), BR(2), BR(2), BR(2), BR(3), BR(3), BR(3), BR(3), TR(1), TR(2) ];
-firespray.far[2] = [ TR(1), TR(1), TR(1), TR(1), TR(1), TR(2), TR(2), TR(2), TR(2), TR(2) ];
-firespray.far[3] = [ TR(1), TR(1), TR(1), TR(1), TR(1), TR(2), TR(2), TR(2), TR(2), TR(2) ];
-firespray.far[4] = [ TL(1), TL(1), TL(2), TL(2), TR(1), TR(1), TR(2), TR(2), K(4), TRR(3) ];
-firespray.far[5] = [ TL(1), TL(1), TL(1), TL(1), TL(1), TL(2), TL(2), TL(2), TL(2), TL(2) ];
-firespray.far[6] = [ TL(1), TL(1), TL(1), TL(1), TL(1), TL(2), TL(2), TL(2), TL(2), TL(2) ];
-firespray.far[7] = [ BL(2), BL(2), BL(2), BL(2), BL(3), BL(3), BL(3), BL(3), TL(1), TL(2) ];
-
-firespray.stressed = [];
-firespray.stressed[0] = [ BL(1), BL(3), F(1), F(1), F(2), F(2), F(3), F(3), F(4), F(4) ];
-firespray.stressed[1] = [ F(1), BR(1), BR(1), BR(1), BR(2), BR(2), BR(3), BR(3), TR(1), TR(2) ];
-firespray.stressed[2] = [ TR(1), TR(1), TR(1), TR(1), TR(1), TR(2), TR(2), TR(2), TR(2), TR(2) ];
-firespray.stressed[3] = [ TR(1), TR(1), TR(1), TR(1), TR(1), TR(2), TR(2), TR(2), TR(2), TR(2) ];
-firespray.stressed[4] = [ TL(1), TL(1), TL(1), TL(2), TL(2), TL(2), TR(1), TR(1), TR(2), TR(2) ];
-firespray.stressed[5] = [ TL(1), TL(1), TL(1), TL(1), TL(1), TL(2), TL(2), TL(2), TL(2), TL(2) ];
-firespray.stressed[6] = [ TL(1), TL(1), TL(1), TL(1), TL(1), TL(2), TL(2), TL(2), TL(2), TL(2) ];
-firespray.stressed[7] = [ F(1), BL(1), BL(1), BL(1), BL(2), BL(2), BL(3), BL(3), TL(1), TL(2) ];
 
 // ****************************************************************************
 // Firespray-31 (Scum)
@@ -1982,58 +1930,6 @@ scavfalcon.stressed[6] = [ BL(1), BL(1), BL(1), BL(2), BL(2), BL(3), BL(3), TL(2
 scavfalcon.stressed[7] = [ F(1), BL(1), BL(1), BL(1), BL(2), BL(2), BL(3), BL(3), TL(2), TL(3) ];
 
 // ****************************************************************************
-// Scurrg H-6 Bomber (Rebel)
-
-var scurrg = {};
-scurrg.name = "Scurrg H-6 Bomber (Rebel)";
-scurrg.image = "img/scurrg.png";
-scurrg.faction = "rebel";
-scurrg.simple = [ BL(1), F(1), BR(1), F(2) ];
-scurrg.normal = [ TL(2), BL(2), BR(2), TR(2), BL(3), F(3), BR(3) ];
-scurrg.difficult = [ TL(3), TR(3), TRL(3), TRR(3), F(4) ];
-scurrg.actions = (BARREL_ROLL_D + FOCUS + TARGET_LOCK);
-
-scurrg.closing = [];
-scurrg.closing[0] = [ BL(1), F(1), F(1), F(1), F(1), F(2), F(2), F(2), TRL(3), TRL(3) ];
-scurrg.closing[1] = [ F(1), BR(1), BR(1), BR(1), BR(1), BR(2), BR(2), BR(2), TR(2), TR(2) ];
-scurrg.closing[2] = [ TR(2), TR(2), TR(2), TR(2), TR(3), TR(3), TR(3), TR(3), TRL(3), TRL(3) ];
-scurrg.closing[3] = [ BR(1), TR(2), TR(2), TR(2), TR(2), TR(3), TR(3), TR(3), TRL(3), TRL(3) ];
-scurrg.closing[4] = [ TL(3), F(4), TR(3), TRL(3), TRL(3), TRL(3), TRR(3), TRR(3), TRR(3), TRR(3) ];
-scurrg.closing[5] = [ BL(1), TL(2), TL(2), TL(2), TL(2), TL(3), TL(3), TL(3), TRR(3), TRR(3) ];
-scurrg.closing[6] = [ TL(2), TL(2), TL(2), TL(2), TL(3), TL(3), TL(3), TL(3), TRR(3), TRR(3) ];
-scurrg.closing[7] = [ F(1), BL(1), BL(1), BL(1), BL(1), BL(2), BL(2), BL(2), TL(2), TL(2) ];
-
-scurrg.away = [];
-scurrg.away[0] = [ F(3), F(3), F(3), F(3), F(3), F(4), F(4), F(4), F(4), F(4) ];
-scurrg.away[1] = [ BR(2), BR(2), BR(2), BR(2), BR(3), BR(3), BR(3), BR(3), TR(2), TR(3) ];
-scurrg.away[2] = [ BR(2), BR(3), BR(3), TR(2), TR(2), TR(2), TR(3), TR(3), TR(3), TR(3) ];
-scurrg.away[3] = [ TR(2), TR(2), TR(2), TR(3), TR(3), TR(3), TR(3), TRL(3), TRR(3), TRR(3) ];
-scurrg.away[4] = [ TL(3), TR(3), TR(3), TRL(3), TRL(3), TRL(3), TRR(3), TRR(3), TRR(3), TRR(3) ];
-scurrg.away[5] = [ TL(2), TL(2), TL(2), TL(3), TL(3), TL(3), TL(3), TRR(3), TRL(3), TRL(3) ];
-scurrg.away[6] = [ BL(2), BL(3), BL(3), TL(2), TL(2), TL(2), TL(3), TL(3), TL(3), TL(3) ];
-scurrg.away[7] = [ BL(2), BL(2), BL(2), BL(2), BL(3), BL(3), BL(3), BL(3), TL(2), TL(3) ];
-
-scurrg.far = [];
-scurrg.far[0] = [ BL(3), F(3), F(3), F(3), F(3), F(4), F(4), F(4), F(4), BR(3) ];
-scurrg.far[1] = [ BR(2), BR(2), BR(2), BR(2), BR(3), BR(3), BR(3), BR(3), TR(2), TR(3) ];
-scurrg.far[2] = [ TR(2), TR(2), TR(2), TR(2), TR(2), TR(3), TR(3), TR(3), TR(3), TR(3) ];
-scurrg.far[3] = [ TR(2), TR(2), TR(2), TR(2), TR(2), TR(3), TR(3), TR(3), TR(3), TR(3) ];
-scurrg.far[4] = [ TL(2), TL(2), TL(3), TL(3), TR(2), TR(2), TR(3), TR(3), TRR(3), TRR(3) ];
-scurrg.far[5] = [ TL(2), TL(2), TL(2), TL(2), TL(2), TL(3), TL(3), TL(3), TL(3), TL(3) ];
-scurrg.far[6] = [ TL(2), TL(2), TL(2), TL(2), TL(2), TL(3), TL(3), TL(3), TL(3), TL(3) ];
-scurrg.far[7] = [ BL(2), BL(2), BL(2), BL(2), BL(3), BL(3), BL(3), BL(3), TL(2), TL(3) ];
-
-scurrg.stressed = [];
-scurrg.stressed[0] = [ BL(1), BL(3), F(1), F(1), F(1), F(2), F(2), F(2), F(3), F(3) ];
-scurrg.stressed[1] = [ F(1), BR(1), BR(1), BR(1), BR(2), BR(2), BR(3), BR(3), TR(2), TR(2) ];
-scurrg.stressed[2] = [ TR(2), TR(2), TR(2), TR(2), TR(2), TR(2), TR(2), TR(2), TR(2), TR(2) ];
-scurrg.stressed[3] = [ TR(2), TR(2), TR(2), TR(2), TR(2), TR(2), TR(2), TR(2), TR(2), TR(2) ];
-scurrg.stressed[4] = [ TL(2), TL(2), TL(2), TL(2), TL(2), TR(2), TR(2), TR(2), TR(2), TR(2) ];
-scurrg.stressed[5] = [ TL(2), TL(2), TL(2), TL(2), TL(2), TL(2), TL(2), TL(2), TL(2), TL(2) ];
-scurrg.stressed[6] = [ TL(2), TL(2), TL(2), TL(2), TL(2), TL(2), TL(2), TL(2), TL(2), TL(2) ];
-scurrg.stressed[7] = [ F(1), BL(1), BL(1), BL(1), BL(2), BL(2), BL(3), BL(3), TL(2), TL(2) ];
-
-// ****************************************************************************
 // Scurrg H-6 Bomber (Scum)
 
 var scurrgs = {};
@@ -3027,7 +2923,7 @@ tiereaper.stressed[7] = [ F(1), F(2), BL(1), BL(1), BL(1), BL(2), BL(2), BL(2), 
 var tiesf = {};
 tiesf.name = "TIE/sf Special Forces";
 tiesf.image = "img/ship_tiesf.png";
-tiesf.faction = "empire";
+tiesf.faction = "1storder";
 tiesf.simple = [ BL(1), F(1), BR(1), F(2), F(3) ];
 tiesf.normal = [ TL(2), BL(2), BR(2), TR(2), BL(3), BR(3), F(4) ];
 tiesf.difficult = [ TL(1), TR(1), TL(3), TR(3), SLL(3), SLR(3) ];
@@ -3235,7 +3131,7 @@ transport.stressed[7] = [ F(1), F(2), BL(1), BL(1), BL(1), BL(1), BL(2), BL(2), 
 var upsilon = {};
 upsilon.name = "Upsilon-class Command Shuttle";
 upsilon.image = "img/ship_upsilon.png";
-upsilon.faction = "empire";
+upsilon.faction = "1storder";
 upsilon.simple = [ F(1), BL(2), F(2), BR(2) ];
 upsilon.normal = [ BL(1), BR(1), TL(2), TR(2), BL(3), F(3), BR(3) ];
 upsilon.difficult = [ STA(0), TL(1), TR(1), TL(3), TR(3) ];
@@ -3649,4 +3545,4 @@ z95S.stressed[7] = [ F(1), BL(1), BL(1), BL(1), BL(2), BL(2), BL(3), BL(3), TL(2
 // ****************************************************************************
 // Ships
 
-var ships = [ alpha, arc170, arc170R, auzituck, awing, belbullab, bwing, carrier, corvette, custfalcon, decimator, delta7, escape, ewing, falcon, fang, firespray, firesprays, ghost, houndstooth, hwk290, hwk290S, ig2000, kihraxz, kimogila, kwing, lambda, lancer, m3a, mg100, mistHunter, outrider, phantom, punishingOne, quadjumper, raider, rz2awing, scavfalcon, scurrg, scurrgs, sheathipede, sithinf, starviper, starviper_guri, t70xwing, tie, tieAdvanced, tieAggressor, tieBomber, tieDefender, tieInquisitor, tieInterceptor, tiePhantom, tiePunisher, tieStriker, tiefo, tiemod, tiereaper, tiesf, tiesilencer, torrent, transport, upsilon, uwing, vulture, xwing, ywing, ywingS, z95, z95S ];
+var ships = [ alpha, arc170, arc170R, auzituck, awing, belbullab, bwing, carrier, corvette, custfalcon, decimator, delta7, escape, ewing, falcon, fang, firesprays, ghost, houndstooth, hwk290, hwk290S, ig2000, kihraxz, kimogila, kwing, lambda, lancer, m3a, mg100, mistHunter, outrider, phantom, punishingOne, quadjumper, raider, rz2awing, scavfalcon, scurrgs, sheathipede, sithinf, starviper, starviper_guri, t70xwing, tie, tieAdvanced, tieAggressor, tieBomber, tieDefender, tieInquisitor, tieInterceptor, tiePhantom, tiePunisher, tieStriker, tiefo, tiemod, tiereaper, tiesf, tiesilencer, torrent, transport, upsilon, uwing, vulture, xwing, ywing, ywingS, z95, z95S ];

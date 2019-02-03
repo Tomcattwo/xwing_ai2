@@ -147,7 +147,6 @@ var BARREL_ROLL_D2EVADE_D_TEXT2 = 'Choose <img src="img/action_barrelroll-red.pn
 var ships = [];
 var SHIP = {};
 
-
 // ****************************************************************************
 // Moves
 
@@ -232,16 +231,16 @@ function display_ship_choice( faction, funct )
     data += '<b>Faction:</b><br>';
 
     data += '<label>\n';
+	data += '    <div title="Rebels">'
+	data += '       <input type="radio" onclick="display_ship_choice(\'rebel\', \'' + funct + '\')" hidden >'
+	data += '        <img class="faction_button" src="img/rebel.png" />'
+	data += '    </div>'
+	data += '</label>\n';
+
+    data += '<label>\n';
     data += '    <div title="Empire">'
     data += '       <input type="radio" onclick="display_ship_choice(\'empire\', \'' + funct + '\')" hidden >'
     data += '       <img class="faction_button" src="img/empire.png" />'
-    data += '    </div>'
-    data += '</label>\n';
-
-    data += '<label>\n';
-    data += '    <div title="Rebels">'
-    data += '       <input type="radio" onclick="display_ship_choice(\'rebel\', \'' + funct + '\')" hidden >'
-    data += '        <img class="faction_button" src="img/rebel.png" />'
     data += '    </div>'
     data += '</label>\n';
 
@@ -681,14 +680,14 @@ function format_actions( ship )
 function load_index()
 {
     set_ship(0);
-    display_ship_choice( "empire", "set_ship" );
+    display_ship_choice( "rebel", "set_ship" );
 }
 
 
 function load_ships()
 {
     display_ship(0);
-    display_ship_choice( "empire", "display_ship" );
+    display_ship_choice( "rebel", "display_ship" );
 }
 
 
