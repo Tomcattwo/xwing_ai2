@@ -1,14 +1,14 @@
 ﻿====================================================================
    Star Wars X-Wing Miniatures: Ship AI Combined 1st and 2nd Edition
 
-            1st Edition AI v1.14.0 / 2nd Edition AI v2.0.0
+            1st Edition AI v1.14.0 / 2nd Edition AI v2.0.1
 ====================================================================
 
 -------------------
 Standard Disclaimer
 -------------------
 
-Star Wars and all associated elements are � 2015 Lucasfilm Ltd. & TM. All rights reserved.
+Star Wars and all associated elements are ? 2015 Lucasfilm Ltd. & TM. All rights reserved.
 Fantasy Flight Games and the FFG logo are trademarks of Fantasy Flight Publishing, Inc.
 
 You use this software at your own risk, the authors are not responsible for any loss or damage resulting from the use of this software. If you do not agree with these terms do not use this software, simple.
@@ -75,6 +75,12 @@ Change History
 
 01/21/2019  2.0.0/1.14.0   (Tomcattwo) Added complete 2nd Edition AI. This includes all ships/waves, updated to 2nd edition maneuvers and actions (drawn from http://xhud.sirjorj.com/xwing.cgi) and combined 1st Ed. v1.14.0 and 2nd Ed. 2.0.0 into a single distributable package. Added icons to both 1st and 2nd editions to allow switching back and forth between them. Now the entire package can be distributed in a single distributable, and the user can elect to use the older 1st edition ruleset and AI or 2nd edition ruleset with 2nd edition AI.
 
+02/03/2019  2.0.1/1.14.0   (Tomcattwo) Updated version to 2.0.1.
+                           Put TIE/SF and Upsilon Class Shuttle in First Order Faction where they belong and removed from Empire Faction.
+                           Minor update to 2nd edition files to remove Scurrg H-6 Bomber from Rebel inventory and Firespray from Empire Inventory - per 2nd Edition ruleset.
+                           Changed Index2 to show Rebel faction first on main page and ships page, to align all the "good guys" (Rebel, Scum, Rebellion, Republic) on the left and all the "bad guys" (Empire, First Order, Seperatist) on the right.
+                           Minor change to Info2 file in Dedication
+                           No changes to 1st edition files
 -------
 Contact
 -------
@@ -93,7 +99,7 @@ Source: https://github.com/Tomcattwo/xwing_ai2
 Dedication
 ----------
 
-The 2nd Edition AI and Combined fileset work is dedicated to the memory of my stepson, Chris Glidden,a devoted Star Wars fan and X-Wing player, who lost his year-long fight with pancreatic cancer in January 2019. Chris was a Jedi Knight, right to the very end. May the Force always be with you, son.
+The 2nd Edition AI and Combined fileset work is dedicated to the memory of my stepson, Chris Glidden,a devoted Star Wars fan and X-Wing player, who lost his year-long fight with pancreatic cancer in February 2019. Chris was a Jedi Knight, right to the very end. May the Force always be with you, son.
 
 -------
 Credits
