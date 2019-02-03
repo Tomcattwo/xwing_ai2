@@ -71,7 +71,7 @@
 			<maneuver>RBR1</maneuver>
 		</difficult>
 	</quadjumper>
-	<upsilon actions="FOCUS + TARGET_LOCK + COORDINATE + REINFORCE + JAM" image="img/ship_upsilon.png" name="Upsilon-class Command Shuttle" faction="empire">
+	<upsilon actions="FOCUS + TARGET_LOCK + COORDINATE + REINFORCE + JAM" image="img/ship_upsilon.png" name="Upsilon-class Command Shuttle" faction="1storder">
 		<simple>
 			<maneuver>F1</maneuver>
 			<maneuver>BL2</maneuver>

@@ -46,7 +46,7 @@
 			<maneuver>K4</maneuver>
 		</difficult>
 	</arc170R>
-	<tiesf actions="FOCUS + TARGET_LOCK + BARREL_ROLL" image="img/ship_tiesf.png" name="TIE/sf Special Forces" faction="empire">
+	<tiesf actions="FOCUS + TARGET_LOCK + BARREL_ROLL" image="img/ship_tiesf.png" name="TIE/sf Special Forces" faction="1storder">
 		<simple>
 			<maneuver>BL1</maneuver>
 			<maneuver>F1</maneuver>

@@ -194,31 +194,6 @@
 			<maneuver>TRR3</maneuver>
 		</difficult>
 	</firesprays>
-	<firespray actions="TARGET_LOCK + FOCUS + BOOST + REINFORCE_D" image="img/slave1.png" name="Firespray-31 (Empire)" faction="empire">
-		<simple>
-			<maneuver>F1</maneuver>
-			<maneuver>F2</maneuver>
-			<maneuver>F3</maneuver>
-			<maneuver>BL1</maneuver>
-			<maneuver>BR1</maneuver>
-		</simple>
-		<normal>
-			<maneuver>TL1</maneuver>
-			<maneuver>TL2</maneuver>
-			<maneuver>BL2</maneuver>
-			<maneuver>BL3</maneuver>
-			<maneuver>F4</maneuver>
-			<maneuver>BR2</maneuver>
-			<maneuver>BR3</maneuver>
-			<maneuver>TR1</maneuver>
-			<maneuver>TR2</maneuver>
-		</normal>
-		<difficult>
-			<maneuver>K4</maneuver>
-			<maneuver>TRL3</maneuver>
-			<maneuver>TRR3</maneuver>
-		</difficult>
-	</firespray>
 	<tie actions="BARREL_ROLL + FOCUS + EVADE" image="img/tie.png" name="TIE/ln Fighter" faction="empire">
 		<simple>
 			<maneuver>F2</maneuver>

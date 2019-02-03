@@ -70,28 +70,4 @@
 			<maneuver>F4</maneuver>
 		</difficult>
 	</scurrgs>
-	<scurrg actions="BARREL_ROLL_D + FOCUS + TARGET_LOCK" image="img/scurrg.png" name="Scurrg H-6 Bomber (Rebel)" faction="rebel">
-		<simple>
-			<maneuver>BL1</maneuver>
-			<maneuver>F1</maneuver>
-			<maneuver>BR1</maneuver>
-			<maneuver>F2</maneuver>
-		</simple>
-		<normal>
-			<maneuver>TL2</maneuver>
-			<maneuver>BL2</maneuver>
-			<maneuver>BR2</maneuver>
-			<maneuver>TR2</maneuver>
-			<maneuver>BL3</maneuver>
-			<maneuver>F3</maneuver>
-			<maneuver>BR3</maneuver>
-		</normal>
-		<difficult>
-			<maneuver>TL3</maneuver>
-			<maneuver>TR3</maneuver>
-			<maneuver>TRL3</maneuver>
-			<maneuver>TRR3</maneuver>
-			<maneuver>F4</maneuver>
-		</difficult>
-	</scurrg>
 </ships>
