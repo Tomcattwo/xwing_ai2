@@ -135,7 +135,7 @@ class Ship:
         code.append( self.__gen_js_maneuver_list( "normal", self.normal ) )
         code.append( self.__gen_js_maneuver_list( "difficult", self.difficult ) )
 
-        code.append( '%s.actions = (%s);' % ( self.name, self.actions ) )
+        code.append( '%s.actions = [%s];' % ( self.name, self.actions ) )
 
         # AI Tables: closing, away, far (two-dimentional arrays)
         code.append( "" )
@@ -316,12 +316,12 @@ class Ship:
         #      away: BR, TR
         #       far: TR
         self.label = "3 o'clock"
-        if self.name in [ "lambda", "uwing", "upsilon", "punishingOne", "tiereaper", "escape", "scavfalcon", ]:
+        if self.name in [ "lambda", "uwing", "uwingk2so", "upsilon", "punishingOne", "tiereaper", "escape", "scavfalcon", "hmp", "laati", "xi" ]:
             self.closing.append( self.generate_row( [BR], [TR], [], "slow" ) )
             self.away.append( self.generate_row( [BR], [TR], [], "fast" ) )
             self.far.append( self.generate_row( [BR], [], [], "fast" ) )
             self.stressed.append( self.generate_row( [BR], [TR], [], "stressed" ) )
-        elif self.name in [ "corvette", "transport", "carrier", "raider" ]:
+        elif self.name in [ "corvette", "transport", "raider", "gozanti", "gozantifo", "crocscum", "crocsep" ]:
             self.closing.append( self.generate_row( [BR], [F], [], "slow" ) )
             self.away.append( self.generate_row( [BR], [F], [], "fast" ) )
             self.far.append( self.generate_row( [BR], [F], [], "fast" ) )
@@ -337,12 +337,12 @@ class Ship:
         #      away: TR, K
         #       far: TR
         self.label = "4-5 o'clock"
-        if self.name in [ "lambda", "uwing", "upsilon", "punishingOne", "tiereaper", "escape", "scavfalcon" ]:
+        if self.name in [ "lambda", "uwing", "uwingk2so", "upsilon", "punishingOne", "tiereaper", "escape", "scavfalcon", "hmp", "laati", "xi" ]:
             self.closing.append( self.generate_row( [BR], [TR], [], "slow" ) )
             self.away.append( self.generate_row( [BR], [TR], [], "fast" ) )
             self.far.append( self.generate_row( [BR], [TR], [], "fast" ) )
             self.stressed.append( self.generate_row( [BR], [TR], [], "stressed" ) )
-        elif self.name in [ "corvette", "transport", "carrier", "raider" ]:
+        elif self.name in [ "corvette", "transport", "raider", "gozanti", "gozantifo", "crocscum", "crocsep" ]:
             self.closing.append( self.generate_row( [BR], [F], [], "slow" ) )
             self.away.append( self.generate_row( [BR], [F], [], "fast" ) )
             self.far.append( self.generate_row( [BR], [F], [], "fast" ) )
@@ -358,7 +358,7 @@ class Ship:
         #      away: K*, TR, TL
         #       far: K, TR*, TL*
         self.label = "6 o'clock"
-        if self.name in [ "lambda", "houndstooth", "kwing", "uwing", "upsilon", "auzituck", "alpha", "mg100", "tiereaper", "escape", "scavfalcon", "belbullab" ]:
+        if self.name in [ "lambda", "houndstooth", "kwing", "uwing", "uwingk2so", "upsilon", "auzituck", "alpha", "mg100", "tiereaper", "escape", "scavfalcon", "belbullab", "n1", "restransport", "hmp", "laati", "xi" ]:
             # Special case as this ship does not support Koiogran Turn
             self.closing.append( self.generate_row( [BL,BR], [TL,TR,F], [], "fast" ) )
             self.away.append( self.generate_row( [BL,BR], [TL,TR], [], "fast" ) )
@@ -370,7 +370,7 @@ class Ship:
             self.away.append( self.generate_row( [TL,TR], [], [], "fast" ) )
             self.far.append( self.generate_row( [TL, TR], [], [], "fast" ) )
             self.stressed.append( self.generate_row( [TL, TR], [], [], "stressed" ) )
-        elif self.name in [ "corvette", "transport", "carrier", "raider" ]:
+        elif self.name in [ "corvette", "transport", "raider", "gozanti", "gozantifo", "crocscum", "crocsep" ]:
             self.closing.append( self.generate_row( [BL, BR], [], [], "slow" ) )
             self.away.append( self.generate_row( [BL, BR], [], [], "fast" ) )
             self.far.append( self.generate_row( [BL, BR], [], [], "fast" ) )
