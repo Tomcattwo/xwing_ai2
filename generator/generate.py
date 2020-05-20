@@ -19,8 +19,8 @@ from version import VERSION
 DEBUG=False
 VEBOSE=False
 
-ACTIONS = ( 'BARREL_ROLL', 'BOOST', 'BOOST_D', 'CALCULATE', 'CLOAKING', 'COORDINATE', 'EVADE', 'FOCUS', 'JAM', 'RELOAD', 'REINFORCE', 'ROTATE_ARC', 'SLAM', 'TARGET_LOCK', 'FOCUS2BARREL_ROLL', 'BARREL_ROLL2LOCK', 'BOOST2LOCK', 'FOCUS2ROTATE', 'LOCK2ROTATE', 'JAM_D', 'REINFORCE_D', 'BARREL_ROLL_D', 'RELOAD_D', 'COORDINATE_D', 'BARREL_ROLL2CALC', 'BARREL_ROLL2FOCUS', 'BOOST2CALC', 'BOOST2FOCUS', 'BARREL_ROLL2EVADE', 'EVADE_D', 'ROTATE_ARC_D', 'EVADE_F', 'BARREL_ROLL_D2EVADE_D' )
-FACTIONS = ( 'rebel', 'empire', 'scum', 'resistance', '1storder', 'republic', 'seperatist' )
+ACTIONS = ( "'BARREL_ROLL'", "'BARREL_ROLL_D'", "'BARREL_ROLL2CALC'", "'BARREL_ROLL2EVADE'", "'BARREL_ROLL2EVADE_D'", "'BARREL_ROLL_D2EVADE_D'", "'BARREL_ROLL2FOCUS'", "'BARREL_ROLL2FOCUS_D'", "'BARREL_ROLL2LOCK'", "'BARREL_ROLL2LOCK_D'", "'BARREL_ROLL2ROTATE'", "'BARREL_ROLL2ROTATE_D'", "'BOOST'", "'BOOST_D'", "'BOOST2CALC'", "'BOOST2FOCUS'", "'BOOST2FOCUS_D'", "'BOOST2LOCK'", "'BOOST2LOCK_D'", "'CALCULATE'", "'CLOAKING'", "'COORDINATE'", "'COORDINATE_D'", "'EVADE'", "'EVADE_D'", "'EVADE_F'", "'EVADE2ROTATE'", "'EVADE2ROTATE_D'", "'FOCUS'", "'FOCUS2BARREL_ROLL'", "'FOCUS2BARREL_ROLL_D'", "'FOCUS2ROTATE'", "'FOCUS2ROTATE_D'", "'JAM'", "'JAM_D'", "'RELOAD'", "'RELOAD_D'", "'RELOAD2CALC'", "'REINFORCE'", "'REINFORCE_D'", "'ROTATE_ARC'", "'ROTATE_ARC_D'", "'SLAM'", "'TARGET_LOCK'", "'TARGET_LOCK_D'", "'LOCK2ROTATE'", "'LOCK2ROTATE_D'" )
+FACTIONS = ( 'Rebel', 'Empire', 'Scum', 'Resistance', 'First Order', 'Republic', 'Seperatist' )
 
 # ******************************************************************************
 
@@ -79,7 +79,7 @@ class XWingGenerator:
         """
         Validate all actions are valid
         """
-        actions = actionsString.split("+")
+        actions = actionsString.split(",")
         actions = [x.strip() for x in actions]
 
         for action in actions:
