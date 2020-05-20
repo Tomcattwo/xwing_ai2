@@ -1,6 +1,6 @@
 // ***************************************************************************
 // X-Wing Miniatures AI 2nd Edition - Javascript
-
+// Version: 2.0.2
 // ****************************************************************************
 // Constants
 
@@ -22,126 +22,120 @@ var CLOSING = "Closing";            // Closing
 var FAR = "Out of Range";           // Far
 var STRESSED = "Stressed";          // Stressed
 
+
 // ACTIONS
-var TARGET_LOCK = 0x1;
-var BARREL_ROLL = 0x2;
-var BOOST       = 0x4;
-var FOCUS       = 0x8;
-var EVADE       = 0x10;
-var CLOAKING    = 0x20;
-var SLAM        = 0x40;
-var ROTATE_ARC  = 0x80;
 
-var COORDINATE   = 0x1000;
-var JAM         = 0x2000;
-var RELOAD     = 0x4000;
-var REINFORCE   = 0x8000;
-
-var CALCULATE   = 0x100;
-var FOCUS2BARREL_ROLL = 0x200;
-var BARREL_ROLL2LOCK = 0x400;
-var BOOST2LOCK = 0x800;
-
-var BOOST_D      = 0x10000;
-var FOCUS2ROTATE = 0x20000;
-var LOCK2ROTATE  = 0x40000;
-var JAM_D        = 0x80000;
-
-var REINFORCE_D   = 0x100000;
-var RELOAD_D      = 0x200000;
-var BARREL_ROLL_D = 0x400000;
-var COORDINATE_D  = 0x800000;
-
-var BARREL_ROLL2CALC = 0x1000000;
-var BARREL_ROLL2FOCUS = 0x2000000;
-var BOOST2CALC = 0x4000000;
-var BOOST2FOCUS = 0x8000000;
-
-var BARREL_ROLL2EVADE = 0x10000000;
-var EVADE_D           = 0x20000000;
-var ROTATE_ARC_D      = 0x40000000;
-var EVADE_F           = 0x80000000;
-
-var BARREL_ROLL_D2EVADE_D = 0x20400000;
-
-
+var actions = "";
+var evadeTest;
 
 // ACTIONS TEXT
-var TARGET_LOCK_TEXT =  'Obtain <img src="img/action_targetlock.png" alt="Target-Lock"> on targeted ship as a free action.<br>';
-TARGET_LOCK_TEXT += "Clear Target Lock at end of turn.";
+var BARREL_ROLL_TEXT1 = 'Choose <img src="img/action_barrelroll.png" alt="Barrel Roll" title="Barrel Roll"> if this will put target into AI ship\'s firing arc.';
+var BARREL_ROLL_TEXT2 = 'Choose <img src="img/action_barrelroll.png" alt="Barrel Roll" title="Barrel Roll"> if this will put the AI ship out of enemy ship firing arc.';
 
-var BARREL_ROLL_TEXT1 = 'Choose <img src="img/action_barrelroll.png" alt="Barrel Roll"> if this will put target into AI ship\'s firing arc.';
-var BARREL_ROLL_TEXT2 = 'Choose <img src="img/action_barrelroll.png" alt="Barrel Roll"> if this will put the AI ship out of enemy ship firing arc.';
+var BARREL_ROLL_D_TEXT1 = 'Choose <img src="img/action_barrelroll-red.png" alt="Barrel Roll (Difficult)" title="Barrel Roll (Difficult)"> if this will put target into AI ship\'s firing arc.';
+var BARREL_ROLL_D_TEXT2 = 'Choose <img src="img/action_barrelroll-red.png" alt="Barrel Roll (Difficult)" title="Barrel Roll (Difficult)"> if this will put the AI ship out of enemy ship firing arc.';
 
-var BARREL_ROLL_D_TEXT1 = 'Choose <img src="img/action_barrelroll-red.png" alt="Barrel Roll"> if this will put target into AI ship\'s firing arc.';
-var BARREL_ROLL_D_TEXT2 = 'Choose <img src="img/action_barrelroll-red.png" alt="Barrel Roll"> if this will put the AI ship out of enemy ship firing arc.';
+var BARREL_ROLL2CALC_TEXT1 = 'Choose <img src="img/action_barrelroll.png" alt="Barrel Roll" title="Barrel Roll"> if this will put target into AI ship\'s firing arc. OPTIONAL: Gain 1 <img src="img/action_calculate-red.png" alt="Calculate (Difficult)" title="Calculate (Difficult)"> token.';
+var BARREL_ROLL2CALC_TEXT2 = 'Choose <img src="img/action_barrelroll.png" alt="Barrel Roll" title="Barrel Roll"> if this will put the AI ship out of enemy ship firing arc. OPTIONAL: Gain 1 <img src="img/action_calculate-red.png" alt="Calculate (Difficult)" title="Calculate (Difficult)"> token.';
 
-var BOOST_TEXT1 = 'Choose <img src="img/action_boost.png" alt="Boost"> if this will put target into AI ship\'s firing arc.';
-var BOOST_TEXT2 = 'Choose <img src="img/action_boost.png" alt="Boost"> if this will put the AI ship out of enemy ship firing arc.';
+var BARREL_ROLL2EVADE_TEXT1 = 'Choose <img src="img/action_barrelroll.png" alt="Barrel Roll" title="Barrel Roll"> if this will put target into AI ship\'s firing arc. OPTIONAL: If AI is in a firing arc, choose <img src="img/action_evade.png" alt="Evade" title="Evade">.';
+var BARREL_ROLL2EVADE_TEXT2 = 'Choose <img src="img/action_barrelroll.png" alt="Barrel Roll" title="Barrel Roll"> if this will put the AI ship out of enemy ship firing arc. OPTIONAL: choose <img src="img/action_evade.png" alt="Evade" title="Evade">.';
 
-var BOOST_D_TEXT1 = 'Choose <img src="img/action_boost-red.png" alt="Boost"> if this will put target into AI ship\'s firing arc.';
-var BOOST_D_TEXT2 = 'Choose <img src="img/action_boost-red.png" alt="Boost"> if this will put the AI ship out of enemy ship firing arc.';
+var BARREL_ROLL2EVADE_D_TEXT1 = 'Choose <img src="img/action_barrelroll.png" alt="Barrel Roll" title="Barrel Roll"> if this will put target into AI ship\'s firing arc. OPTIONAL: If AI is in a firing arc, choose <img src="img/action_evade-red.png" alt="Evade (Difficult)" title="Evade (Difficult)">.';
+var BARREL_ROLL2EVADE_D_TEXT2 = 'Choose <img src="img/action_barrelroll.png" alt="Barrel Roll" title="Barrel Roll"> if this will put the AI ship out of enemy ship firing arc. OPTIONAL: choose <img src="img/action_evade-red.png" alt="Evade (Difficult)" title="Evade (Difficult)">.';
 
-var FOCUS_TEXT1 = 'If target is in a firing arc, choose <img src="img/action_focus.png" alt="Focus">';
-var FOCUS_TEXT2 = 'Always use <img src="img/action_focus.png" alt="Focus">';
+var BARREL_ROLL_D2EVADE_D_TEXT1 = 'Choose <img src="img/action_barrelroll-red.png" alt="Barrel Roll (Difficult)" title="Barrel Roll (Difficult)"> if this will put target into AI ship\'s firing arc. OPTIONAL: If AI is in a firing arc, choose <img src="img/action_evade-red.png" alt="Evade (Difficult)" title="Evade (Difficult)">.';
+var BARREL_ROLL_D2EVADE_D_TEXT2 = 'Choose <img src="img/action_barrelroll-red.png" alt="Barrel Roll (Difficult)" title="Barrel Roll (Difficult)"> if this will put the AI ship out of enemy ship firing arc. OPTIONAL: choose <img src="img/action_evade-red.png" alt="Evade (Difficult)" title="Evade (Difficult)">.';
 
-var EVADE_TEXT = 'Else choose <img src="img/action_evade.png" alt="Evade">';
-var EVADE_D_TEXT = 'Else choose <img src="img/action_evade-red.png" alt="Evade">';
-var EVADE_F_TEXT = 'Else spend a <img src="img/token_force.png" alt="Evade"> to choose <img src="img/action_evade-purple.png" alt="Evade">.';
+var BARREL_ROLL2FOCUS_TEXT1 = 'Choose <img src="img/action_barrelroll.png" alt="Barrel Roll" title="Barrel Roll"> if this will put target into AI ship\'s firing arc. OPTIONAL: If target is in a firing arc, choose <img src="img/action_focus.png" alt="Focus" title="Focus">.';
+var BARREL_ROLL2FOCUS_TEXT2 = 'Choose <img src="img/action_barrelroll.png" alt="Barrel Roll" title="Barrel Roll"> if this will put the AI ship out of enemy ship firing arc. OPTIONAL: choose <img src="img/action_focus.png" alt="Focus" title="Focus">.';
 
-var CLOAKING_TEXT = 'Cloak/Decloak <img src="img/action_cloak.png" alt="Cloak">';          // TODO
+var BARREL_ROLL2FOCUS_D_TEXT1 = 'Choose <img src="img/action_barrelroll.png" alt="Barrel Roll" title="Barrel Roll"> if this will put target into AI ship\'s firing arc. OPTIONAL: If target is in a firing arc, choose <img src="img/action_focus-red.png" alt="Focus (Difficult)" title="Focus (Difficult)">.';
+var BARREL_ROLL2FOCUS_D_TEXT2 = 'Choose <img src="img/action_barrelroll.png" alt="Barrel Roll" title="Barrel Roll"> if this will put the AI ship out of enemy ship firing arc. OPTIONAL: choose <img src="img/action_focus-red.png" alt="Focus (Difficult)" title="Focus (Difficult)">.';
 
-var SLAM_TEXT1 = 'Choose <img src="img/action_slam.png" alt="SLAM"> if this will put target into AI ship\'s firing arc.';
-var SLAM_TEXT2 = 'Choose <img src="img/action_slam.png" alt="SLAM"> if this will put the AI ship out of enemy ship firing arc.'
+var BARREL_ROLL2LOCK_TEXT = 'OPTIONAL: If target is in AI firing arc, obtain <img src="img/action_targetlock.png" alt="Target-Lock" title="Target-Lock"> on targeted ship.<br>';
+BARREL_ROLL2LOCK_TEXT += 'Clear <img src="img/action_targetlock.png" alt="Target-Lock" title="Target-Lock"> at end of turn.';
 
-var ROTATE_ARC_TEXT = 'If no target in AI Turret Arc, <img src="img/action_rotatearc.png" alt="Rotate Arc"> to target an enemy ship.'; 	// TODO
-var ROTATE_ARC_D_TEXT = 'If no target in AI Turret Arc, <img src="img/action_rotatearc-red.png" alt="Rotate Arc"> to target an enemy ship.';
+var BARREL_ROLL2LOCK_D_TEXT = 'OPTIONAL: If target is in AI firing arc, obtain <img src="img/action_targetlock-red.png" alt="Target-Lock (Difficult)" title="Target-Lock (Difficult)"> on targeted ship.<br>';
+BARREL_ROLL2LOCK_D_TEXT += 'Clear <img src="img/action_targetlock-red.png" alt="Target-Lock (Difficult)" title="Target-Lock (Difficult)"> at end of turn.';
 
-var COORDINATE_TEXT = '<img src="img/action_coordinate.png" alt="Coordinate"> the action of a friendly ship at range 1-2.';      // TODO
-var COORDINATE_D_TEXT = '<img src="img/action_coordinate-red.png" alt="Coordinate"> the action of a friendly ship at range 1-2.';
+var BARREL_ROLL2ROTATE_TEXT = 'OPTIONAL: If no target in AI Turret Arc, <img src="img/action_rotatearc.png" alt="Rotate Turret Arc" title="Rotate Turret Arc"> to target an enemy ship.<br>';
+var BARREL_ROLL2ROTATE_D_TEXT = 'OPTIONAL: If no target in AI Turret Arc, <img src="img/action_rotatearc-red.png" alt="Rotate Turret Arc (Difficult)" title="Rotate Turret Arc (Difficult)"> to target an enemy ship.';
 
-var JAM_TEXT = 'Give a <img src="img/action_jam.png" alt="jam"> token to an enemy ship at range 1.';                    // TODO
-var JAM_D_TEXT = 'Give a <img src="img/action_jam-red.png" alt="jam"> token to an enemy ship at range 1.';
+var BOOST_TEXT1 = 'Choose <img src="img/action_boost.png" alt="Boost" title="Boost"> if this will put target into AI ship\'s firing arc.';
+var BOOST_TEXT2 = 'Choose <img src="img/action_boost.png" alt="Boost" title="Boost"> if this will put the AI ship out of enemy ship firing arc.';
 
-var RELOAD_TEXT = '<img src="img/action_reload.png" alt="Reload"> to recover 1 <img src="img/token_charge.png" alt="charge"> on a <img src="img/token_torpedo.png" alt="torpedo">, <img src="img/token_missile.png" alt="missile"> or <img src="img/token_mine.png" alt="mine"> upgrade.';            // TODO
-var RELOAD_D_TEXT = '<img src="img/action_reload-red.png" alt="Reload"> to recover 1 <img src="img/token_charge.png" alt="charge"> on a <img src="img/token_torpedo.png" alt="torpedo">, <img src="img/token_missile.png" alt="missile"> or <img src="img/token_mine.png" alt="mine"> upgrade.';
+var BOOST_D_TEXT1 = 'Choose <img src="img/action_boost-red.png" alt="Boost (Difficult)" title="Boost (Difficult)"> if this will put target into AI ship\'s firing arc.';
+var BOOST_D_TEXT2 = 'Choose <img src="img/action_boost-red.png" alt="Boost (Difficult)" title="Boost (Difficult)"> if this will put the AI ship out of enemy ship firing arc.';
 
-var REINFORCE_TEXT = 'Gain 1 fore or aft <img src="img/action_reinforce.png" alt="reinforce"> token.'; // TODO
-var REINFORCE_D_TEXT = 'Gain 1 fore or aft <img src="img/action_reinforce-red.png" alt="reinforce"> token.';
+var BOOST2CALC_TEXT1 = 'Choose <img src="img/action_boost.png" alt="Boost" title="Boost"> if this will put target into AI ship\'s firing arc. OPTIONAL: Gain 1 <img src="img/action_calculate-red.png" alt="Calculate (Difficult)" title="Calculate (Difficult)"> token.';
+var BOOST2CALC_TEXT2 = 'Choose <img src="img/action_boost.png" alt="Boost" title="Boost"> if this will put the AI ship out of enemy ship firing arc. OPTIONAL: Gain 1 <img src="img/action_calculate-red.png" alt="Calculate (Difficult)" title="Calculate (Difficult)"> token.';
 
-var CALCULATE_TEXT = 'Gain 1 <img src="img/action_calculate.png" alt="calculate"> token.';
+var BOOST2FOCUS_TEXT1 = 'Choose <img src="img/action_boost.png" alt="Boost" title="Boost"> if this will put target into AI ship\'s firing arc. OPTIONAL: If target is in a firing arc, choose <img src="img/action_focus.png" alt="Focus" title="Focus">.';
+var BOOST2FOCUS_TEXT2 = 'Choose <img src="img/action_boost.png" alt="Boost" title="Boost"> if this will put the AI ship out of enemy ship firing arc. OPTIONAL: choose <img src="img/action_focus.png" alt="Focus" title="Focus">.';
 
-var FOCUS2BARREL_ROLL_TEXT1 = 'Choose <img src="img/action_focus.png" alt="Focus"> if target is in a firing arc.';
-var FOCUS2BARREL_ROLL_TEXT2 = 'Choose <img src="img/action_focus.png" alt="Focus"> then <img src="img/action_barrelroll-red.png" alt="Barrel Roll"> if this will put target into AI ship\'s firing arc.';
-var FOCUS2BARREL_ROLL_TEXT3 = 'Choose <img src="img/action_focus.png" alt="Focus"> then <img src="img/action_barrelroll-red.png" alt="Barrel Roll"> if this will put the AI ship out of enemy ship firing arc ';
+var BOOST2FOCUS_D_TEXT1 = 'Choose <img src="img/action_boost.png" alt="Boost" title="Boost"> if this will put target into AI ship\'s firing arc. OPTIONAL: If target is in a firing arc, choose <img src="img/action_focus-red.png" alt="Focus (Difficult)" title="Focus (Difficult)">.';
+var BOOST2FOCUS_D_TEXT2 = 'Choose <img src="img/action_boost.png" alt="Boost" title="Boost"> if this will put the AI ship out of enemy ship firing arc. OPTIONAL: choose <img src="img/action_focus-red.png" alt="Focus (Difficult)" title="Focus (Difficult)">.';
 
-var BARREL_ROLL2LOCK_TEXT = 'OPTIONAL: If target is in AI firing arc, obtain <img src="img/action_targetlock-red.png" alt="Target-Lock"> on targeted ship.<br>';
-BARREL_ROLL2LOCK_TEXT += "Clear Target Lock at end of turn.";
+var BOOST2LOCK_TEXT = 'OPTIONAL: If target in AI firing arc, obtain <img src="img/action_targetlock.png" alt="Target-Lock" title="Target-Lock"> on targeted ship.<br>';
+BOOST2LOCK_TEXT += 'Clear <img src="img/action_targetlock.png" alt="Target-Lock" title="Target-Lock"> at end of turn.';
 
-var BOOST2LOCK_TEXT = 'OPTIONAL: If target in AI firing arc, obtain <img src="img/action_targetlock-red.png" alt="Target-Lock"> on targeted ship.<br>';
-BOOST2LOCK_TEXT += "Clear Target Lock at end of turn.";
+var BOOST2LOCK_D_TEXT = 'OPTIONAL: If target in AI firing arc, obtain <img src="img/action_targetlock-red.png" alt="Target-Lock (Difficult)" title="Target-Lock (Difficult)"> on targeted ship.<br>';
+BOOST2LOCK_D_TEXT += 'Clear <img src="img/action_targetlock-red.png" alt="Target-Lock (Difficult)" title="Target-Lock (Difficult)"> at end of turn.';
 
-var FOCUS2ROTATE_TEXT = 'If no target in AI Turret Arc, choose <img src="img/action_focus.png" alt="Focus"> then <img src="img/action_rotatearc-red.png" alt="Rotate Arc"> to target an enemy ship.';
-var LOCK2ROTATE_TEXT = 'If no target in AI Turret Arc, choose <img src="img/action_targetlock.png" alt="Target-Lock"> then <img src="img/action_rotatearc-red.png" alt="Rotate Arc"> to target an enemy ship.';
+var CALCULATE_TEXT = 'Always use <img src="img/action_calculate.png" alt="Calculate" title="Calculate"> if there are no more advantageous actions to take. Gain 1 <img src="img/action_calculate.png" alt="Calculate" title="Calculate"> token.';
 
-var BARREL_ROLL2CALC_TEXT1 = 'Choose <img src="img/action_barrelroll.png" alt="Barrel Roll"> if this will put target into AI ship\'s firing arc. OPTIONAL: Gain 1 <img src="img/action_calculate-red.png" alt="calculate"> token.';
-var BARREL_ROLL2CALC_TEXT2 = 'Choose <img src="img/action_barrelroll.png" alt="Barrel Roll"> if this will put the AI ship out of enemy ship firing arc. OPTIONAL: Gain 1 <img src="img/action_calculate-red.png" alt="calculate"> token.';
+var CLOAKING_TEXT = 'Cloak/Decloak <img src="img/action_cloak.png" alt="Cloak/Decloak" title="Cloak/Decloak">';
 
-var BARREL_ROLL2FOCUS_TEXT1 = 'Choose <img src="img/action_barrelroll.png" alt="Barrel Roll"> if this will put target into AI ship\'s firing arc. OPTIONAL: If target is in a firing arc, choose <img src="img/action_focus-red.png" alt="Focus">.';
-var BARREL_ROLL2FOCUS_TEXT2 = 'Choose <img src="img/action_barrelroll.png" alt="Barrel Roll"> if this will put the AI ship out of enemy ship firing arc. OPTIONAL: choose <img src="img/action_focus-red.png" alt="Focus">.';
+var COORDINATE_TEXT = '<img src="img/action_coordinate.png" alt="Coordinate" title="Coordinate"> the action of a friendly ship at range 1-2.';
+var COORDINATE_D_TEXT = '<img src="img/action_coordinate-red.png" alt="Coordinate (Difficult)" title="Coordinate (Difficult)"> the action of a friendly ship at range 1-2.';
 
-var BOOST2CALC_TEXT1 = 'Choose <img src="img/action_boost.png" alt="Boost"> if this will put target into AI ship\'s firing arc. OPTIONAL: Gain 1 <img src="img/action_calculate-red.png" alt="calculate"> token.';
-var BOOST2CALC_TEXT2 = 'Choose <img src="img/action_boost.png" alt="Boost"> if this will put the AI ship out of enemy ship firing arc. OPTIONAL: Gain 1 <img src="img/action_calculate-red.png" alt="calculate"> token.';
+var EVADE_TEXT = 'Else choose <img src="img/action_evade.png" alt="Evade" title="Evade">';
+var EVADE_D_TEXT = 'Else choose <img src="img/action_evade-red.png" alt="Evade (Difficult)" title="Evade (Difficult)">';
+var EVADE_F_TEXT = 'Else spend a <img src="img/token_force.png" alt="Force token" title="Force token"> to choose <img src="img/action_evade-purple.png" alt="Evade (using The Force)" title="Evade (using The Force)">.';
 
-var BOOST2FOCUS_TEXT1 = 'Choose <img src="img/action_boost.png" alt="Boost"> if this will put target into AI ship\'s firing arc. OPTIONAL: If target is in a firing arc, choose <img src="img/action_focus-red.png" alt="Focus">.';
-var BOOST2FOCUS_TEXT2 = 'Choose <img src="img/action_boost.png" alt="Boost"> if this will put the AI ship out of enemy ship firing arc. OPTIONAL: choose <img src="img/action_focus-red.png" alt="Focus">.';
+var EVADE2ROTATE_TEXT = 'If AI ship is in an enemy firing arc, choose <img src="img/action_evade.png" alt="Evade" title="Evade">, then, if no target in AI Turret Arc, <img src="img/action_rotatearc.png" alt="Rotate Turret Arc" title="Rotate Turret Arc"> to target an enemy ship.';
+var EVADE2ROTATE_D_TEXT = 'If AI ship is in an enemy firing arc, choose <img src="img/action_evade.png" alt="Evade" title="Evade"> then, if no target in AI Turret Arc, <img src="img/action_rotatearc-red.png" alt="Rotate Turret Arc (Difficult)" title="Rotate Turret Arc (Difficult)"> to target an enemy ship.';
 
-var BARREL_ROLL2EVADE_TEXT1 = 'Choose <img src="img/action_barrelroll.png" alt="Barrel Roll"> if this will put target into AI ship\'s firing arc. OPTIONAL: If AI is in a firing arc, choose <img src="img/action_evade-red.png" alt="Evade">.';
-var BARREL_ROLL2EVADE_TEXT2 = 'Choose <img src="img/action_barrelroll.png" alt="Barrel Roll"> if this will put the AI ship out of enemy ship firing arc. OPTIONAL: choose <img src="img/action_evade-red.png" alt="Evade">.';
+var FOCUS_TEXT1 = 'If target is in a firing arc, choose <img src="img/action_focus.png" alt="Focus" title="Focus">';
+var FOCUS_TEXT2 = 'Always use <img src="img/action_focus.png" alt="Focus" title="Focus"> unless there are other more advantageous AI actions to take.';
 
-var BARREL_ROLL_D2EVADE_D_TEXT1 = 'Choose <img src="img/action_barrelroll-red.png" alt="Barrel Roll"> if this will put target into AI ship\'s firing arc. OPTIONAL: If AI is in a firing arc, choose <img src="img/action_evade-red.png" alt="Evade">.';
-var BARREL_ROLL_D2EVADE_D_TEXT2 = 'Choose <img src="img/action_barrelroll-red.png" alt="Barrel Roll"> if this will put the AI ship out of enemy ship firing arc. OPTIONAL: choose <img src="img/action_evade-red.png" alt="Evade">.';
+var FOCUS2BARREL_ROLL_TEXT1 = 'Choose <img src="img/action_focus.png" alt="Focus" title="Focus"> if target is in a firing arc.';
+var FOCUS2BARREL_ROLL_TEXT2 = 'Choose <img src="img/action_focus.png" alt="Focus" title="Focus"> then <img src="img/action_barrelroll.png" alt="Barrel Roll" title="Barrel Roll"> if this will put target into AI ship\'s firing arc.';
+var FOCUS2BARREL_ROLL_TEXT3 = 'Choose <img src="img/action_focus.png" alt="Focus" title="Focus"> then <img src="img/action_barrelroll.png" alt="Barrel Roll" title="Barrel Roll"> if this will put the AI ship out of enemy ship firing arc ';
 
+var FOCUS2BARREL_ROLL_D_TEXT1 = 'Choose <img src="img/action_focus.png" alt="Focus" title="Focus"> if target is in a firing arc.';
+var FOCUS2BARREL_ROLL_D_TEXT2 = 'Choose <img src="img/action_focus.png" alt="Focus" title="Focus"> then <img src="img/action_barrelroll-red.png" alt="Barrel Roll (Difficult)" title="Barrel Roll (Difficult)"> if this will put target into AI ship\'s firing arc.';
+var FOCUS2BARREL_ROLL_D_TEXT3 = 'Choose <img src="img/action_focus.png" alt="Focus" title="Focus"> then <img src="img/action_barrelroll-red.png" alt="Barrel Roll (Difficult)" title="Barrel Roll (Difficult)"> if this will put the AI ship out of enemy ship firing arc ';
+
+var FOCUS2ROTATE_TEXT = 'If no target in AI Turret Arc, choose <img src="img/action_focus.png" alt="Focus" title="Focus"> then <img src="img/action_rotatearc.png" alt="Rotate Turret Arc" title="Rotate Turret Arc"> to target an enemy ship.';
+var FOCUS2ROTATE_D_TEXT = 'If no target in AI Turret Arc, choose <img src="img/action_focus.png" alt="Focus" title="Focus"> then <img src="img/action_rotatearc-red.png" alt="Rotate Turret Arc (Difficult)" title="Rotate Turret Arc (Difficult)"> to target an enemy ship.';
+
+var JAM_TEXT = 'Give a <img src="img/action_jam.png" alt="Jam" title="Jam"> token to an enemy ship at range 1.';
+var JAM_D_TEXT = 'Give a <img src="img/action_jam-red.png" alt="Jam (Difficult)" title="Jam (Difficult)"> token to an enemy ship at range 1.';
+
+var RELOAD_TEXT = '<img src="img/action_reload.png" alt="Reload" title="Reload"> to recover 1 <img src="img/token_charge.png" alt="Charge token" title="Charge token"> on a <img src="img/token_torpedo.png" alt="Torpedo" title="Torpedo">, <img src="img/token_missile.png" alt="Missile" title="Missile"> or <img src="img/token_mine.png" alt="Mine" title="Mine"> upgrade.';
+var RELOAD_D_TEXT = '<img src="img/action_reload-red.png" alt="Reload (Difficult)" title="Reload (Difficult)"> to recover 1 <img src="img/token_charge.png" alt="Charge token" title="Charge token"> on a <img src="img/token_torpedo.png" alt="Torpedo" title="Torpedo">, <img src="img/token_missile.png" alt="Missile" title="Missile"> or <img src="img/token_mine.png" alt="Mine" title="Mine"> upgrade.';
+
+var RELOAD2CALC_TEXT = 'Choose <img src="img/action_reload.png" alt="Reload" title="Reload"> to recover 1 <img src="img/token_charge.png" alt="Charge token" title="Charge token"> on a <img src="img/token_torpedo.png" alt="Torpedo" title="Torpedo">, <img src="img/token_missile.png" alt="Missile" title="Missile"> or <img src="img/token_mine.png" alt="Mine" title="Mine"> upgrade. OPTIONAL: Gain 1 <img src="img/action_calculate-red.png" alt="Calculate (Difficult)" title="Calculate (Difficult)"> token.';
+
+var REINFORCE_TEXT = 'If AI ship is in an enemy firing arc, gain 1 fore or aft <img src="img/action_reinforce.png" alt="Reinforce" title="Reinforce"> token.'; // TODO
+var REINFORCE_D_TEXT = 'If AI ship is in an enemy firing arc, gain 1 fore or aft <img src="img/action_reinforce-red.png" alt="Reinforce (Difficult)" title="Reinforce (Difficult)"> token.';
+
+var ROTATE_ARC_TEXT = 'If no target in AI Turret Arc, <img src="img/action_rotatearc.png" alt="Rotate Turret Arc" title="Rotate Turret Arc"> to target an enemy ship.';
+var ROTATE_ARC_D_TEXT = 'If no target in AI Turret Arc, <img src="img/action_rotatearc-red.png" alt="Rotate Turret Arc (Difficult)" title="Rotate Turret Arc (Difficult)"> to target an enemy ship.';
+
+var SLAM_TEXT1 = 'Choose <img src="img/action_slam.png" alt="SLAM" title="SLAM"> if this will put target into AI ship\'s firing arc.';
+var SLAM_TEXT2 = 'Choose <img src="img/action_slam.png" alt="SLAM" title="SLAM"> if this will put the AI ship out of enemy ship firing arc.'
+
+var TARGET_LOCK_TEXT =  'Obtain <img src="img/action_targetlock.png" alt="Target-Lock" title="Target Lock"> on targeted ship as a free action.<br>';
+TARGET_LOCK_TEXT += 'Clear <img src="img/action_targetlock.png" alt="Target-Lock" title="Target Lock"> at end of turn.';
+
+var TARGET_LOCK_D_TEXT =  'Obtain <img src="img/action_targetlock-red.png" alt="Target-Lock (Difficult)" title="Target-Lock (Difficult)"> on targeted ship.<br>';
+TARGET_LOCK_D_TEXT += 'Clear <img src="img/action_targetlock-red.png" alt="Target-Lock (Difficult)" title="Target-Lock (Difficult)"> at end of turn.';
+
+var LOCK2ROTATE_TEXT = 'If no target in AI Turret Arc, choose <img src="img/action_targetlock.png" alt="Target-Lock" title="Target Lock"> then <img src="img/action_rotatearc.png" alt="Rotate Turret Arc" title="Rotate Turret Arc"> to target an enemy ship.';
+var LOCK2ROTATE_D_TEXT = 'If no target in AI Turret Arc, choose <img src="img/action_targetlock.png" alt="Target-Lock" title="Target Lock"> then <img src="img/action_rotatearc-red.png" alt="Rotate Turret Arc (Difficult)" title="Rotate Turret Arc (Difficult)"> to target an enemy ship.';
 
 // SHIPS array and currently selected SHIP (re-defined in separate js file)
 var ships = [];
@@ -232,14 +226,14 @@ function display_ship_choice( faction, funct )
 
     data += '<label>\n';
 	data += '    <div title="Rebels">'
-	data += '       <input type="radio" onclick="display_ship_choice(\'rebel\', \'' + funct + '\')" hidden >'
+	data += '       <input type="radio" onclick="display_ship_choice(\'Rebel\', \'' + funct + '\')" hidden >'
 	data += '        <img class="faction_button" src="img/rebel.png" />'
 	data += '    </div>'
 	data += '</label>\n';
 
     data += '<label>\n';
     data += '    <div title="Empire">'
-    data += '       <input type="radio" onclick="display_ship_choice(\'empire\', \'' + funct + '\')" hidden >'
+    data += '       <input type="radio" onclick="display_ship_choice(\'Empire\', \'' + funct + '\')" hidden >'
     data += '       <img class="faction_button" src="img/empire.png" />'
     data += '    </div>'
     data += '</label>\n';
@@ -248,7 +242,7 @@ function display_ship_choice( faction, funct )
 
     data += '<label>\n';
     data += '    <div title="Scum">'
-    data += '       <input type="radio" onclick="display_ship_choice(\'scum\', \'' + funct + '\')" hidden >'
+    data += '       <input type="radio" onclick="display_ship_choice(\'Scum\', \'' + funct + '\')" hidden >'
     data += '        <img class="faction_button" src="img/scum.png" />'
     data += '    </div>'
     data += '</label>\n';
@@ -257,14 +251,14 @@ function display_ship_choice( faction, funct )
 
 	data += '<label>\n';
 	data += '    <div title="Resistance">'
-	data += '       <input type="radio" onclick="display_ship_choice(\'resistance\', \'' + funct + '\')" hidden >'
+	data += '       <input type="radio" onclick="display_ship_choice(\'Resistance\', \'' + funct + '\')" hidden >'
 	data += '        <img class="faction_button" src="img/resistance.png" />'
 	data += '    </div>'
     data += '</label>\n';
 
     data += '<label>\n';
 	data += '    <div title="First Order">'
-	data += '       <input type="radio" onclick="display_ship_choice(\'1storder\', \'' + funct + '\')" hidden >'
+	data += '       <input type="radio" onclick="display_ship_choice(\'First Order\', \'' + funct + '\')" hidden >'
 	data += '        <img class="faction_button" src="img/1storder.png" />'
 	data += '    </div>'
     data += '</label>\n';
@@ -273,14 +267,14 @@ function display_ship_choice( faction, funct )
 
 	data += '<label>\n';
 	data += '    <div title="Republic">'
-	data += '       <input type="radio" onclick="display_ship_choice(\'republic\', \'' + funct + '\')" hidden >'
+	data += '       <input type="radio" onclick="display_ship_choice(\'Republic\', \'' + funct + '\')" hidden >'
 	data += '        <img class="faction_button" src="img/republic.png" />'
 	data += '    </div>'
     data += '</label>\n';
 
     data += '<label>\n';
 	data += '    <div title="Seperatist">'
-	data += '       <input type="radio" onclick="display_ship_choice(\'seperatist\', \'' + funct + '\')" hidden >'
+	data += '       <input type="radio" onclick="display_ship_choice(\'Seperatist\', \'' + funct + '\')" hidden >'
 	data += '        <img class="faction_button" src="img/seperatist.png" />'
 	data += '    </div>'
 	data += '</label>\n';
@@ -368,7 +362,7 @@ function display_ship( ship_id )
     tables += gen_maneuver_table( FAR, SHIP.far )
     tables += gen_maneuver_table( STRESSED, SHIP.stressed )
 
-    document.getElementById( "version" ).innerHTML = VERSION;
+    document.getElementById( "version" ).innerHTML = "XWingAI2 Version: " + VERSION;
     document.getElementById( "ship").innerHTML = ship;
     document.getElementById( "actions" ).innerHTML = actions;
     document.getElementById( "table" ).innerHTML = tables;
@@ -377,7 +371,7 @@ function display_ship( ship_id )
 
 function set_version()
 {
-    document.getElementById('version').innerHTML = VERSION;
+    document.getElementById('version').innerHTML = "XWingAI2 Version: " + VERSION;
 }
 
 
@@ -483,196 +477,319 @@ function format_maneuver( ship, maneuver )
 
 function format_actions( ship )
 {
-    var actions = "<ol>";
-
-    if( ship.actions & TARGET_LOCK )
-    {
-        actions += "<li>" + TARGET_LOCK_TEXT + "</li>";
-    }
-
-    if( ship.actions & FOCUS )
-    {
-        if( ship.actions & EVADE )
-        {
-            actions += "<li>" + FOCUS_TEXT1 + "</li>";
-        }
-        else
-        {
-            actions += "<li>" + FOCUS_TEXT2 + "</li>";
-        }
-    }
-
-    if( ship.actions & BARREL_ROLL )
-    {
-        actions += "<li>" + BARREL_ROLL_TEXT1 + "</li>";
-        actions += "<li>" + BARREL_ROLL_TEXT2 + "</li>";
-    }
-
-    if( ship.actions & BOOST )
-    {
-        actions += "<li>" + BOOST_TEXT1 + "</li>";
-        actions += "<li>" + BOOST_TEXT2 + "</li>";
-    }
-
-    if( ship.actions & SLAM )
-    {
-        actions += "<li>" + SLAM_TEXT1 + "</li>";
-        actions += "<li>" + SLAM_TEXT2 + "</li>";
-    }
-
-    if( ship.actions & FOCUS2BARREL_ROLL )
-		    {
-		actions += "<li>" + FOCUS2BARREL_ROLL_TEXT1 + "</li>";
-		actions += "<li>" + FOCUS2BARREL_ROLL_TEXT2 + "</li>";
-		actions += "<li>" + FOCUS2BARREL_ROLL_TEXT3 + "</li>";
-    }
-
-    if( ship.actions & BARREL_ROLL2LOCK )
-		    {
-		actions += "<li>" + BARREL_ROLL_TEXT1 + "</li>";
-		actions += "<li>" + BARREL_ROLL2LOCK_TEXT + "</li>";
-		actions += "<li>" + BARREL_ROLL_TEXT2 + "</li>";
-    }
-
-    if( ship.actions & BARREL_ROLL2CALC )
-		    {
-		actions += "<li>" + BARREL_ROLL2CALC_TEXT1 + "</li>";
-		actions += "<li>" + BARREL_ROLL2CALC_TEXT2 + "</li>";
-    }
-
-    if( ship.actions & BARREL_ROLL2FOCUS )
-			    {
-			actions += "<li>" + BARREL_ROLL2FOCUS_TEXT1 + "</li>";
-			actions += "<li>" + BARREL_ROLL2FOCUS_TEXT2 + "</li>";
-    }
-
-    if( ship.actions & BARREL_ROLL2EVADE )
-			    {
-			actions += "<li>" + BARREL_ROLL2EVADE_TEXT1 + "</li>";
-			actions += "<li>" + BARREL_ROLL2EVADE_TEXT2 + "</li>";
-    }
-
-    if( ship.actions & BOOST2CALC )
-			    {
-			actions += "<li>" + BOOST2CALC_TEXT1 + "</li>";
-			actions += "<li>" + BOOST2CALC_TEXT2 + "</li>";
-    }
-
-    if( ship.actions & BOOST2FOCUS )
-				    {
-				actions += "<li>" + BOOST2FOCUS_TEXT1 + "</li>";
-				actions += "<li>" + BOOST2FOCUS_TEXT2 + "</li>";
-    }
-
-    if( ship.actions & BOOST2LOCK )
-	    {
-	    actions += "<li>" + BOOST_TEXT1 + "</li>";
-	    actions += "<li>" + BOOST2LOCK_TEXT + "</li>";
-	    actions += "<li>" + BOOST_TEXT2 + "</li>";
-    }
-
-    if( ship.actions & ROTATE_ARC )
-    {
-        actions += "<li>" + ROTATE_ARC_TEXT + "</li>";
-    }
-
-    if( ship.actions & FOCUS2ROTATE )
-    {
-        actions += "<li>" + FOCUS2ROTATE_TEXT + "</li>";
-    }
-
-    if( ship.actions & LOCK2ROTATE )
-    {
-        actions += "<li>" + LOCK2ROTATE_TEXT + "</li>";
-    }
-
-    if( ship.actions & BARREL_ROLL_D )
-    {
-        actions += "<li>" + BARREL_ROLL_D_TEXT1 + "</li>";
-        actions += "<li>" + BARREL_ROLL_D_TEXT2 + "</li>";
-    }
-
-    if( ship.actions & BOOST_D )
-    {
-        actions += "<li>" + BOOST_D_TEXT1 + "</li>";
-        actions += "<li>" + BOOST_D_TEXT2 + "</li>";
-    }
-
-    if( ship.actions & ROTATE_ARC_D )
+	actions = "<ol>";
+	if( ship.actions.indexOf("EVADE") != -1 )
 	{
-	    actions += "<li>" + ROTATE_ARC_D_TEXT + "</li>";
-    }
-
-    if( ship.actions & CALCULATE )
-	    {
-	    actions += "<li>" + CALCULATE_TEXT + "</li>";
-    }
-
-    if( ship.actions & CLOAKING )
-    {
-        actions += "<li>" + CLOAKING_TEXT + "</li>";
-    }
-
-    if( ship.actions & COORDINATE )
-    {
-        actions += "<li>" + COORDINATE_TEXT + "</li>";
-    }
-
-    if( ship.actions & COORDINATE_D )
-    {
-        actions += "<li>" + COORDINATE_D_TEXT + "</li>";
-    }
-
-    if( ship.actions & JAM )
-    {
-        actions += "<li>" + JAM_TEXT + "</li>";
-    }
-
-    if( ship.actions & JAM_D )
-    {
-        actions += "<li>" + JAM_D_TEXT + "</li>";
-    }
-
-    if( ship.actions & RELOAD )
-    {
-        actions += "<li>" + RELOAD_TEXT + "</li>";
-    }
-
-    if( ship.actions & RELOAD_D )
-     {
-         actions += "<li>" + RELOAD_D_TEXT + "</li>";
-    }
-
-    if( ship.actions & REINFORCE )
-    {
-        actions += "<li>" + REINFORCE_TEXT + "</li>";
-    }
-
-    if( ship.actions & REINFORCE_D )
-    {
-        actions += "<li>" + REINFORCE_D_TEXT + "</li>";
-    }
-
-    if( ship.actions & EVADE )
-	    {
-	        actions += "<li>" + EVADE_TEXT + "</li>";
-    }
-
-    if( ship.actions & EVADE_F )
-		    {
-		        actions += "<li>" + EVADE_F_TEXT + "</li>";
-    }
-
-    if( ship.actions & EVADE_D )
-	    {
-	        actions += "<li>" + EVADE_D_TEXT + "</li>";
-    }
-
-    actions += "</ol>";
-
-    return actions;
+		evadeTest = 1;
+	}
+	else if( ship.actions.indexOf("EVADE_D") != -1 )
+	{
+		evadeTest = 1;
+	}
+	else if( ship.actions.indexOf("EVADE_F") != -1 )
+	{
+		evadeTest = 1;
+	}
+	else if( ship.actions.indexOf("EVADE2ROTATE") != -1 )
+	{
+		evadeTest = 1;
+	}
+	else if( ship.actions.indexOf("EVADE2ROTATE_D") != -1 )
+	{
+		evadeTest = 1;
+	}
+	else
+	{
+		evadeTest = 0;
+	}
+	ship.actions.forEach(actionText);
+	actions += "</ol>";
+	return actions;
 }
 
+function actionText( value, index, array )
+{
+	switch( value )
+	{
+    	case 'BARREL_ROLL':
+    	{
+        	actions += "<li>" + BARREL_ROLL_TEXT1 + "</li>";
+        	actions += "<li>" + BARREL_ROLL_TEXT2 + "</li>";
+        	break;
+    	}
+    	case 'BARREL_ROLL_D':
+    	{
+        	actions += "<li>" + BARREL_ROLL_D_TEXT1 + "</li>";
+        	actions += "<li>" + BARREL_ROLL_D_TEXT2 + "</li>";
+        	break;
+    	}
+		case 'BARREL_ROLL2CALC':
+	    {
+			actions += "<li>" + BARREL_ROLL2CALC_TEXT1 + "</li>";
+			actions += "<li>" + BARREL_ROLL2CALC_TEXT2 + "</li>";
+			break;
+	    }
+		case 'BARREL_ROLL2EVADE':
+		{
+			actions += "<li>" + BARREL_ROLL2EVADE_TEXT1 + "</li>";
+			actions += "<li>" + BARREL_ROLL2EVADE_TEXT2 + "</li>";
+			break;
+	    }
+		case 'BARREL_ROLL2EVADE_D':
+		{
+			actions += "<li>" + BARREL_ROLL2EVADE_D_TEXT1 + "</li>";
+			actions += "<li>" + BARREL_ROLL2EVADE_D_TEXT2 + "</li>";
+			break;
+	    }
+		case 'BARREL_ROLL_D2EVADE_D':
+		{
+			actions += "<li>" + BARREL_ROLL_D2EVADE_D_TEXT1 + "</li>";
+			actions += "<li>" + BARREL_ROLL_D2EVADE_D_TEXT2 + "</li>";
+			break;
+	    }
+	    case 'BARREL_ROLL2FOCUS':
+	    {
+			actions += "<li>" + BARREL_ROLL2FOCUS_TEXT1 + "</li>";
+			actions += "<li>" + BARREL_ROLL2FOCUS_TEXT2 + "</li>";
+			break;
+		}
+	    case 'BARREL_ROLL2FOCUS_D':
+	    {
+			actions += "<li>" + BARREL_ROLL2FOCUS_D_TEXT1 + "</li>";
+			actions += "<li>" + BARREL_ROLL2FOCUS_D_TEXT2 + "</li>";
+			break;
+		}
+		case 'BARREL_ROLL2LOCK':
+		{
+			actions += "<li>" + BARREL_ROLL_TEXT1 + "</li>";
+			actions += "<li>" + BARREL_ROLL_TEXT2 + "</li>";
+			actions += "<li>" + BARREL_ROLL2LOCK_TEXT + "</li>";
+			break;
+	    }
+		case 'BARREL_ROLL2LOCK_D':
+		{
+			actions += "<li>" + BARREL_ROLL_TEXT1 + "</li>";
+			actions += "<li>" + BARREL_ROLL_TEXT2 + "</li>";
+			actions += "<li>" + BARREL_ROLL2LOCK_D_TEXT + "</li>";
+			break;
+	    }
+	    case 'BARREL_ROLL2ROTATE':
+	    {
+			actions += "<li>" + BARREL_ROLL_TEXT1 + "</li>";
+			actions += "<li>" + BARREL_ROLL_TEXT2 + "</li>";
+			actions += "<li>" + BARREL_ROLL2ROTATE_TEXT + "</li>";
+			break;
+		}
+	    case 'BARREL_ROLL2ROTATE_D':
+	    {
+			actions += "<li>" + BARREL_ROLL_TEXT1 + "</li>";
+			actions += "<li>" + BARREL_ROLL_TEXT2 + "</li>";
+			actions += "<li>" + BARREL_ROLL2ROTATE_D_TEXT + "</li>";
+			break;
+		}
+		case 'BOOST':
+		{
+			actions += "<li>" + BOOST_TEXT1 + "</li>";
+		    actions += "<li>" + BOOST_TEXT2 + "</li>";
+		    break;
+    	}
+ 		case 'BOOST_D':
+ 		{
+ 			actions += "<li>" + BOOST_D_TEXT1 + "</li>";
+ 		    actions += "<li>" + BOOST_D_TEXT2 + "</li>";
+ 		    break;
+     	}
+	    case 'BOOST2CALC':
+	    {
+			actions += "<li>" + BOOST2CALC_TEXT1 + "</li>";
+			actions += "<li>" + BOOST2CALC_TEXT2 + "</li>";
+			break;
+	    }
+	    case 'BOOST2FOCUS':
+	    {
+			actions += "<li>" + BOOST2FOCUS_TEXT1 + "</li>";
+			actions += "<li>" + BOOST2FOCUS_TEXT2 + "</li>";
+			break;
+	    }
+	    case 'BOOST2FOCUS_D':
+	    {
+			actions += "<li>" + BOOST2FOCUS_D_TEXT1 + "</li>";
+			actions += "<li>" + BOOST2FOCUS_D_TEXT2 + "</li>";
+			break;
+	    }
+	    case 'BOOST2LOCK':
+	    {
+		    actions += "<li>" + BOOST_TEXT1 + "</li>";
+		    actions += "<li>" + BOOST_TEXT2 + "</li>";
+		    actions += "<li>" + BOOST2LOCK_TEXT + "</li>";
+		    break;
+ 	    }
+	    case 'BOOST2LOCK_D':
+	    {
+		    actions += "<li>" + BOOST_TEXT1 + "</li>";
+		    actions += "<li>" + BOOST_TEXT2 + "</li>";
+		    actions += "<li>" + BOOST2LOCK_D_TEXT + "</li>";
+		    break;
+ 	    }
+    	case 'CALCULATE':
+	    {
+		    actions += "<li>" + CALCULATE_TEXT + "</li>";
+		    break;
+ 	    }
+		case 'CLOAKING':
+	    {
+ 	       actions += "<li>" + CLOAKING_TEXT + "</li>";
+ 	       break;
+	    }
+	    case 'COORDINATE':
+	    {
+	        actions += "<li>" + COORDINATE_TEXT + "</li>";
+	        break;
+	    }
+	    case 'COORDINATE_D':
+	    {
+	        actions += "<li>" + COORDINATE_D_TEXT + "</li>";
+	        break;
+	    }
+	    case 'EVADE':
+	    {
+	        actions += "<li>" + EVADE_TEXT + "</li>";
+	        break;
+ 	    }
+	    case 'EVADE_D':
+	    {
+	        actions += "<li>" + EVADE_D_TEXT + "</li>";
+	        break;
+ 	    }
+	    case 'EVADE_F':
+	    {
+	        actions += "<li>" + EVADE_F_TEXT + "</li>";
+	        break;
+ 	    }
+	    case 'EVADE2ROTATE':
+	    {
+			actions += "<li>" + EVADE2ROTATE_TEXT + "</li>";
+			break;
+		}
+	    case 'EVADE2ROTATE_D':
+	    {
+			actions += "<li>" + EVADE2ROTATE_D_TEXT + "</li>";
+			break;
+		}
+		case 'FOCUS':
+		{
+		    if( evadeTest == 0 )
+		        {
+		            actions += "<li>" + FOCUS_TEXT2 + "</li>";
+		            break;
+		        }
+		        else
+		        {
+		            actions += "<li>" + FOCUS_TEXT1 + "</li>";
+		            break;
+		        }
+    	}
+		case 'FOCUS2BARREL_ROLL':
+	    {
+			actions += "<li>" + FOCUS2BARREL_ROLL_TEXT1 + "</li>";
+			actions += "<li>" + FOCUS2BARREL_ROLL_TEXT2 + "</li>";
+			actions += "<li>" + FOCUS2BARREL_ROLL_TEXT3 + "</li>";
+			break;
+	    }
+		case 'FOCUS2BARREL_ROLL_D':
+	    {
+			actions += "<li>" + FOCUS2BARREL_ROLL_D_TEXT1 + "</li>";
+			actions += "<li>" + FOCUS2BARREL_ROLL_D_TEXT2 + "</li>";
+			actions += "<li>" + FOCUS2BARREL_ROLL_D_TEXT3 + "</li>";
+			break;
+	    }
+ 	    case 'FOCUS2ROTATE':
+   		{
+   	        actions += "<li>" + FOCUS2ROTATE_TEXT + "</li>";
+   	        break;
+   		}
+ 	    case 'FOCUS2ROTATE_D':
+   		{
+   	        actions += "<li>" + FOCUS2ROTATE_D_TEXT + "</li>";
+   	        break;
+   		}
+		case 'JAM':
+	    {
+	        actions += "<li>" + JAM_TEXT + "</li>";
+	        break;
+	    }
+		case 'JAM_D':
+	    {
+	        actions += "<li>" + JAM_D_TEXT + "</li>";
+	        break;
+	    }
+		case 'RELOAD':
+	    {
+	        actions += "<li>" + RELOAD_TEXT + "</li>";
+	        break;
+	    }
+		case 'RELOAD_D':
+	    {
+	        actions += "<li>" + RELOAD_D_TEXT + "</li>";
+	        break;
+	    }
+	    case 'RELOAD2CALC':
+	    {
+			actions += "<li>" + RELOAD2CALC_TEXT + "</li>";
+			break;
+	    }
+		case 'REINFORCE':
+	    {
+	        actions += "<li>" + REINFORCE_TEXT + "</li>";
+	        break;
+	    }
+		case 'REINFORCE_D':
+	    {
+	        actions += "<li>" + REINFORCE_D_TEXT + "</li>";
+	        break;
+	    }
+ 	    case 'ROTATE_ARC':
+ 	    {
+ 	        actions += "<li>" + ROTATE_ARC_TEXT + "</li>";
+ 	        break;
+ 	    }
+ 	    case 'ROTATE_ARC_D':
+ 	    {
+ 	        actions += "<li>" + ROTATE_ARC_D_TEXT + "</li>";
+ 	        break;
+ 	    }
+ 		case 'SLAM':
+ 		{
+		    actions += "<li>" + SLAM_TEXT1 + "</li>";
+		    actions += "<li>" + SLAM_TEXT2 + "</li>";
+		    break;
+        }
+		case 'TARGET_LOCK':
+    	{
+		    actions += "<li>" + TARGET_LOCK_TEXT + "</li>";
+		    break;
+    	}
+		case 'TARGET_LOCK_D':
+    	{
+		    actions += "<li>" + TARGET_LOCK_D_TEXT + "</li>";
+		    break;
+    	}
+   		case 'LOCK2ROTATE':
+	    {
+	        actions += "<li>" + LOCK2ROTATE_TEXT + "</li>";
+	        break;
+	    }
+   		case 'LOCK2ROTATE_D':
+	    {
+	        actions += "<li>" + LOCK2ROTATE_D_TEXT + "</li>";
+	        break;
+	    }
+	    default:
+	    {
+			actions += "<li>" + "No Actions Found" + "</li>";
+		}
+    }
+}
 
 // ****************************************************************************
 // Main
@@ -680,14 +797,14 @@ function format_actions( ship )
 function load_index()
 {
     set_ship(0);
-    display_ship_choice( "rebel", "set_ship" );
+    display_ship_choice( "Rebel", "set_ship" );
 }
 
 
 function load_ships()
 {
     display_ship(0);
-    display_ship_choice( "rebel", "display_ship" );
+    display_ship_choice( "Rebel", "display_ship" );
 }
 
 
