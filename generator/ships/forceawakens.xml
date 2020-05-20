@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <ships>
-	<t70xwing actions="FOCUS + TARGET_LOCK + BOOST" image="img/t70xwing.png" name="T-70 X-Wing" faction="resistance">
+	<t70xwing actions=" 'TARGET_LOCK', 'FOCUS', 'BOOST' " image="img/t70xwing.png" name="T-70 X-Wing" faction="Resistance">
 		<simple>
 		    <maneuver>BL1</maneuver>
 		    <maneuver>F1</maneuver>
@@ -25,7 +25,7 @@
 		    <maneuver>K4</maneuver>
 		</difficult>
 	</t70xwing>
-	<tiefo actions="FOCUS + TARGET_LOCK + BARREL_ROLL + EVADE" image="img/tiefo.png" name="TIE/fo Fighter" faction="1storder">
+	<tiefo actions=" 'TARGET_LOCK', 'FOCUS', 'BARREL_ROLL', 'EVADE' " image="img/tiefo.png" name="TIE/fo Fighter" faction="First Order">
 		<simple>
 		    <maneuver>TL2</maneuver>
 		    <maneuver>BL2</maneuver>

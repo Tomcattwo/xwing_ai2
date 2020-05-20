@@ -1,0 +1,56 @@
+<?xml version="1.0" ?>
+<ships>
+	<fireball actions=" 'FOCUS', 'BARREL_ROLL', 'SLAM', 'EVADE' " image="img/Fireball.png" name="Fireball Racer" faction="Resistance">
+		<simple>
+			<maneuver>BL1</maneuver>
+			<maneuver>F1</maneuver>
+			<maneuver>BR1</maneuver>
+			<maneuver>F2</maneuver>
+		</simple>
+		<normal>
+			<maneuver>TL1</maneuver>
+			<maneuver>TR1</maneuver>
+			<maneuver>TL2</maneuver>
+			<maneuver>BL2</maneuver>
+			<maneuver>BR2</maneuver>
+			<maneuver>TR2</maneuver>
+			<maneuver>BL3</maneuver>
+			<maneuver>F3</maneuver>
+			<maneuver>BR3</maneuver>
+		</normal>
+		<difficult>				
+			<maneuver>TL3</maneuver>
+			<maneuver>TR3</maneuver>
+			<maneuver>F4</maneuver>
+			<maneuver>TRL3</maneuver>
+			<maneuver>TRR3</maneuver>
+		</difficult>
+	</fireball>
+	<tieba actions=" 'TARGET_LOCK', 'FOCUS', 'BARREL_ROLL', 'BOOST', 'EVADE' " image="img/tie_ba.png" name="TIE/ba Interceptor" faction="First Order">
+		<simple>
+			<maneuver>TL1</maneuver>
+			<maneuver>BL1</maneuver>
+			<maneuver>BR1</maneuver>
+			<maneuver>TR1</maneuver>
+			<maneuver>BL2</maneuver>
+			<maneuver>F2</maneuver>
+			<maneuver>BR2</maneuver>
+			<maneuver>F3</maneuver>
+			<maneuver>F4</maneuver>		
+		</simple>
+		<normal>
+			<maneuver>TL2</maneuver>
+			<maneuver>TR2</maneuver>	
+			<maneuver>TL3</maneuver>
+			<maneuver>BL3</maneuver>
+			<maneuver>BR3</maneuver>
+			<maneuver>TR3</maneuver>
+			<maneuver>F5</maneuver>
+		</normal>
+		<difficult>
+			<maneuver>SLL2</maneuver>
+			<maneuver>SLR2</maneuver>
+			<maneuver>K5</maneuver>
+		</difficult>
+	</tieba>
+</ships>

@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <ships>
-	<uwing actions="FOCUS + TARGET_LOCK + COORDINATE_D" image="img/ship_uwing.png" name="UT-60D U-Wing" faction="rebel">
+	<uwing actions=" 'TARGET_LOCK', 'FOCUS', 'COORDINATE_D' " image="img/ship_uwing.png" name="UT-60D U-Wing" faction="Rebel">
 		<simple>
 			<maneuver>BL1</maneuver>
 			<maneuver>F1</maneuver>
@@ -21,7 +21,28 @@
 			<maneuver>STA0</maneuver>
 		</difficult>
 	</uwing>
-	<tieStriker actions="FOCUS + BARREL_ROLL + EVADE" image="img/ship_tieStriker.png" name="TIE/sk Striker" faction="empire">
+	<uwingk2so actions=" 'TARGET_LOCK', 'CALCULATE', 'COORDINATE_D' " image="img/ship_uwing.png" name="UT-60D U-Wing (K2SO)" faction="Rebel">
+		<simple>
+			<maneuver>BL1</maneuver>
+			<maneuver>F1</maneuver>
+			<maneuver>BR1</maneuver>
+			<maneuver>BL2</maneuver>
+			<maneuver>F2</maneuver>
+			<maneuver>BR2</maneuver>
+		</simple>
+		<normal>
+			<maneuver>TL2</maneuver>
+			<maneuver>TR2</maneuver>
+			<maneuver>BL3</maneuver>
+			<maneuver>F3</maneuver>
+			<maneuver>BR3</maneuver>
+			<maneuver>F4</maneuver>
+		</normal>
+		<difficult>
+			<maneuver>STA0</maneuver>
+		</difficult>
+	</uwingk2so>
+	<tieStriker actions=" 'FOCUS', 'BARREL_ROLL', 'EVADE' " image="img/ship_tieStriker.png" name="TIE/sk Striker" faction="Empire">
 		<simple>
 			<maneuver>BL1</maneuver>
 			<maneuver>F1</maneuver>
@@ -45,7 +66,7 @@
 			<maneuver>SLR2</maneuver>
 		</difficult>
 	</tieStriker>
-	<quadjumper actions="BARREL_ROLL + FOCUS + EVADE_D" image="img/ship_quadjumper.png" name="Quadrijet Transfer Spacetug (Quadjumper)" faction="scum">
+	<quadjumper actions=" 'FOCUS', 'BARREL_ROLL', 'EVADE_D' " image="img/ship_quadjumper.png" name="Quadrijet Transfer Spacetug (Quadjumper)" faction="Scum">
 		<simple>
 			<maneuver>BL2</maneuver>
 			<maneuver>F2</maneuver>
@@ -71,7 +92,7 @@
 			<maneuver>RBR1</maneuver>
 		</difficult>
 	</quadjumper>
-	<upsilon actions="FOCUS + TARGET_LOCK + COORDINATE + REINFORCE + JAM" image="img/ship_upsilon.png" name="Upsilon-class Command Shuttle" faction="1storder">
+	<upsilon actions=" 'TARGET_LOCK', 'FOCUS', 'COORDINATE', 'REINFORCE', 'JAM' " image="img/ship_upsilon.png" name="Upsilon-class Command Shuttle" faction="First Order">
 		<simple>
 			<maneuver>F1</maneuver>
 			<maneuver>BL2</maneuver>

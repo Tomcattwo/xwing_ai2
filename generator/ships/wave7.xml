@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <ships>
-	<houndstooth actions="TARGET_LOCK + FOCUS + REINFORCE" image="img/houndstooth.png" name="YV-666 Light Freighter (Hound's Tooth)" faction="scum">
+	<houndstooth actions=" 'TARGET_LOCK', 'FOCUS', 'REINFORCE' " image="img/houndstooth.png" name="YV-666 Light Freighter (Hound's Tooth)" faction="Scum">
 		<simple>
 			<maneuver>BL1</maneuver>
 			<maneuver>F1</maneuver>
@@ -23,7 +23,7 @@
 			<maneuver>TR2</maneuver>
 		</difficult>
 	</houndstooth>
-	<kihraxz actions="TARGET_LOCK + FOCUS + BARREL_ROLL" image="img/kihraxz.png" name="Kihraxz Fighter" faction="scum">
+	<kihraxz actions=" 'TARGET_LOCK', 'FOCUS', 'BARREL_ROLL' " image="img/kihraxz.png" name="Kihraxz Fighter" faction="Scum">
 		<simple>
 			<maneuver>BL1</maneuver>
 			<maneuver>BR1</maneuver>
@@ -47,7 +47,7 @@
 			<maneuver>K4</maneuver>
 		</difficult>
 	</kihraxz>
-	<kwing actions="TARGET_LOCK + SLAM + FOCUS + ROTATE_ARC + RELOAD" image="img/kwing.png" name="BTL-S8 K-Wing" faction="rebel">
+	<kwing actions=" 'TARGET_LOCK', 'FOCUS', 'ROTATE_ARC', 'SLAM', 'RELOAD' " image="img/kwing.png" name="BTL-S8 K-Wing" faction="Rebel">
 		<simple>
 			<maneuver>BL1</maneuver>
 			<maneuver>BL2</maneuver>
@@ -66,7 +66,7 @@
 		<difficult>
 		</difficult>
 	</kwing>
-	<tiePunisher actions="TARGET_LOCK + BOOST2LOCK + FOCUS + BARREL_ROLL_D + RELOAD" image="img/tiePunisher.png" name="TIE/ca Punisher" faction="empire">
+	<tiePunisher actions=" 'TARGET_LOCK', 'FOCUS', 'BOOST2LOCK_D', 'BARREL_ROLL_D', 'RELOAD' " image="img/tiePunisher.png" name="TIE/ca Punisher" faction="Empire">
 		<simple>
 			<maneuver>BL1</maneuver>
 			<maneuver>F1</maneuver>

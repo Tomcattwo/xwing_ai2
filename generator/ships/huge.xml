@@ -1,66 +1,148 @@
 <?xml version="1.0" ?>
 <ships>
-	<corvette actions="COORDINATE + RELOAD + REINFORCE + TARGET_LOCK" image="img/corvette.png" name="CR90 Corvette" faction="rebel">
+	<corvette actions=" 'TARGET_LOCK', 'FOCUS', 'COORDINATE_D', 'REINFORCE', 'JAM' " image="img/corvette.png" name="CR90 Corellian Corvette" faction="Rebel">
 		<simple>
-		</simple>
-		<normal>
-		    <maneuver>BL1</maneuver>
-		    <maneuver>BR1</maneuver>
 		    <maneuver>BL2</maneuver>
 		    <maneuver>F2</maneuver>
 		    <maneuver>BR2</maneuver>
 		    <maneuver>F3</maneuver>
-		    <maneuver>F4</maneuver>
-		</normal>
-		<difficult>
-		</difficult>
-	</corvette>
-	<raider actions="RELOAD + REINFORCE + COORDINATE + TARGET_LOCK" image="img/raider.png" name="Imperial Raider" faction="empire">
-		<simple>
-		</simple>
-		<normal>
-            <maneuver>BL1</maneuver>
-            <maneuver>F1</maneuver>
-            <maneuver>BR1</maneuver>
-            <maneuver>BL2</maneuver>
-            <maneuver>F2</maneuver>
-            <maneuver>BR2</maneuver>
-            <maneuver>F3</maneuver>
-            <maneuver>F4</maneuver>
-		</normal>
-		<difficult>
-		</difficult>
-	</raider>
-	<carrier actions="RELOAD + REINFORCE + COORDINATE + TARGET_LOCK" image="img/carrier.png" name="Imperial Assault Carrier" faction="empire">
-		<simple>
-		</simple>
-		<normal>
-            <maneuver>BL1</maneuver>
-            <maneuver>F1</maneuver>
-            <maneuver>BR1</maneuver>
-            <maneuver>BL2</maneuver>
-            <maneuver>F2</maneuver>
-            <maneuver>BR2</maneuver>
-            <maneuver>F3</maneuver>
-            <maneuver>F4</maneuver>
-		</normal>
-		<difficult>
-		</difficult>
-	</carrier>
-	<transport actions="COORDINATE + JAM + RELOAD + REINFORCE" image="img/transport.png" name="Rebel Transport" faction="rebel">
-		<simple>
 		</simple>
 		<normal>
 		    <maneuver>BL1</maneuver>
 		    <maneuver>F1</maneuver>
+		    <maneuver>BR1</maneuver>   
+		</normal>
+		<difficult>
+		    <maneuver>BL0</maneuver>
+		    <maneuver>STA0</maneuver>
+		    <maneuver>BR0</maneuver>
+		    <maneuver>BL3</maneuver>
+		    <maneuver>BR3</maneuver>
+		    <maneuver>F4</maneuver>
+		    <maneuver>F5</maneuver>
+		</difficult>
+	</corvette>
+	<raider actions=" 'TARGET_LOCK', 'FOCUS', 'COORDINATE', 'REINFORCE', 'JAM' " image="img/raider.png" name="Imperial Raider-class Corvette" faction="Empire">
+		<simple>
+           	    <maneuver>BL1</maneuver>
+                    <maneuver>BR1</maneuver>
+                    <maneuver>F2</maneuver>
+                    <maneuver>F3</maneuver>                   
+		</simple>
+		<normal>
+ 		    <maneuver>F1</maneuver>
+		    <maneuver>BL2</maneuver>
+ 		    <maneuver>BR2</maneuver>
+ 	            <maneuver>F4</maneuver>
+		</normal>
+		<difficult>
+		    <maneuver>BL0</maneuver>
+		    <maneuver>STA0</maneuver>
+ 		    <maneuver>BR0</maneuver>
+		    <maneuver>BL3</maneuver>
+ 		    <maneuver>BR3</maneuver>
+ 	            <maneuver>F5</maneuver>
+		</difficult>
+	</raider>
+	<transport actions=" 'FOCUS', 'REINFORCE_D', 'COORDINATE', 'JAM', 'TARGET_LOCK_D' " image="img/transport.png" name="GR-75 Medium Transport" faction="Rebel">
+		<simple>
+		    <maneuver>BL1</maneuver>
+		    <maneuver>F1</maneuver>
 		    <maneuver>BR1</maneuver>
+		</simple>
+		<normal>
 		    <maneuver>BL2</maneuver>
 		    <maneuver>F2</maneuver>
 		    <maneuver>BR2</maneuver>
-		    <maneuver>F3</maneuver>
-		    <maneuver>F4</maneuver>
 		</normal>
 		<difficult>
+		    <maneuver>BL0</maneuver>
+		    <maneuver>STA0</maneuver>
+		    <maneuver>BR0</maneuver>		    
+		    <maneuver>F3</maneuver>
+		    <maneuver>F4</maneuver>
 		</difficult>
 	</transport>
+	<gozanti actions=" 'TARGET_LOCK', 'FOCUS', 'REINFORCE', 'COORDINATE', 'JAM' " image="img/gozanti.png" name="Gozanti-class Imperial Cruiser" faction="Empire">
+		<simple>
+		    <maneuver>F1</maneuver>
+		    <maneuver>F2</maneuver>
+		    <maneuver>F3</maneuver>
+		</simple>
+		<normal>
+		    <maneuver>BL1</maneuver>
+		    <maneuver>BR1</maneuver>
+		</normal>
+		<difficult>
+		    <maneuver>BL0</maneuver>
+		    <maneuver>STA0</maneuver>
+		    <maneuver>BR0</maneuver>
+		    <maneuver>BL2</maneuver>
+		    <maneuver>BR2</maneuver>
+		    <maneuver>F4</maneuver>
+		</difficult>
+	</gozanti>
+	<gozantifo actions=" 'TARGET_LOCK', 'FOCUS', 'COORDINATE', 'REINFORCE', 'JAM' " image="img/gozanti.png" name="Gozanti-class Cruiser" faction="First Order">
+			<simple>
+			    <maneuver>F1</maneuver>
+			    <maneuver>F2</maneuver>
+			    <maneuver>F3</maneuver>
+			</simple>
+			<normal>
+			    <maneuver>BL1</maneuver>
+			    <maneuver>BR1</maneuver>
+			</normal>
+			<difficult>
+			    <maneuver>BL0</maneuver>
+			    <maneuver>STA0</maneuver>
+			    <maneuver>BR0</maneuver>
+			    <maneuver>BL2</maneuver>
+			    <maneuver>BR2</maneuver>
+			    <maneuver>F4</maneuver>
+			</difficult>
+	</gozantifo>
+	<crocscum actions=" 'TARGET_LOCK', 'FOCUS', 'REINFORCE_D', 'COORDINATE_D', 'JAM' " image="img/croc.png" name="C-ROC Cruiser (Syndicate Smugglers)" faction="Scum">
+		<simple>
+		    <maneuver>F1</maneuver>
+		    <maneuver>F2</maneuver>
+		</simple>
+		<normal>
+		    <maneuver>BL1</maneuver>
+		    <maneuver>BR1</maneuver>
+		    <maneuver>BL2</maneuver>
+		    <maneuver>BR2</maneuver>
+		    <maneuver>F3</maneuver>
+		</normal>
+		<difficult>
+		    <maneuver>BL0</maneuver>
+		    <maneuver>STA0</maneuver>
+		    <maneuver>BR0</maneuver>		    
+		    <maneuver>BL3</maneuver>
+		    <maneuver>BR3</maneuver>
+		    <maneuver>F4</maneuver>
+		    <maneuver>F5</maneuver>
+		</difficult>
+	</crocscum>
+	<crocsep actions=" 'TARGET_LOCK', 'FOCUS', 'JAM', 'REINFORCE_D', 'COORDINATE_D' " image="img/croc.png" name="C-ROC Cruiser (Seperatist Privateers)" faction="Seperatist">
+		<simple>
+		    <maneuver>F1</maneuver>
+		    <maneuver>F2</maneuver>
+		</simple>
+		<normal>
+		    <maneuver>BL1</maneuver>
+		    <maneuver>BR1</maneuver>
+		    <maneuver>BL2</maneuver>
+		    <maneuver>BR2</maneuver>
+		    <maneuver>F3</maneuver>
+		</normal>
+		<difficult>
+		    <maneuver>BL0</maneuver>
+		    <maneuver>STA0</maneuver>
+		    <maneuver>BR0</maneuver>		    
+		    <maneuver>BL3</maneuver>
+		    <maneuver>BR3</maneuver>
+		    <maneuver>F4</maneuver>
+		    <maneuver>F5</maneuver>
+		</difficult>
+	</crocsep>
 </ships>

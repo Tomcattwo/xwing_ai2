@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <ships>
-	<awing actions="TARGET_LOCK + BOOST + FOCUS + EVADE + BARREL_ROLL" image="img/awing.png" name="RZ-1 A-Wing" faction="rebel">
+	<awing actions=" 'TARGET_LOCK', 'FOCUS', 'BARREL_ROLL', 'BOOST', 'EVADE' " image="img/awing.png" name="RZ-1 A-Wing" faction="Rebel">
 		<simple>
 			<maneuver>F2</maneuver>
 			<maneuver>F3</maneuver>
@@ -25,7 +25,7 @@
 			<maneuver>SLR3</maneuver>
 		</difficult>
 	</awing>
-	<bwing actions="BARREL_ROLL + FOCUS2BARREL_ROLL + TARGET_LOCK" image="img/bwing.png" name="A/SF-01 B-Wing" faction="rebel">
+	<bwing actions=" 'TARGET_LOCK', 'BARREL_ROLL', 'FOCUS2BARREL_ROLL_D' " image="img/bwing.png" name="A/SF-01 B-Wing" faction="Rebel">
 		<simple>
 			<maneuver>BL1</maneuver>
 			<maneuver>F1</maneuver>
@@ -50,7 +50,7 @@
 			<maneuver>K2</maneuver>
 		</difficult>
 	</bwing>
-	<ewing actions="BARREL_ROLL2LOCK + BOOST2LOCK + EVADE + FOCUS + TARGET_LOCK" image="img/ewing.png" name="E-Wing" faction="rebel">
+	<ewing actions=" 'TARGET_LOCK', 'FOCUS', 'BARREL_ROLL2LOCK_D', 'BOOST2LOCK_D', 'EVADE' " image="img/ewing.png" name="E-Wing" faction="Rebel">
 		<simple>
 			<maneuver>F1</maneuver>
 			<maneuver>BL1</maneuver>
@@ -78,7 +78,7 @@
 			<maneuver>K4</maneuver>
 		</difficult>
 	</ewing>
-	<falcon actions="TARGET_LOCK + FOCUS + BOOST_D + ROTATE_ARC" image="img/falcon.png" name="YT-1300 Light Freighter" faction="rebel">
+	<falcon actions=" 'TARGET_LOCK', 'FOCUS', 'BOOST_D', 'ROTATE_ARC' " image="img/falcon.png" name="Modified YT-1300 Light Freighter" faction="Rebel">
 		<simple>
 			<maneuver>F1</maneuver>
 			<maneuver>F2</maneuver>
@@ -103,7 +103,7 @@
 			<maneuver>K4</maneuver>
 		</difficult>
 	</falcon>
-	<hwk290 actions="FOCUS2ROTATE + LOCK2ROTATE + BOOST_D + ROTATE_ARC + JAM_D" image="img/hwk290.png" name="HWK-290 Light Freighter" faction="rebel">
+	<hwk290 actions=" 'LOCK2ROTATE_D', 'FOCUS2ROTATE_D', 'ROTATE_ARC', 'BOOST_D', 'JAM_D' " image="img/hwk290.png" name="HWK-290 Light Freighter" faction="Rebel">
 		<simple>
 			<maneuver>BL1</maneuver>
 			<maneuver>F1</maneuver>
@@ -126,7 +126,7 @@
 			<maneuver>TR3</maneuver>
 		</difficult>
 	</hwk290>
-	<hwk290S actions="FOCUS2ROTATE + LOCK2ROTATE + BOOST_D + ROTATE_ARC + JAM_D" image="img/hwk290.png" name="HWK-290 Light Freighter (Scum)" faction="scum">
+	<hwk290S actions=" 'LOCK2ROTATE_D', 'FOCUS2ROTATE_D', 'ROTATE_ARC', 'BOOST_D', 'JAM_D' " image="img/hwk290.png" name="HWK-290 Light Freighter (Scum)" faction="Scum">
 		<simple>
 			<maneuver>BL1</maneuver>
 			<maneuver>F1</maneuver>
@@ -149,7 +149,7 @@
 			<maneuver>TR3</maneuver>
 		</difficult>
 	</hwk290S>
-	<lambda actions="FOCUS + TARGET_LOCK + COORDINATE + JAM_D" image="img/lambda.png" name="Lambda Shuttle" faction="empire">
+	<lambda actions=" 'FOCUS', 'COORDINATE', 'REINFORCE', 'JAM_D' " image="img/lambda.png" name="Lambda Shuttle" faction="Empire">
 		<simple>
 			<maneuver>BL1</maneuver>
 			<maneuver>F1</maneuver>
@@ -169,7 +169,7 @@
 			<maneuver>TR2</maneuver>
 		</difficult>
 	</lambda>
-	<firesprays actions="TARGET_LOCK + FOCUS + BOOST + REINFORCE_D" image="img/slave1.png" name="Firespray-31 (Scum)" faction="scum">
+	<firesprays actions=" 'TARGET_LOCK', 'FOCUS', 'BOOST', 'REINFORCE_D' " image="img/slave1.png" name="Firespray-31 (Scum)" faction="Scum">
 		<simple>
 			<maneuver>F1</maneuver>
 			<maneuver>F2</maneuver>
@@ -194,7 +194,7 @@
 			<maneuver>TRR3</maneuver>
 		</difficult>
 	</firesprays>
-	<tie actions="BARREL_ROLL + FOCUS + EVADE" image="img/tie.png" name="TIE/ln Fighter" faction="empire">
+	<tie actions=" 'FOCUS', 'BARREL_ROLL', 'EVADE' " image="img/tie.png" name="TIE/ln Fighter" faction="Empire">
 		<simple>
 			<maneuver>F2</maneuver>
 			<maneuver>BL2</maneuver>
@@ -218,7 +218,7 @@
 			<maneuver>K4</maneuver>
 		</difficult>
 	</tie>
-	<tieAdvanced actions="TARGET_LOCK + FOCUS2BARREL_ROLL + BARREL_ROLL" image="img/TieAdvanced.png" name="TIE Advanced x1" faction="empire">
+	<tieAdvanced actions=" 'TARGET_LOCK', 'FOCUS2BARREL_ROLL_D', 'BARREL_ROLL' " image="img/TieAdvanced.png" name="TIE Advanced x1" faction="Empire">
 		<simple>
 			<maneuver>BL1</maneuver>
 			<maneuver>BL2</maneuver>
@@ -244,7 +244,7 @@
 			<maneuver>TRR3</maneuver>
 		</difficult>
 	</tieAdvanced>
-	<tieBomber actions="BARREL_ROLL2LOCK + FOCUS + TARGET_LOCK + RELOAD_D" image="img/tieBomber.png" name="TIE/sa Bomber" faction="empire">
+	<tieBomber actions=" 'TARGET_LOCK', 'FOCUS', 'BARREL_ROLL2LOCK_D', 'RELOAD_D' " image="img/tieBomber.png" name="TIE/sa Bomber" faction="Empire">
 		<simple>
 			<maneuver>F1</maneuver>
 			<maneuver>F2</maneuver>
@@ -268,7 +268,7 @@
 			<maneuver>K5</maneuver>
 		</difficult>
 	</tieBomber>
-	<tieDefender actions="BARREL_ROLL + FOCUS + TARGET_LOCK + EVADE + BOOST" image="img/tieDefender.png" name="TIE/D Defender" faction="empire">
+	<tieDefender actions=" 'TARGET_LOCK', 'FOCUS', 'BARREL_ROLL', 'BOOST', 'EVADE' " image="img/tieDefender.png" name="TIE/D Defender" faction="Empire">
 		<simple>
 		    <maneuver>BL1</maneuver>
 		    <maneuver>BR1</maneuver>
@@ -294,7 +294,7 @@
 		    <maneuver>K2</maneuver>
 		</difficult>
 	</tieDefender>
-	<tieInterceptor actions="BARREL_ROLL + BOOST + FOCUS + EVADE" image="img/tieInterceptor.png" name="TIE Interceptor" faction="empire">
+	<tieInterceptor actions=" 'FOCUS', 'BARREL_ROLL', 'BOOST', 'EVADE' " image="img/tieInterceptor.png" name="TIE Interceptor" faction="Empire">
 		<simple>
 			<maneuver>F2</maneuver>
 			<maneuver>F3</maneuver>
@@ -319,7 +319,7 @@
 			<maneuver>K4</maneuver>
 		</difficult>
 	</tieInterceptor>
-	<tiePhantom actions="BARREL_ROLL + CLOAKING + EVADE + FOCUS" image="img/tiePhantom.png" name="TIE/ph Phantom" faction="empire">
+	<tiePhantom actions=" 'CLOAKING', 'FOCUS', 'BARREL_ROLL', 'EVADE' " image="img/tiePhantom.png" name="TIE/ph Phantom" faction="Empire">
 		<simple>
 		    <maneuver>BL2</maneuver>
 		    <maneuver>F2</maneuver>
@@ -342,7 +342,7 @@
 		    <maneuver>K4</maneuver>
 		</difficult>
 	</tiePhantom>
-	<xwing actions="TARGET_LOCK + FOCUS + BARREL_ROLL" image="img/xwing.png" name="T-65 X-Wing" faction="rebel">
+	<xwing actions=" 'TARGET_LOCK', 'FOCUS', 'BARREL_ROLL' " image="img/xwing.png" name="T-65 X-Wing" faction="Rebel">
 		<simple>
 			<maneuver>F1</maneuver>
 			<maneuver>BL1</maneuver>
@@ -367,7 +367,7 @@
 			<maneuver>K4</maneuver>
 		</difficult>
 	</xwing>
-	<ywing actions="TARGET_LOCK + FOCUS + BARREL_ROLL_D + RELOAD_D" image="img/ywing.png" name="BTL-A4 Y-Wing" faction="rebel">
+	<ywinga4 actions=" 'TARGET_LOCK', 'FOCUS', 'BARREL_ROLL_D', 'RELOAD_D' " image="img/ywing.png" name="BTL-A4 Y-Wing" faction="Rebel">
 		<simple>
 			<maneuver>BL1</maneuver>
 			<maneuver>BR1</maneuver>
@@ -389,8 +389,8 @@
 			<maneuver>F4</maneuver>
 			<maneuver>K4</maneuver>
 		</difficult>
-	</ywing>
-<ywingS actions="TARGET_LOCK + FOCUS + BARREL_ROLL_D + RELOAD_D" image="img/ywingS.png" name="BTL-A4 Y-Wing (Scum)" faction="scum">
+	</ywinga4>
+<ywinga4S actions=" 'TARGET_LOCK', 'FOCUS', 'BARREL_ROLL_D', 'RELOAD_D' " image="img/ywingS.png" name="BTL-A4 Y-Wing (Scum)" faction="Scum">
 		<simple>
 			<maneuver>BL1</maneuver>
 			<maneuver>BR1</maneuver>
@@ -412,8 +412,8 @@
 			<maneuver>F4</maneuver>
 			<maneuver>K4</maneuver>
 		</difficult>
-	</ywingS>
-	<z95 actions="FOCUS + TARGET_LOCK + BARREL_ROLL_D" image="img/z95.png" name="Z-95-AF4 Headhunter" faction="rebel">
+	</ywinga4S>
+	<z95 actions=" 'TARGET_LOCK', 'FOCUS', 'BARREL_ROLL_D' " image="img/z95.png" name="Z-95-AF4 Headhunter" faction="Rebel">
 		<simple>
 			<maneuver>F1</maneuver>
 			<maneuver>F2</maneuver>
@@ -437,7 +437,7 @@
 			<maneuver>K4</maneuver>
 		</difficult>
 	</z95>
-	<z95S actions="FOCUS + TARGET_LOCK + BARREL_ROLL_D" image="img/z95S.png" name="Z-95-AF4 Headhunter (Scum)" faction="scum">
+	<z95S actions=" 'TARGET_LOCK', 'FOCUS', 'BARREL_ROLL_D' " image="img/z95S.png" name="Z-95-AF4 Headhunter (Scum)" faction="Scum">
 		<simple>
 			<maneuver>F1</maneuver>
 			<maneuver>F2</maneuver>

@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <ships>
-	<scavfalcon actions="FOCUS + TARGET_LOCK + ROTATE_ARC_D + BOOST_D" image="img/scavenged_YT-1300.png" name="Scavenged YT-1300 Light Freighter" faction="resistance">
+	<scavfalcon actions=" 'TARGET_LOCK', 'FOCUS', 'ROTATE_ARC_D', 'BOOST_D' " image="img/scavenged_YT-1300.png" name="Scavenged YT-1300 Light Freighter" faction="Resistance">
 		<simple>
 			<maneuver>F1</maneuver>
 			<maneuver>BL2</maneuver>
@@ -24,7 +24,7 @@
 			<maneuver>F4</maneuver>
 		</difficult>
 	</scavfalcon>
-	<rz2awing actions="FOCUS + BARREL_ROLL + EVADE + TARGET_LOCK + BOOST" image="img/rz-2_A-wing.png" name="RZ-2 A-Wing" faction="resistance">
+	<rz2awing actions=" 'TARGET_LOCK', 'FOCUS', 'BARREL_ROLL', 'BOOST', 'EVADE' " image="img/rz-2_A-wing.png" name="RZ-2 A-Wing" faction="Resistance">
 		<simple>
 			<maneuver>TL2</maneuver>
 			<maneuver>BL2</maneuver>
@@ -49,7 +49,7 @@
 			<maneuver>K5</maneuver>
 		</difficult>
 	</rz2awing>
-        <tiemod actions="FOCUS + BARREL_ROLL + EVADE" image="img/tie_miner.png" name="Mod TIE/ln Fighter (Mining Guild)" faction="scum">
+        <tiemod actions=" 'FOCUS', 'BARREL_ROLL', 'EVADE' " image="img/tie_miner.png" name="Mod TIE/ln Fighter (Mining Guild)" faction="Scum">
 		<simple>
 			
 			

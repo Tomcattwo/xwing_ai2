@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <ships>
-	<delta7 actions="FOCUS + TARGET_LOCK + BARREL_ROLL + BOOST + EVADE_F" image="img/delta-7.png" name="Delta-7 Aethersprite" faction="republic">
+	<delta7 actions=" 'TARGET_LOCK', 'FOCUS', 'BARREL_ROLL', 'BOOST', 'EVADE_F' " image="img/delta-7.png" name="Delta-7 Aethersprite" faction="Republic">
 		<simple>
 			<maneuver>BL1</maneuver>
 			<maneuver>BR1</maneuver>
@@ -26,7 +26,7 @@
 			<maneuver>K5</maneuver>
 		</difficult>
 	</delta7>
-	<torrent actions="FOCUS + BARREL_ROLL_D2EVADE_D + EVADE + TARGET_LOCK" image="img/v-19.png" name="V-19 Torrent" faction="republic">
+	<torrent actions=" 'TARGET_LOCK', 'FOCUS', 'BARREL_ROLL2EVADE_D', 'EVADE' " image="img/v-19.png" name="V-19 Torrent" faction="Republic">
 		<simple>
 			<maneuver>BL1</maneuver>
 			<maneuver>F1</maneuver>
@@ -51,7 +51,7 @@
 			<maneuver>K3</maneuver>
 		</difficult>
 	</torrent>
-        <belbullab actions="FOCUS + TARGET_LOCK + BARREL_ROLL2FOCUS + BOOST2FOCUS" image="img/belbullab-22.png" name="Belbullab-22 Heavy Starfighter" faction="seperatist">
+        <belbullab actions=" 'TARGET_LOCK', 'FOCUS', 'BARREL_ROLL2FOCUS_D', 'BOOST2FOCUS_D' " image="img/belbullab-22.png" name="Belbullab-22 Heavy Starfighter" faction="Seperatist">
 		<simple>
 			<maneuver>BL2</maneuver>
 			<maneuver>F2</maneuver>
@@ -77,7 +77,7 @@
 			<maneuver>SLR3</maneuver>
 		</difficult>
 	</belbullab>
-        <sithinf actions="FOCUS + BARREL_ROLL_D + TARGET_LOCK" image="img/sith_infiltrator.png" name="Sith Infiltrator" faction="seperatist">
+        <sithinf actions=" 'TARGET_LOCK', 'FOCUS', 'BARREL_ROLL_D' " image="img/sith_infiltrator.png" name="Sith Infiltrator" faction="Seperatist">
 		<simple>
 			<maneuver>BL1</maneuver>
 			<maneuver>F1</maneuver>
@@ -104,7 +104,7 @@
 			<maneuver>K5</maneuver>
 		</difficult>
 	</sithinf>
-        <vulture actions="CALCULATE + BARREL_ROLL2CALC + TARGET_LOCK" image="img/vulture.png" name="Vulture Class (Droid Fighter)" faction="seperatist">
+        <vulture actions=" 'TARGET_LOCK', 'CALCULATE', 'BARREL_ROLL2CALC' " image="img/vulture.png" name="Vulture Class (Droid Fighter)" faction="Seperatist">
 		<simple>
 			<maneuver>TL2</maneuver>
 			<maneuver>F2</maneuver>

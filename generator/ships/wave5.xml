@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <ships>
-	<decimator actions="FOCUS + TARGET_LOCK + REINFORCE + ROTATE_ARC + COORDINATE_D" image="img/decimator.png" name="VT-49 Decimator" faction="empire">
+	<decimator actions=" 'TARGET_LOCK', 'FOCUS', 'ROTATE_ARC', 'COORDINATE_D', 'REINFORCE' " image="img/decimator.png" name="VT-49 Decimator" faction="Empire">
 		<simple>
 		    <maneuver>BL1</maneuver>
 		    <maneuver>F1</maneuver>
@@ -24,7 +24,7 @@
 		    <maneuver>TR1</maneuver>
 		</difficult>
 	</decimator>
-	<outrider actions="BARREL_ROLL_D + FOCUS + TARGET_LOCK + ROTATE_ARC" image="img/outrider.png" name="YT-2400 Light Freighter" faction="rebel">
+	<outrider actions=" 'TARGET_LOCK', 'FOCUS', 'ROTATE_ARC', 'BARREL_ROLL_D' " image="img/outrider.png" name="YT-2400 Light Freighter" faction="Rebel">
 	    <simple></simple>
 			<maneuver>F1</maneuver>
 			<maneuver>F2</maneuver>

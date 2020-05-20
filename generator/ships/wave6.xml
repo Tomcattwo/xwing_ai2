@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <ships>
-	<ig2000 actions="TARGET_LOCK + BOOST + EVADE + CALCULATE" image="img/ig2000.png" name="IG-2000 Agressor Assault Fighter" faction="scum">
+	<ig2000 actions=" 'TARGET_LOCK', 'CALCULATE', 'BOOST', 'EVADE' " image="img/ig2000.png" name="IG-2000 Agressor Assault Fighter" faction="Scum">
 		<simple>
 			<maneuver>BL1</maneuver>
 			<maneuver>F1</maneuver>
@@ -25,7 +25,7 @@
 			<maneuver>K4</maneuver>
 		</difficult>
 	</ig2000>
-	<m3a actions="BARREL_ROLL + TARGET_LOCK + FOCUS + EVADE" image="img/m3aInterceptor.png" name="M3-A Interceptor" faction="scum">
+	<m3a actions=" 'TARGET_LOCK', 'FOCUS', 'BARREL_ROLL', 'EVADE' " image="img/m3aInterceptor.png" name="M3-A Interceptor" faction="Scum">
 		<simple>
 			<maneuver>BL1</maneuver>
 			<maneuver>BR1</maneuver>
@@ -49,7 +49,7 @@
 			<maneuver>K5</maneuver>
 		</difficult>
 	</m3a>
-	<starviper actions="BARREL_ROLL2FOCUS + TARGET_LOCK + BOOST2FOCUS + FOCUS" image="img/starviper.png" name="StarViper" faction="scum">
+	<starviper actions=" 'TARGET_LOCK', 'FOCUS', 'BARREL_ROLL2FOCUS_D', 'BOOST2FOCUS_D' " image="img/starviper.png" name="StarViper" faction="Scum">
 		<simple>
 			<maneuver>BL1</maneuver>
 			<maneuver>F1</maneuver>
@@ -73,7 +73,7 @@
 			<maneuver>SLR3</maneuver>
 		</difficult>
 	</starviper>
-	<starviper_guri actions="BARREL_ROLL2CALC + TARGET_LOCK + BOOST2CALC + CALCULATE" image="img/starviper.png" name="StarViper (Guri)" faction="scum">
+	<starviper_guri actions=" 'TARGET_LOCK', 'CALCULATE', 'BARREL_ROLL2CALC', 'BOOST2CALC' " image="img/starviper.png" name="StarViper (Guri)" faction="Scum">
 		<simple>
 			<maneuver>BL1</maneuver>
 			<maneuver>F1</maneuver>
