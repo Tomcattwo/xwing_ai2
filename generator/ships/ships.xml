@@ -328,6 +328,8 @@
 		</simple>
 		<normal>
 		    <maneuver>TL1</maneuver>
+		    <maneuver>BL1</maneuver>
+		    <maneuver>BR1</maneuver>
 		    <maneuver>TR1</maneuver>
 		    <maneuver>TL2</maneuver>
 		    <maneuver>TR2</maneuver>
