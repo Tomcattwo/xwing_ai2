@@ -1,0 +1,107 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>X-Wing Miniatures HotAC AI 2nd Edition - Help</title>
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+<link rel="stylesheet" type="text/css" href="style.css" />
+<script src="src/xwing_ai3.js">
+</script>
+</head>
+
+<body onload=set_version()>
+<div id="header">
+	<div id="logos">
+		<img class=company_logo src="img/ffglogoLQ.png" alt="Fantasy Flight Games">
+		<img class=game_logo src="img/game_logo.png" alt="StarWars: X-Wing Miniatures">
+		<img class=applet_logo src="img/applet_logo3.png" alt="X-Wing Heroes of the Aturi Cluster (HotAC) AI 2nd Edition">
+	</div>
+	<div id="links">
+		<div id="version"></div><br>
+		<a href="index2.htm"><img class=index_icon src="img/applet_logo2-64.png" alt="X-Wing_AI 2nd Ed." title="XWingAI2 Main Page"></a>
+		<a href="index.htm"><img class=switch_icon src="img/applet_logo-64.png" alt="X-Wing_AI 1st Ed." title="Switch to 1st Edition AI"></a>
+		<a href="index3.htm"><img class=index_icon src="img/star.png" alt="XWing HotAC AI Main Page" title="XWing Heroes of the Aturi Cluster (HotAC) AI Main Page"></a>
+		<a href="info3.htm"><img class=info_icon src="img/info.png" alt="info" title="Info Page"></a>
+		<a href="ships3.htm"><img class=ships_icon src="img/ships.png" alt="ships" title="Ships Page - Displays all ship maneuvers and actions"></a>
+	</div>
+</div>
+
+<div id="main">
+<h2>Purpose:</h2>
+
+<p>Provide AI control of one or more ships for the Heroes of the Aturi Cluster (HotAC) Cooperative X-Wing Miniatures Game, using HotAC 2nd edition Version 2.07.04 and FFG's 2nd Edition ruleset.</p>
+
+<h2>Materials Needed to Play:</h2>
+<ol>
+<li>You will need to download the HotAC Campaign book, mission pack and all printable materials from <a href="https://drive.google.com/drive/folders/1FuTxsSqbqqsiPm7Ayo5aX2daVloQ3RhM">Heroes of the Aturi Cluster 2.0 Conversion</a> by Shaun Tiernan.<br>
+This is the same version of HotAC that has been exported for use in Vassal, with Shaun's permission.</li>
+<li>Then you will need to print off and cut out the various new terrain materials, reference cards, mission cards, Rebel Pilot Cards etc...</li>
+<li>You will also need a sufficient number of X-WIng 2nd Edition Miniatures models, cards, tokens etc. between all the players to play each mission.</li>
+<li>You will need to access this HotAC 2 AI program, either online using the x-wing-ai.com website or using this offline version.</li>
+</ol>
+This web-based application, HotAC 2nd Edition Artificial Intelligence (AI), faithfully recreates the HotAC 2.0 AI developed by Claes Sorennson and Flight Group Alpha<br>
+for Shaun's 2nd Edition HotAC upgrade of Josh Derkson's original 1st Edition HotAC cooperative campaign.<br>
+This program mirrors the "FGA Imperial AI Cards V7" for all eight types of Empire ships used in HotAC and does the "dice rolling" for you for AI maneuvers.<br>
+It also lists the prioritized activities in each phase that you will use for decision-making for the Empire's AI ships, in an easy to see and use form.
+
+<h2>Setup:</h2>
+Read the HotAC Campaign book, and set up the campaign with 2 to 5 of your star-pilot friends as you take on the Empire in the Aturi Cluster.<br>
+Setup each mission per the Campaign directions using standard X-Wing 2nd Edition rules.
+
+<h2>Usage Overview:</h2>
+
+On the AI main page, for each AI controlled ship, during each round, you will:<br>
+
+<ol><li>Click on the Empire ship picture on the left side of the page for the AI ship you are controlling.</li>
+<li>The page will update to show the selected ship's icon in the middle of an "aiming reticle" field, the ship's stats, abilities and all prioritized activities the ship can perform in each phase.</li>
+<li>Each sector of the "aiming reticle" corresponds to the location where the Target Ship is in relation to the AI ship, and is a "live" (clickable) area.</li>
+<li>When you are ready to select the AI ship's maneuver, you will click on the appropriate sector, and the app will "roll the dice" and update the potential maneuvers.</li></ol>
+
+<h2>The Game Round:</h2>
+<ol>
+<li><b>Planning Phase:</b> AI ships do nothing during the Planning Phase.</li>
+<li><b>System Phase:</b> AI ships carry out any actions listed under the <b><span style="color:teal">System Phase</span></b> header on the app (only the TIE Phantom has <b><span style="color:teal">System Phase</span></b> activity).</li>
+
+<li><b>Activation Phase:</b></li>
+<ol>
+<li>Pick a Target (human-controlled) ship for the AI ship using the priorities shown under <b><span style="color:teal">Select Target</span></b>.</li>
+<li>Click on the location on the "aiming reticle" that matches the location of the Target ship (relative to the AI ship).<br>
+The app will update the four possible maneuvers the AI ship can perform, depending on the range of the Target ship from the AI ship and whether the AI is "Stressed".</li>
+
+<li>Move the AI Ship using the displayed maneuver:
+<ul>
+<li>Choose the <b>"Tgt R1/R2(Closing)"</b> maneuver if the Target ship is <b><span style="color:LightPink">in Range 1</span></b> or is <b><span style="color:LightPink">in Range 2 and facing towards</span></b> the the AI ship ("Closing" aspect).<br>
+The HotAC Campaign book provides more details on how to determine the Target's aspect.</li>
+<li>Choose the <b>"R2(Fleeing)/R3"</b> maneuver if the Target ship is <b><span style="color:LightSalmon">in Range 2 and facing away</span></b> from the AI ship ("Opening" aspect) or is <b><span style="color:LightSalmon">in Range 3</span></b>.</li>
+<li>Choose the <b>"R4+"</b> maneuver if the Target ship is <b><span style="color:LightGreen">further than Range 3</span></b> from the AI ship.</li>
+<li>Choose the <b><span style="color:red">"AI Stressed"</span></b> maneuver if the AI ship has a <img src="img/Stress_small.png" alt="Stress" title="Stress"> token.</li>
+</ul>
+Remember that AI ships do NOT gain a <img src="img/Stress_small.png" alt="Stress" title="Stress"> token as a result of conducting a <span style="color:red">"Difficult" (Red)</span> maneuver.<br>
+However, they may <b>not</b> take an action in the Action portion of the Activation Phase if they conducted a <span style="color:red">"Difficult" (Red)</span> maneuver.<br>
+AI ships CAN gain a <img src="img/Stress_small.png" alt="Stress" title="Stress"> token as a result of other game mechanics, such as collisions with obstacles, executing an action, card direction, etc.<br>
+See the HotAC Campaign Book for details.</ol>
+<li>In the Action portion of the Activation Phase, if allowed, choose the Action for the AI ship using the <b><span style="color:teal">Action Selection"</span></b> priorities listed on the app.<br>
+Don't forget to take any other additional allowed actions resulting from ship/pilot abilities, card direction, etc.</li>
+<li><b>Engagement Phase:</b> Select the Attack Target for the AI ship using the priorities listed on the app under <b><span style="color:teal">Attack Priorities</span></b>.<br>
+Note that the Attack Target might not be the same target that was used for maneuver selection! That is perfectly fine.<br>
+Conduct engagement using X-Wing 2nd edition rules.</li>
+<li><b>End Phase:</b> Remove all circular tokens. AI ships carry out any actions listed under the <b><span style="color:teal">End Phase</span></b> header on the app (only the TIE Phantom has <b><span style="color:teal">End Phase</span></b> activity).</li>
+</ol>
+
+<h2>Notes:</h2>
+<ul>
+<li>Ships move in Initiative Order from Lowest Initiative to Highest Initiative</li>
+<li>AI ships never get a stress token as a result of executing a difficult maneuver, but may not perform any actions after a <span style="color:red">RED</span> maneuver.</li>
+<li>AI ships can get a stress token as a result of interacting with an obstacle (for example, space debris) or executing a <span style="color:red">RED</span> action.</li>
+<li>Always use secondary weapons, upgrade functions or optional pilot skills for each AI ship, when and as applicable.</li>
+<li>Have fun and use HotAC XWingAI2 to help you enjoy your HotAC Cooperative campaign and ease some of the mechanics of game play. It's a tool, so use it however it fits your play style.</li>
+</ul>
+</div>
+
+<div id="footer">
+<hr>
+Star Wars and all associated elements are &copy; 2015 Lucasfilm Ltd. & TM. All rights reserved.<br>
+Fantasy Flight Games, the FFG logo and X-Wing Miniatures Game are trademarks of Fantasy Flight Publishing, Inc.<br>
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="img/creative_commons_logo.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">X-Wing Miniatures AI by Ralph Berrett;</span><a class=label xmlns:cc="http://creativecommons.org/ns#" href="mailto:colt.coltrain@gmail.com" property="cc:attributionName" rel="cc:attributionURL"> X-Wing_AI2, (2nd Edition) by Tom Stevenson</a> based on Ralph's X-Wing_AI, both licensed under a <a class=label rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">Creative Commons Attribution-ShareAlike 3.0 Unported License.</a>
+</div>
+</body>
+</html>

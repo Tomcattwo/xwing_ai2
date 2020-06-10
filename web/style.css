@@ -77,7 +77,7 @@ body
 	display: table-cell;
 	vertical-align: top;
 	text-align: center;
-	width: 108px;
+	width: 150px;
 }
 
 label
@@ -150,16 +150,59 @@ img.ship_button
 	font-weight: bold;
 }
 
+#HotAC_map
+{
+	display: block;
+	text-align: center;
+	width: 300px;
+}
+
+.HotAC_image_map
+{
+	padding: 0;
+	border: 0px;
+	display: block;
+	vertical-align: top;
+	margin: 0;
+	width: 300px;
+	height: 300px;
+}
+
+.map_ship_image {
+ position: relative;
+    top: -195px;
+  left: 0px;
+  z-index: -1;
+}
+
+#stats-text
+{
+	display: block;
+	text-align: center;
+	width: 300px;
+	font-size: large;
+}
+
 /*****************************************************************************/
 /* Maneuvers */
 
 #maneuvers
 {
 	display: table-cell;
-	padding-left: 25px;
+	padding-left: 100px;
 	vertical-align: top;
-	text-align: center;
-	width: 150px;
+	text-align: left;
+	width: 300px;
+}
+
+#system-text
+{
+	font-size: large;
+}
+
+#targets-text
+{
+	font-size: large;
 }
 
 .maneuver_label
@@ -210,6 +253,11 @@ img.ship_button
 	font-size: large;
 }
 
+#attacks-text
+{
+	font-size: large;
+}
+
 /*****************************************************************************/
 /* Ship Details page */
 
@@ -223,9 +271,10 @@ img.ship_button
 #detail_head 
 {
 	display: table;
+	width: 450px;
 }
 
-#ship #faction #actions #table
+#ship #faction #stats #targets #actions #attacks #table
 {
 	display: table-cell;
 }

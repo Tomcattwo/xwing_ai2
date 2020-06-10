@@ -1,8 +1,8 @@
-﻿====================================================================
-   Star Wars X-Wing Miniatures: Ship AI Combined 1st and 2nd Edition
+﻿=========================================================================================================================================
+   Star Wars X-Wing Miniatures: Ship AI Combined 1st and 2nd Edition and Heroes of the Aturi Cluster (HotAC) AI 2nd Edition (ver 2.07.04)
 
-            1st Edition AI v1.14.0 / 2nd Edition AI v2.0.2
-====================================================================
+            1st Edition AI v1.14.0 / 2nd Edition AI v2.0.2 / HoTAC 2nd Edition (2.07.04) AI v3.0.0
+=========================================================================================================================================
 
 -------------------
 Standard Disclaimer
@@ -19,15 +19,31 @@ Overview
 
 Simple web based for AI control of ships in the "Star Wars x-Wing Miniatures game" for both 1st and 2nd Edition rules.
 
+New AI built to match Heores of the Aturi Cluster Rebel Cooperative Campaign Game (original by Josh Derkson, updated to 2nd Edition by Shaun Tiernan,
+Imperial A.I. courtesy of Flight Group Alpha and Claes Sorennson
+Campaign Book and Mission Pack Layout courtesy of Bill Waller
+Elite Pilot Cards and Player Record Cards Layout courtesy of Justin Gan
+Playtesting by Recon Specialists - Patrick Patrick and Padre
+Additional Pilot Ability Cards by Dovi Anderson
+
+You can download HotAC 2nd Edition (v 2.07.04) at:
+
+https://drive.google.com/drive/folders/1FuTxsSqbqqsiPm7Ayo5aX2daVloQ3RhM
+
+Shaun's HotAC update is the same version that has been imported to Vassal.
+
 --------------------
 Installation / Usage
 --------------------
 
 Extract zip file to any location
-Open "index2.html" in a browser to use X-Wing 2nd Edition AI or open "index.html" in a browser to use original X-Wing 1st Edition AI.
-You can switch between 1st Edition and 2nd Edition by clicking the small yellow "AI" icon.
-Click the "?" button for detailed instructions on using the application
-
+Open "index2.htm" in a browser to use X-Wing 2nd Edition AI or open "index.htm" in a browser to use original X-Wing 1st Edition AI, or open "index3.htm
+in a browser to use HotAC AI 2nd Edition (v 2.07.04).
+You can switch between 1st Edition, 2nd Edition or HotAC AI by clicking the small yellow "AI" icon on the top right side of any page.
+Click the "?" button for detailed instructions on using the applications
+Click on the "i" button for info about x-wing-ai
+Click on the "star" button to get back to the current AI main page.
+Click on the "ship" button to get to the "Ship" page to get a detailed breakdown of maneuvers and actions for any ship
 
 --------------
 Change History
@@ -73,15 +89,15 @@ Change History
 
 01/21/2019  1.14.0 (Tomcattwo) Added waves 11 through 14 ships; fixed Mist Hunter in wave 8 to correct maneuvers
 
-01/21/2019  2.0.0/1.14.0   (Tomcattwo) Added complete 2nd Edition AI. This includes all ships/waves, updated to 2nd edition maneuvers and actions (drawn from http://xhud.sirjorj.com/xwing.cgi) and combined 1st Ed. v1.14.0 and 2nd Ed. 2.0.0 into a single distributable package. Added icons to both 1st and 2nd editions to allow switching back and forth between them. Now the entire package can be distributed in a single distributable, and the user can elect to use the older 1st edition ruleset and AI or 2nd edition ruleset with 2nd edition AI.
+01/21/2019  1.14.01/2.0.2   (Tomcattwo) Added complete 2nd Edition AI. This includes all ships/waves, updated to 2nd edition maneuvers and actions (drawn from http://xhud.sirjorj.com/xwing.cgi) and combined 1st Ed. v1.14.0 and 2nd Ed. 2.0.0 into a single distributable package. Added icons to both 1st and 2nd editions to allow switching back and forth between them. Now the entire package can be distributed in a single distributable, and the user can elect to use the older 1st edition ruleset and AI or 2nd edition ruleset with 2nd edition AI.
 
-02/03/2019  2.0.1/1.14.0   (Tomcattwo) Updated version to 2.0.1.
+02/03/2019  1.14.01/2.0.2   (Tomcattwo) Updated version to 2.0.1.
                            Put TIE/SF and Upsilon Class Shuttle in First Order Faction where they belong and removed from Empire Faction.
                            Minor update to 2nd edition files to remove Scurrg H-6 Bomber from Rebel inventory and Firespray from Empire Inventory - per 2nd Edition ruleset.
                            Changed Index2 to show Rebel faction first on main page and ships page, to align all the "good guys" (Rebel, Scum, Rebellion, Republic) on the left and all the "bad guys" (Empire, First Order, Seperatist) on the right.
                            Minor change to Info2 file in Dedication
                            No changes to 1st edition files
-5/19/2020  2.0.2/1.14.0    (Tomcattwo) Updated 2nd Edition AI to version 2.0.2. This was a major update which included:
+5/19/2020  1.14.01/2.0.2    (Tomcattwo) Updated 2nd Edition AI to version 2.0.2. This was a major update which included:
 
 			   1) Added ships for 2nd Edition Wave 4 (Hyena, Naboo N-1, Resistance Transport, Resistance Transport Pod (including Droid Pilot Variants), Wave 5 (BTL-B Y-Wing, Nantex Starfighter), Wave 6 (Fireball Racer, Maj Baron von Reg's TIE/ba), and Wave 7 (HMP Droid Gunship, LAAT/i, Xi-class Light Shuttle). 
 			   2) Updated "huge" ships to delete Imperial Carrier, and added Gozanti and C-ROC cruisers (and faction variants).
@@ -90,6 +106,13 @@ Change History
 			   5) Changed the factions to be capitalized on the AI2 main screen (e.g., "Rebel" vice "rebel" and "First Order" vice "1storder"). This required changes to the following files: generate.py, every ship in every .xml file (19 files, 85 unique ships/variants, including the new wave 5-7 files) and minor code changes to the xwing_ai2.js file.
 			   6) Updated all HTML pages for Tooltips for all icons. Minor updates to AI2 Help page to clarify instructions
 			   7) No changes to 1st edition non-HTML files or stylesheet.
+
+6/05/2020 1.14.01/2.0.2     Minor update to fix an incorrect maneuver for 1 ship.
+
+6/10/2020 1.14.01/2.0.2/3.0.0 (Tomcattwo) Added an entirely new AI for "Heroes of the Aturi Cluster" (HotAC) Rebel cooperative campaign game. HotAC for 1st edition was designed by Josh Derkson.
+HotAC for 2nd Edition rules was updated by Shaun Tiernan, assisted by Claes Sorrenson and the members of Flight Group Alpha (HotAC Imperial A.I.), Bill Waller (Campaign Book and Mission Pack Layout), Justin Gan (Elite Pilot Cards and Player Record Cards Layout), and Dovi Anderson (additional Pilot Ability Cards). The new AI contains a "scratch built" xwing_ships3.js file, extensively modified html and xwing_ai3.js files, and added a number of new images. The new
+HotAC AI is a faithful representation of the 2.07.04 Imperial AI cards developed by Claes Sorrenson and the Alpha Flight Group for HotAC 2nd Edition, and is a signifcant step up from AI1 or AI2. However iot contains AI for only the eight Empire ships used in HotAC. Changes were made to the html files for 1st and 2nd edition to fix some broken icons and to allow for switching back and forth between HotAC AI and AI1/AI2. No changes were made to the AI1 or AI2 javascript files. Additions were made to the style sheet, but no older styles were altered. 
+
 -------
 Contact
 -------
@@ -99,7 +122,7 @@ BoardGameGeek: wyzbang
 Source: https://github.com/Wyzbang/xwing_ai
 
 
-2nd Edition Update:
+2nd Edition Update and HotAC AI 2nd Edition:
 Email: colt.coltrain@gmail.com
 BoardGameGeek: Tomcattwo
 Source: https://github.com/Tomcattwo/xwing_ai2
@@ -108,7 +131,7 @@ Source: https://github.com/Tomcattwo/xwing_ai2
 Dedication
 ----------
 
-The 2nd Edition AI and Combined fileset work is dedicated to the memory of my stepson, Chris Glidden,a devoted Star Wars fan and X-Wing player, who lost his year-long fight with pancreatic cancer in February 2019. Chris was a Jedi Knight, right to the very end. May the Force always be with you, son.
+The 2nd Edition AI, Combined fileset, and HotAC AI2 work is dedicated to the memory of my stepson, Chris Glidden,a devoted Star Wars fan and X-Wing player, who lost his year-long fight with pancreatic cancer on February 9, 2019. Chris was a Jedi Knight, right to the very end. May the Force always be with you, son.
 
 -------
 Credits
@@ -120,6 +143,14 @@ Game Web Site:  http://www.fantasyflightgames.com/edge_minisite.asp?eidm=174
 --------------
 Special Thanks
 --------------
+Heores of the Aturi Cluster Rebel Cooperative Campaign Game authors: original by Josh Derkson, updated to 2nd Edition by Shaun Tiernan
+and the HotAC 2nd Edition Team:
+Imperial A.I. courtesy of Flight Group Alpha and Claes Sorennson
+Campaign Book and Mission Pack Layout courtesy of Bill Waller
+Elite Pilot Cards and Player Record Cards Layout courtesy of Justin Gan
+Playtesting by Recon Specialists - Patrick Patrick and Padre
+Additional Pilot Ability Cards by Dovi Anderson
+
 Ralph Berrett for years of work on the original X-Wing_AI code, and for making it so easy to modify, and for sharing it with the world for free.
 
 SirJorj for developing all of the 1st and 2nd edition X-Wing Miniatures game ships, maneuvers, pilots and actions at http://xhud.sirjorj.com/xwing.cgi

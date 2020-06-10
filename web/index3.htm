@@ -1,0 +1,140 @@
+<!DOCTYPE XHTML>
+<html>
+<head>
+<title>X-Wing Miniatures HotAC AI 2nd Edition</title>
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+<link rel="stylesheet" type="text/css" href="style.css" />
+<script src="src/xwing_ai3.js"></script>
+<script src="src/xwing_ships3.js"></script>
+</head>
+<body onload=load_index()>
+<div id="header">
+	<div id="logos">
+		<img class=company_logo src="img/ffglogoLQ.png" alt="Fantasy Flight Games">
+		<img class=game_logo src="img/game_logo.png" alt="StarWars: X-Wing Miniatures">
+		<img class=applet_logo src="img/applet_logo3.png" alt="HotAC AI 2nd Edition">
+	</div>
+	<div id="links">
+		<div id="version"></div><br>
+		<a href="index2.htm"><img class=switch_icon src="img/applet_logo2-64.png" alt="X-Wing_AI 2nd Ed." title="Switch to 2nd Edition AI"></a>
+		<a href="index.htm"><img class=switch_icon src="img/applet_logo-64.png" alt="X-Wing_AI 1st Ed." title="Switch to 1st Edition AI"></a>
+		<a href="help3.htm"><img class=help_icon src="img/help.png" alt="help" title="Help Page - How to use XWing AI2 for Heroes of the Aturi Cluster (HotAC)"></a>
+		<a href="info3.htm"><img class=info_icon src="img/info.png" alt="info" title="Info Page"></a>
+		<a href="ships3.htm"><img class=ships_icon src="img/ships.png" alt="ships" title="Ships Page - Displays all ship maneuvers and actions"></a>
+	</div>
+</div>
+
+<div id="main">
+
+<div id="ships">
+</div>
+
+<div id="HotAC_map">
+<div class="label">Select Target Location</div><br>
+
+	<div class="HotAC_image_map">
+		<img src="img/HotAC_image_map2.png" usemap="#HotAC_image_map">
+
+		<map name="HotAC_image_map">
+		    <area onclick="movement(DIR_360)" alt="bullseye" title="Bullseye" coords="162,98,136,3" shape="rect">
+		    <area onclick="movement(DIR_000)" alt="000to045" title="000 to 045" coords="164,99,200,99,299,0,164,1" shape="poly">
+		    <area onclick="movement(DIR_045)" alt="045to090" title="045 to 090" coords="200,101,200,150,299,149,299,3" shape="poly">
+		    <area onclick="movement(DIR_090)" alt="090to135" title="090 to 135" coords="200,151,200,198,299,297,299,153" shape="poly">
+		    <area onclick="movement(DIR_135)" alt="135to180" title="135 to 180" coords="151,199,199,199,299,299,151,299" shape="poly">
+		    <area onclick="movement(DIR_180)" alt="180to225" title="180 to 225" coords="104,198,149,199,149,299,3,299" shape="poly">
+		    <area onclick="movement(DIR_225)" alt="225to270" title="225 to 270" coords="100,199,1,299,1,151,99,151" shape="poly">
+		    <area onclick="movement(DIR_270)" alt="270to315" title="270 to 315" coords="99,149,99,100,1,0,1,149" shape="poly">
+		    <area onclick="movement(DIR_315)" alt="315to000" title="315 to 000" coords="102,99,134,100,134,1,3,1" shape="poly">
+		</map>
+
+		<div class="map_ship_image">
+			<img id="ship_image" src="img/tie.png">
+		</div>
+		</div>
+	<div class="ship_name" id="ship_name">
+	</div>
+</div>
+
+<div id="stats-text"></div>
+
+<!-- NOTE: the below section needs to be in here for the js code to function properly, but the display of it is HIDDEN. This keeps it from appearing to the user or interfering with selections on the map image. -->
+<div id="diagram" style="display: none;">
+	<div class="direction_grid">
+		<input id="target7" type="image" src="img/empire7.png" /><input id="target0" type="image" src="img/empire0.png" /><input id="target1" type="image" src="img/empire1.png" />
+	</div>
+	<div class="direction_grid">
+		<input id="target6" type="image" src="img/empire6.png" /><img id="ship_image" src="img/tie.png"><input id="target2" type="image" src="img/empire2.png" />
+	</div>
+	<div class="direction_grid">
+		<input id="target5" type="image" src="img/empire5.png" /><input id="target4" type="image" src="img/empire4.png" /><input id="target3" type="image" src="img/empire3.png" />
+	</div>
+</div>
+
+<div id="maneuvers">
+	<div>
+		<div id="system-text"></div>
+	</div>
+
+	<div>
+		<div class="label">Select Target</div>
+		<div id="targets-text"></div>
+	</div>
+	<div>
+		<div class="label">Target Location</div>
+		<div id="selection"><p>Click on a sector</p></div>
+	</div>
+
+	<div class="label">AI Maneuver</div>
+	<div class="seperator"><p></p></div>
+	<div class="maneuver_label">Tgt R1/R2(Closing)</div>
+	<div class="maneuver">
+		<div id="closing_num" class="output"></div>
+		<div id="closing_img" class="output"></div>
+	</div>
+	<div class="seperator"><p></p></div>
+	<div class="maneuver_label">Tgt R2(Fleeing)/R3</div>
+	<div class="maneuver">
+		<div id="away_num" class="output"></div>
+		<div id="away_img" class="output"></div>
+	</div>
+	<div class="seperator"><p></p></div>
+	<div class="maneuver_label">Tgt R4+</div>
+	<div class="maneuver">
+		<div id="far_num" class="output"></div>
+		<div id="far_img" class="output"></div>
+	</div>
+	<div class="seperator"><p></p></div>
+	<div class="maneuver_label_red">AI Stressed</div>
+	<div class="maneuver">
+		<div id="stressed_num" class="output"></div>
+		<div id="stressed_img" class="output"></div>
+	</div>
+	<div>
+	<div id="fullthrottle-text"></div>
+	</div>
+</div>
+<div id="results">
+
+	<div>
+		<div class="label">Action Selection</div>
+		<div id="actions-text"></div>
+	</div>
+	<div>
+		<div class="label">Attack Priorities</div>
+		<div id="attacks-text"></div>
+	</div>
+	<div>
+		<div id="end-text"></div>
+	</div>
+</div>
+</div>
+
+<div id="footer">
+<br><br><br>
+<hr>
+Star Wars and all associated elements are &copy; 2015 Lucasfilm Ltd. & TM. All rights reserved.<br>
+Fantasy Flight Games, the FFG logo and X-Wing Miniatures Game are trademarks of Fantasy Flight Publishing, Inc.<br>
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="img/creative_commons_logo.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">X-Wing Miniatures AI by Ralph Berrett;</span><a class=label xmlns:cc="http://creativecommons.org/ns#" href="mailto:colt.coltrain@gmail.com" property="cc:attributionName" rel="cc:attributionURL"> X-Wing_AI2, (2nd Edition) by Tom Stevenson</a> based on Ralph's X-Wing_AI, both licensed under a <a class=label rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">Creative Commons Attribution-ShareAlike 3.0 Unported License.</a>
+</div>
+</body>
+</html>
