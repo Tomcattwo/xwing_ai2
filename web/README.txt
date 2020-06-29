@@ -1,7 +1,7 @@
-﻿=========================================================================================================================================
-   Star Wars X-Wing Miniatures: Ship AI Combined 1st and 2nd Edition and Heroes of the Aturi Cluster (HotAC) AI 2nd Edition (ver 2.07.04)
+=========================================================================================================================================
+   Star Wars X-Wing Miniatures: Ship AI Combined 1st and 2nd Edition and Heroes of the Aturi Cluster (HotAC) + Flight Grop Alpha (FGA) AI 2nd Edition
 
-            1st Edition AI v1.14.0 / 2nd Edition AI v2.0.2 / HoTAC 2nd Edition (2.07.04) AI v3.0.0
+            1st Edition AI v1.14.0 / 2nd Edition AI v2.0.2 / HoTAC+FGA 2nd Edition (2.07.04/205_001) AI v3.1.3
 =========================================================================================================================================
 
 -------------------
@@ -20,7 +20,7 @@ Overview
 Simple web based for AI control of ships in the "Star Wars x-Wing Miniatures game" for both 1st and 2nd Edition rules.
 
 New AI built to match Heores of the Aturi Cluster Rebel Cooperative Campaign Game (original by Josh Derkson, updated to 2nd Edition by Shaun Tiernan,
-Imperial A.I. courtesy of Flight Group Alpha and Claes Sorennson
+Imperial A.I. courtesy of Flight Group Alpha and Claes Sorennson) and Flight Group Alpha Imperial Cooperative Campaign by Claes Sorrenson and Flight Group Alpha
 Campaign Book and Mission Pack Layout courtesy of Bill Waller
 Elite Pilot Cards and Player Record Cards Layout courtesy of Justin Gan
 Playtesting by Recon Specialists - Patrick Patrick and Padre
@@ -30,6 +30,10 @@ You can download HotAC 2nd Edition (v 2.07.04) at:
 
 https://drive.google.com/drive/folders/1FuTxsSqbqqsiPm7Ayo5aX2daVloQ3RhM
 
+You can download FGA 2nd Edition (Ver 205_001 with AI Ver 7.1) at:
+
+https://boardgamegeek.com/filepage/161035/flight-group-alpha-imperial-co-operative-campaign
+
 Shaun's HotAC update is the same version that has been imported to Vassal.
 
 --------------------
@@ -38,8 +42,8 @@ Installation / Usage
 
 Extract zip file to any location
 Open "index2.htm" in a browser to use X-Wing 2nd Edition AI or open "index.htm" in a browser to use original X-Wing 1st Edition AI, or open "index3.htm
-in a browser to use HotAC AI 2nd Edition (v 2.07.04).
-You can switch between 1st Edition, 2nd Edition or HotAC AI by clicking the small yellow "AI" icon on the top right side of any page.
+in a browser to use HotAC+FGA AI 2nd Edition.
+You can switch between 1st Edition, 2nd Edition or HotAC+FGA AI by clicking the small yellow "AI" icon on the top right side of any page.
 Click the "?" button for detailed instructions on using the applications
 Click on the "i" button for info about x-wing-ai
 Click on the "star" button to get back to the current AI main page.
@@ -113,6 +117,24 @@ Change History
 HotAC for 2nd Edition rules was updated by Shaun Tiernan, assisted by Claes Sorrenson and the members of Flight Group Alpha (HotAC Imperial A.I.), Bill Waller (Campaign Book and Mission Pack Layout), Justin Gan (Elite Pilot Cards and Player Record Cards Layout), and Dovi Anderson (additional Pilot Ability Cards). The new AI contains a "scratch built" xwing_ships3.js file, extensively modified html and xwing_ai3.js files, and added a number of new images. The new
 HotAC AI is a faithful representation of the 2.07.04 Imperial AI cards developed by Claes Sorrenson and the Alpha Flight Group for HotAC 2nd Edition, and is a signifcant step up from AI1 or AI2. However iot contains AI for only the eight Empire ships used in HotAC. Changes were made to the html files for 1st and 2nd edition to fix some broken icons and to allow for switching back and forth between HotAC AI and AI1/AI2. No changes were made to the AI1 or AI2 javascript files. Additions were made to the style sheet, but no older styles were altered. 
 
+6/18/2020  1.14.01/2.0.2/3.1.0 (Tomcattwo) Appended an additional 19 ships (8 Rebel, 9 Scum, 2 First Order) to incorporate AI for Flight Group Alpha Imperial Cooperative Campaign to HotAC AI
+Completely updated the xwing_ai3.js and xwing_ships3.js files with many changes and new subroutines, and actions. (e.g., added a reroll function, etc.), made links changes to the .html files and minor additions the the style sheet, updated the help and info html files.
+Added Flee Tables for each ship. This is a faithful representation of Claes' AI version 7.1 for all 27 ships used in both campaigns, with exception of correction of some maneuver areas in the original AI.
+Changes were made to the AI2 xwing_ships2.js javascript file to correct several errors I caught in there on maneuvers while double-checking the new AI. No changes were made to AI 1 or xwing_ai2.js. Additions were made to the style sheet, but no older styles were altered.
+
+6/21/2020 1.14.01/2.0.2/3.1.1 (Tomcattwo) Corrections to maneuver tables prior to publishing based on review and recommendations for improvement by Hipsu (Thank You!!). Also added reroll capability for Flee Hyperspace Maneuvers, a "blink" function when you click on a sector
+to let you know it accepted the click (especially useful for tablet users) and a mini ship-image appears in the sector the user clicks on (tie fighters for rebels, scum and FO AI, x-wings for Empire AI.
+
+6/23/2020 1.14.01/2.0.2/3.1.2 (Tomcattwo) "Blink" process didn't work properly for mobiles (tablets and phones); devised a new process to make it work properly. At Hipsu's request, eliminated the green "Bullseye" overlay on all FGA_image_maps.
+Added functionality to prevent context menu (right click or long press on mobiles) from popping up on main page. This was a problem when pressing too long on a sector on mobile devices
+Fixed xwing_ai.js to correct issue of capitalizing target sector filenames for images done during ai2 development. Restores ai1 functionality.
+Added a thank you note to Hipsu (Miikka Sohlman) on info3.htm page and in this README.txt file
+Changed label colors from teal to cyan in style.css
+Files changed: index3.htm, info3.htm, style.css, xwing_ai3.js, xwing_ai.js, xwing_ships3.js (just to change the version number) and adding the new images.
+
+6/29/2020 1.14.01/2.0.2/3.1.3 (Tomcattwo) Added Maneuver Tables for each HotAC and FGA ship on Main page and Ships page, with permission from sirjorj for use of screen grabs of the tables from http://xhud.sirjorj.com/xwing.cgi.
+Files changed: xwing_ai3.js, xwing_ships3.js and adding the new maneuver table images.
+
 -------
 Contact
 -------
@@ -131,7 +153,7 @@ Source: https://github.com/Tomcattwo/xwing_ai2
 Dedication
 ----------
 
-The 2nd Edition AI, Combined fileset, and HotAC AI2 work is dedicated to the memory of my stepson, Chris Glidden,a devoted Star Wars fan and X-Wing player, who lost his year-long fight with pancreatic cancer on February 9, 2019. Chris was a Jedi Knight, right to the very end. May the Force always be with you, son.
+The 2nd Edition AI, Combined fileset, and HotAC+FGA AI work is dedicated to the memory of my stepson, Chris Glidden,a devoted Star Wars fan and X-Wing player, who lost his year-long fight with pancreatic cancer on February 9, 2019. Chris was a Jedi Knight, right to the very end. May the Force always be with you, son.
 
 -------
 Credits
@@ -143,6 +165,7 @@ Game Web Site:  http://www.fantasyflightgames.com/edge_minisite.asp?eidm=174
 --------------
 Special Thanks
 --------------
+Many thanks to Hipsu (Miikka Sohlman) for playtesting the HotAC+FGA web app and making great suggestions for improving it.
 Heores of the Aturi Cluster Rebel Cooperative Campaign Game authors: original by Josh Derkson, updated to 2nd Edition by Shaun Tiernan
 and the HotAC 2nd Edition Team:
 Imperial A.I. courtesy of Flight Group Alpha and Claes Sorennson
@@ -150,6 +173,9 @@ Campaign Book and Mission Pack Layout courtesy of Bill Waller
 Elite Pilot Cards and Player Record Cards Layout courtesy of Justin Gan
 Playtesting by Recon Specialists - Patrick Patrick and Padre
 Additional Pilot Ability Cards by Dovi Anderson
+
+Flight Group Alpha - an Imperial Cooperative Campaign by Claes Sorrenson and Flight Group Alpha - OUTSTANDING work! 
+A superb Imperial campaign game that takes you through the experience of the 1990's 'TIE Fighter' computer game by LucasArts (I LOVED that game!!)
 
 Ralph Berrett for years of work on the original X-Wing_AI code, and for making it so easy to modify, and for sharing it with the world for free.
 

@@ -1,7 +1,7 @@
 <!DOCTYPE XHTML>
 <html>
 <head>
-<title>X-Wing Miniatures HotAC AI 2nd Edition</title>
+<title>X-Wing Miniatures HotAC+FGA AI 2nd Edition</title>
 <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
 <link rel="stylesheet" type="text/css" href="style.css" />
 <script src="src/xwing_ai3.js"></script>
@@ -10,15 +10,15 @@
 <body onload=load_index()>
 <div id="header">
 	<div id="logos">
-		<img class=company_logo src="img/ffglogoLQ.png" alt="Fantasy Flight Games">
-		<img class=game_logo src="img/game_logo.png" alt="StarWars: X-Wing Miniatures">
-		<img class=applet_logo src="img/applet_logo3.png" alt="HotAC AI 2nd Edition">
+		<img class=company_logo src="img/ffglogoLQ.png" alt="Fantasy Flight Games" title="Fantasy Flight Games">
+		<img class=game_logo src="img/game_logo.png" alt="StarWars: X-Wing Miniatures" title="StarWars: X-Wing Miniatures">
+		<img class=applet_logo src="img/applet_logo3.png" alt="X-Wing Heroes of the Aturi Cluster + Flight Group Alpha (FGA) AI 2nd Edition" title="X-Wing Heroes of the Aturi Cluster + Flight Group Alpha (FGA) AI 2nd Edition">
 	</div>
 	<div id="links">
 		<div id="version"></div><br>
 		<a href="index2.htm"><img class=switch_icon src="img/applet_logo2-64.png" alt="X-Wing_AI 2nd Ed." title="Switch to 2nd Edition AI"></a>
 		<a href="index.htm"><img class=switch_icon src="img/applet_logo-64.png" alt="X-Wing_AI 1st Ed." title="Switch to 1st Edition AI"></a>
-		<a href="help3.htm"><img class=help_icon src="img/help.png" alt="help" title="Help Page - How to use XWing AI2 for Heroes of the Aturi Cluster (HotAC)"></a>
+		<a href="help3.htm"><img class=help_icon src="img/help.png" alt="help" title="Help Page - How to use HotAC + FGA AI"></a>
 		<a href="info3.htm"><img class=info_icon src="img/info.png" alt="info" title="Info Page"></a>
 		<a href="ships3.htm"><img class=ships_icon src="img/ships.png" alt="ships" title="Ships Page - Displays all ship maneuvers and actions"></a>
 	</div>
@@ -33,22 +33,23 @@
 <div class="label">Select Target Location</div><br>
 
 	<div class="HotAC_image_map">
-		<img src="img/HotAC_image_map2.png" usemap="#HotAC_image_map">
+		<img id="map_img" usemap="#FGA_image_map">
 
-		<map name="HotAC_image_map">
-		    <area onclick="movement(DIR_360)" alt="bullseye" title="Bullseye" coords="162,98,136,3" shape="rect">
-		    <area onclick="movement(DIR_000)" alt="000to045" title="000 to 045" coords="164,99,200,99,299,0,164,1" shape="poly">
-		    <area onclick="movement(DIR_045)" alt="045to090" title="045 to 090" coords="200,101,200,150,299,149,299,3" shape="poly">
-		    <area onclick="movement(DIR_090)" alt="090to135" title="090 to 135" coords="200,151,200,198,299,297,299,153" shape="poly">
-		    <area onclick="movement(DIR_135)" alt="135to180" title="135 to 180" coords="151,199,199,199,299,299,151,299" shape="poly">
-		    <area onclick="movement(DIR_180)" alt="180to225" title="180 to 225" coords="104,198,149,199,149,299,3,299" shape="poly">
-		    <area onclick="movement(DIR_225)" alt="225to270" title="225 to 270" coords="100,199,1,299,1,151,99,151" shape="poly">
-		    <area onclick="movement(DIR_270)" alt="270to315" title="270 to 315" coords="99,149,99,100,1,0,1,149" shape="poly">
-		    <area onclick="movement(DIR_315)" alt="315to000" title="315 to 000" coords="102,99,134,100,134,1,3,1" shape="poly">
+		<map name="FGA_image_map">
+		    <area onclick="blink(DIR_360, SHIP)" alt="Full Front Bullseye" title="Full Front Bullseye" coords="101,99,199,1" shape="rect">
+		    <area onclick="blink(DIR_000, SHIP)" alt="000 to 045" title="000 to 045" coords="201,97,297,1,201,1" shape="poly">
+		    <area onclick="blink(DIR_045, SHIP)" alt="045 to 090" title="045 to 090" coords="200,102,201,149,298,149,299,4" shape="poly">
+		    <area onclick="blink(DIR_090, SHIP)" alt="090 to 135" title="090 to 135" coords="201,152,201,199,299,296,299,152" shape="poly">
+		    <area onclick="blink(DIR_135, SHIP)" alt="135 to 180" title="135 to 180" coords="151,200,200,201,299,299,151,299" shape="poly">
+		    <area onclick="blink(DIR_180, SHIP)" alt="180 to 225" title="180 to 225" coords="102,200,148,201,148,299,4,299" shape="poly">
+		    <area onclick="blink(DIR_225, SHIP)" alt="225 to 270" title="225 to 270" coords="99,152,99,200,1,298,1,152" shape="poly">
+		    <area onclick="blink(DIR_270, SHIP)" alt="270 to 315" title="270 to 315" coords="99,99,100,149,0,149,0,1" shape="poly">
+		    <area onclick="blink(DIR_315, SHIP)" alt="315 to 000" title="315 to 000" coords="100,98,99,1,2,1" shape="poly">
+		    <area onclick="blink(DIR_ship, SHIP)" alt="Click Here to reroll Hyperspace Maneuver" title="Click here to reroll Hyperspace Maneuver" coords="102,198,198,102" shape="rect">
 		</map>
 
 		<div class="map_ship_image">
-			<img id="ship_image" src="img/tie.png">
+			<img id="ship_image" src="img/xwing.png">
 		</div>
 		</div>
 	<div class="ship_name" id="ship_name">
@@ -56,19 +57,6 @@
 </div>
 
 <div id="stats-text"></div>
-
-<!-- NOTE: the below section needs to be in here for the js code to function properly, but the display of it is HIDDEN. This keeps it from appearing to the user or interfering with selections on the map image. -->
-<div id="diagram" style="display: none;">
-	<div class="direction_grid">
-		<input id="target7" type="image" src="img/empire7.png" /><input id="target0" type="image" src="img/empire0.png" /><input id="target1" type="image" src="img/empire1.png" />
-	</div>
-	<div class="direction_grid">
-		<input id="target6" type="image" src="img/empire6.png" /><img id="ship_image" src="img/tie.png"><input id="target2" type="image" src="img/empire2.png" />
-	</div>
-	<div class="direction_grid">
-		<input id="target5" type="image" src="img/empire5.png" /><input id="target4" type="image" src="img/empire4.png" /><input id="target3" type="image" src="img/empire3.png" />
-	</div>
-</div>
 
 <div id="maneuvers">
 	<div>
@@ -111,6 +99,9 @@
 	</div>
 	<div>
 	<div id="fullthrottle-text"></div>
+	</div>
+	<div>
+	<div id="flee-text"></div>
 	</div>
 </div>
 <div id="results">

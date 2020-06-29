@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>X-Wing Miniatures HotAC AI 2nd Edition - Ship Info</title>
+<title>X-Wing Miniatures HotAC+FGA AI 2nd Edition - Ship Info</title>
 <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
 <link rel="stylesheet" type="text/css" href="style.css" />
 <script src="src/xwing_ai3.js"></script>
@@ -11,16 +11,16 @@
 <body onload=load_ships()>
 <div id="header">
 	<div id="logos">
-		<img class=company_logo src="img/ffglogoLQ.png" alt="Fantasy Flight Games">
-		<img class=game_logo src="img/game_logo.png" alt="StarWars: X-Wing Miniatures">
-		<img class=applet_logo src="img/applet_logo3.png" alt="X-Wing Heroes of the Aturi Cluster (HotAC) AI 2nd Edition">
+		<img class=company_logo src="img/ffglogoLQ.png" alt="Fantasy Flight Games" title="Fantasy Flight Games">
+		<img class=game_logo src="img/game_logo.png" alt="StarWars: X-Wing Miniatures" title="StarWars: X-Wing Miniatures">
+		<img class=applet_logo src="img/applet_logo3.png" alt="X-Wing Heroes of the Aturi Cluster (HotAC) + Flight Group Alpha (FGA) AI 2nd Edition" title="X-Wing Heroes of the Aturi Cluster (HotAC) + Flight Group Alpha (FGA) AI 2nd Edition">
 	</div>
 	<div id="links">
 		<div id="version"></div><br>
-		<a href="index2.htm"><img class=index_icon src="img/applet_logo2-64.png" alt="X-Wing_AI 2nd Ed." title="XWingAI2 Main Page"></a>
+		<a href="index2.htm"><img class=index_icon src="img/applet_logo2-64.png" alt="X-Wing_AI 2nd Ed." title="Switch to 2nd Edition AI"></a>
 		<a href="index.htm"><img class=switch_icon src="img/applet_logo-64.png" alt="X-Wing_AI 1st Ed." title="Switch to 1st Edition AI"></a>
-		<a href="index3.htm"><img class=index_icon src="img/star.png" alt="XWing HotAC AI Main Page" title="XWing Heroes of the Aturi Cluster (HotAC) AI Main Page"></a>
-		<a href="help3.htm"><img class=help_icon src="img/help.png" alt="help" title="Help Page - How to use XWing AI2 for Heroes of the Aturi Cluster (HotAC)"></a>
+		<a href="index3.htm"><img class=index_icon src="img/star.png" alt="XWing HotAC + FGA AI Main Page" title="XWing HotAC + FGA AI Main Page"></a>
+		<a href="help3.htm"><img class=help_icon src="img/help.png" alt="help" title="Help Page - How to use HotAC + FGA AI"></a>
 		<a href="info3.htm"><img class=info_icon src="img/info.png" alt="info" title="Info Page"></a>
 	</div>
 </div>
@@ -37,6 +37,7 @@
 			<div class="label">Select Target</div>
 			<div id="targets"></div>
 			<div id="fullthrottle"></div>
+			<div id="flee"></div>
 			<div class="label">Action Selection</div>
 			<div id="actions"></div>
 			<div class="label">Attack Selection</div>
@@ -45,7 +46,7 @@
 		</div>
 
 	</div>
-	<div class="label">Maneuver Tables</div>
+	<div class="label">AI Maneuver Selection Tables</div>
 	<div id="table"></div>
 </div>
 
