@@ -1,6 +1,6 @@
 // ****************************************************************************
-// X-Wing Miniatures AI - Ships 2nd Generation
-// Generated: 2020-05-19 20:39:36
+// X-Wing Miniatures AI - Ships 2nd Generation 
+// Generated: 2020-06-29 14:36:29
 
 var VERSION = "2.0.2";
 
@@ -325,7 +325,7 @@ bwing.name = "A/SF-01 B-Wing";
 bwing.image = "img/bwing.png";
 bwing.faction = "Rebel";
 bwing.simple = [ BL(1), F(1), F(2), F(3), BR(1) ];
-bwing.normal = [ TL(2), BL(2), BR(2), TR(2),  ];
+bwing.normal = [ TL(2), BL(2), BR(2), TR(2) ];
 bwing.difficult = [ TRL(1), TL(1), BL(3), F(4), BR(3), TR(1), TRR(1), K(2) ];
 bwing.actions = [ 'TARGET_LOCK', 'BARREL_ROLL', 'FOCUS2BARREL_ROLL_D' ];
 
@@ -1329,33 +1329,33 @@ hwk290S.closing[7] = [ F(1), BL(1), BL(1), BL(1), BL(1), BL(2), BL(2), BL(2), TL
 
 hwk290S.away = [];
 hwk290S.away[0] = [ F(3), F(3), F(3), F(3), F(3), F(4), F(4), F(4), F(4), F(4) ];
-hwk290S.away[1] = [ BR(1), BR(1), BR(1), BR(1), BR(2), BR(2), BR(2), BR(2), TR(2), TR(3) ];
-hwk290S.away[2] = [ BR(1), BR(2), BR(2), TR(2), TR(2), TR(2), TR(3), TR(3), TR(3), TR(3) ];
+hwk290S.away[1] = [ BR(2), BR(2), BR(2), BR(2), BR(3), BR(3), BR(3), BR(3), TR(2), TR(3) ];
+hwk290S.away[2] = [ BR(2), BR(3), BR(3), TR(2), TR(2), TR(2), TR(3), TR(3), TR(3), TR(3) ];
 hwk290S.away[3] = [ TR(2), TR(2), TR(2), TR(2), TR(2), TR(3), TR(3), TR(3), TR(3), TR(3) ];
 hwk290S.away[4] = [ TL(2), TL(2), TL(3), TL(3), TR(2), TR(2), TR(2), TR(3), TR(3), TR(3) ];
 hwk290S.away[5] = [ TL(2), TL(2), TL(2), TL(2), TL(2), TL(3), TL(3), TL(3), TL(3), TL(3) ];
-hwk290S.away[6] = [ BL(1), BL(2), BL(2), TL(2), TL(2), TL(2), TL(3), TL(3), TL(3), TL(3) ];
-hwk290S.away[7] = [ BL(1), BL(1), BL(1), BL(1), BL(2), BL(2), BL(2), BL(2), TL(2), TL(3) ];
+hwk290S.away[6] = [ BL(2), BL(3), BL(3), TL(2), TL(2), TL(2), TL(3), TL(3), TL(3), TL(3) ];
+hwk290S.away[7] = [ BL(2), BL(2), BL(2), BL(2), BL(3), BL(3), BL(3), BL(3), TL(2), TL(3) ];
 
 hwk290S.far = [];
-hwk290S.far[0] = [ BL(3), F(3), F(3), F(3), F(3), F(4), F(4), F(4), F(4), BR(2) ];
-hwk290S.far[1] = [ BR(1), BR(1), BR(1), BR(1), BR(2), BR(2), BR(2), BR(2), TR(2), TR(3) ];
+hwk290S.far[0] = [ BL(3), F(3), F(3), F(3), F(3), F(4), F(4), F(4), F(4), BR(3) ];
+hwk290S.far[1] = [ BR(2), BR(2), BR(2), BR(2), BR(3), BR(3), BR(3), BR(3), TR(2), TR(3) ];
 hwk290S.far[2] = [ TR(2), TR(2), TR(2), TR(2), TR(2), TR(3), TR(3), TR(3), TR(3), TR(3) ];
 hwk290S.far[3] = [ TR(2), TR(2), TR(2), TR(2), TR(2), TR(3), TR(3), TR(3), TR(3), TR(3) ];
 hwk290S.far[4] = [ TL(2), TL(2), TL(3), TL(3), TR(2), TR(2), TR(2), TR(3), TR(3), TR(3) ];
 hwk290S.far[5] = [ TL(2), TL(2), TL(2), TL(2), TL(2), TL(3), TL(3), TL(3), TL(3), TL(3) ];
 hwk290S.far[6] = [ TL(2), TL(2), TL(2), TL(2), TL(2), TL(3), TL(3), TL(3), TL(3), TL(3) ];
-hwk290S.far[7] = [ BL(1), BL(1), BL(1), BL(1), BL(2), BL(2), BL(2), BL(2), TL(2), TL(3) ];
+hwk290S.far[7] = [ BL(2), BL(2), BL(2), BL(2), BL(3), BL(3), BL(3), BL(3), TL(2), TL(3) ];
 
 hwk290S.stressed = [];
 hwk290S.stressed[0] = [ BL(1), BL(3), F(1), F(1), F(2), F(2), F(3), F(3), F(4), F(4) ];
-hwk290S.stressed[1] = [ F(1), BR(1), BR(1), BR(1), BR(1), BR(2), BR(2), BR(2), TR(2), TR(2) ];
+hwk290S.stressed[1] = [ F(1), BR(1), BR(1), BR(1), BR(2), BR(2), BR(3), BR(3), TR(2), TR(2) ];
 hwk290S.stressed[2] = [ TR(2), TR(2), TR(2), TR(2), TR(2), TR(2), TR(2), TR(2), TR(2), TR(2) ];
 hwk290S.stressed[3] = [ TR(2), TR(2), TR(2), TR(2), TR(2), TR(2), TR(2), TR(2), TR(2), TR(2) ];
 hwk290S.stressed[4] = [ TL(2), TL(2), TL(2), TL(2), TL(2), TR(2), TR(2), TR(2), TR(2), TR(2) ];
 hwk290S.stressed[5] = [ TL(2), TL(2), TL(2), TL(2), TL(2), TL(2), TL(2), TL(2), TL(2), TL(2) ];
 hwk290S.stressed[6] = [ TL(2), TL(2), TL(2), TL(2), TL(2), TL(2), TL(2), TL(2), TL(2), TL(2) ];
-hwk290S.stressed[7] = [ F(1), BL(1), BL(1), BL(1), BL(1), BL(2), BL(2), BL(2), TL(2), TL(2) ];
+hwk290S.stressed[7] = [ F(1), BL(1), BL(1), BL(1), BL(2), BL(2), BL(3), BL(3), TL(2), TL(2) ];
 
 // ****************************************************************************
 // Hyena-class Droid Bomber
@@ -2092,20 +2092,20 @@ var outrider = {};
 outrider.name = "YT-2400 Light Freighter";
 outrider.image = "img/outrider.png";
 outrider.faction = "Rebel";
-outrider.simple = [ BL(1), F(1), F(2), BR(1) ];
+outrider.simple = [ F(1), F(2), BL(1), BR(1) ];
 outrider.normal = [ TL(1), TL(2), TL(3), BL(2), BL(3), F(3), F(4), BR(2), BR(3), TR(1), TR(2), TR(3) ];
 outrider.difficult = [ K(4) ];
 outrider.actions = [ 'TARGET_LOCK', 'FOCUS', 'ROTATE_ARC', 'BARREL_ROLL_D' ];
 
 outrider.closing = [];
-outrider.closing[0] = [ BL(2), F(3), F(3), F(3), F(3), F(4), F(4), F(4), K(4), K(4) ];
-outrider.closing[1] = [ F(3), BR(2), BR(2), BR(2), BR(2), BR(3), BR(3), BR(3), TR(1), TR(1) ];
+outrider.closing[0] = [ BL(1), F(1), F(1), F(1), F(1), F(2), F(2), F(2), K(4), K(4) ];
+outrider.closing[1] = [ F(1), BR(1), BR(1), BR(1), BR(1), BR(2), BR(2), BR(2), TR(1), TR(1) ];
 outrider.closing[2] = [ TR(1), TR(1), TR(1), TR(1), TR(2), TR(2), TR(2), TR(2), K(4), K(4) ];
-outrider.closing[3] = [ BR(2), TR(1), TR(1), TR(1), TR(1), TR(2), TR(2), TR(2), K(4), K(4) ];
+outrider.closing[3] = [ BR(1), TR(1), TR(1), TR(1), TR(1), TR(2), TR(2), TR(2), K(4), K(4) ];
 outrider.closing[4] = [ TL(3), F(4), TR(3), K(4), K(4), K(4), K(4), K(4), K(4), K(4) ];
-outrider.closing[5] = [ BL(2), TL(1), TL(1), TL(1), TL(1), TL(2), TL(2), TL(2), K(4), K(4) ];
+outrider.closing[5] = [ BL(1), TL(1), TL(1), TL(1), TL(1), TL(2), TL(2), TL(2), K(4), K(4) ];
 outrider.closing[6] = [ TL(1), TL(1), TL(1), TL(1), TL(2), TL(2), TL(2), TL(2), K(4), K(4) ];
-outrider.closing[7] = [ F(3), BL(2), BL(2), BL(2), BL(2), BL(3), BL(3), BL(3), TL(1), TL(1) ];
+outrider.closing[7] = [ F(1), BL(1), BL(1), BL(1), BL(1), BL(2), BL(2), BL(2), TL(1), TL(1) ];
 
 outrider.away = [];
 outrider.away[0] = [ F(3), F(3), F(3), F(3), F(3), F(4), F(4), F(4), F(4), F(4) ];
@@ -2128,14 +2128,14 @@ outrider.far[6] = [ TL(2), TL(2), TL(2), TL(2), TL(2), TL(3), TL(3), TL(3), TL(3
 outrider.far[7] = [ BL(2), BL(2), BL(2), BL(2), BL(3), BL(3), BL(3), BL(3), TL(2), TL(3) ];
 
 outrider.stressed = [];
-outrider.stressed[0] = [ BL(2), F(3), F(3), F(3), F(3), F(4), F(4), F(4), F(4), BR(2) ];
-outrider.stressed[1] = [ F(3), BR(2), BR(2), BR(2), BR(2), BR(3), BR(3), BR(3), TR(1), TR(2) ];
+outrider.stressed[0] = [ BL(1), BL(3), F(1), F(1), F(2), F(2), F(3), F(3), F(4), F(4) ];
+outrider.stressed[1] = [ F(1), BR(1), BR(1), BR(1), BR(2), BR(2), BR(3), BR(3), TR(1), TR(2) ];
 outrider.stressed[2] = [ TR(1), TR(1), TR(1), TR(1), TR(2), TR(2), TR(2), TR(3), TR(3), TR(3) ];
 outrider.stressed[3] = [ TR(1), TR(1), TR(1), TR(1), TR(2), TR(2), TR(2), TR(3), TR(3), TR(3) ];
 outrider.stressed[4] = [ TL(1), TL(1), TL(2), TL(2), TL(3), TL(3), TR(1), TR(1), TR(2), TR(3) ];
 outrider.stressed[5] = [ TL(1), TL(1), TL(1), TL(1), TL(2), TL(2), TL(2), TL(3), TL(3), TL(3) ];
 outrider.stressed[6] = [ TL(1), TL(1), TL(1), TL(1), TL(2), TL(2), TL(2), TL(3), TL(3), TL(3) ];
-outrider.stressed[7] = [ F(3), BL(2), BL(2), BL(2), BL(2), BL(3), BL(3), BL(3), TL(1), TL(2) ];
+outrider.stressed[7] = [ F(1), BL(1), BL(1), BL(1), BL(2), BL(2), BL(3), BL(3), TL(1), TL(2) ];
 
 // ****************************************************************************
 // Phantom Attack Shuttle
@@ -3289,19 +3289,19 @@ tiePhantom.name = "TIE/ph Phantom";
 tiePhantom.image = "img/tiePhantom.png";
 tiePhantom.faction = "Empire";
 tiePhantom.simple = [ BL(2), F(2), BR(2), F(3) ];
-tiePhantom.normal = [ TL(1), TR(1), TL(2), TR(2), TL(3), BL(3), BR(3), TR(3), F(4) ];
+tiePhantom.normal = [ TL(1), BL(1), BR(1), TR(1), TL(2), TR(2), TL(3), BL(3), BR(3), TR(3), F(4) ];
 tiePhantom.difficult = [ K(3), K(4) ];
 tiePhantom.actions = [ 'CLOAKING', 'FOCUS', 'BARREL_ROLL', 'EVADE' ];
 
 tiePhantom.closing = [];
-tiePhantom.closing[0] = [ BL(2), F(2), F(2), F(2), F(2), F(3), F(3), F(3), K(3), K(3) ];
-tiePhantom.closing[1] = [ F(2), BR(2), BR(2), BR(2), BR(2), BR(3), BR(3), BR(3), TR(1), TR(1) ];
+tiePhantom.closing[0] = [ BL(1), F(2), F(2), F(2), F(2), F(3), F(3), F(3), K(3), K(3) ];
+tiePhantom.closing[1] = [ F(2), BR(1), BR(1), BR(1), BR(1), BR(2), BR(2), BR(2), TR(1), TR(1) ];
 tiePhantom.closing[2] = [ TR(1), TR(1), TR(1), TR(1), TR(2), TR(2), TR(2), TR(2), K(3), K(3) ];
-tiePhantom.closing[3] = [ BR(2), TR(1), TR(1), TR(1), TR(1), TR(2), TR(2), TR(2), K(3), K(3) ];
+tiePhantom.closing[3] = [ BR(1), TR(1), TR(1), TR(1), TR(1), TR(2), TR(2), TR(2), K(3), K(3) ];
 tiePhantom.closing[4] = [ TL(3), F(4), TR(3), K(3), K(3), K(3), K(4), K(4), K(4), K(4) ];
-tiePhantom.closing[5] = [ BL(2), TL(1), TL(1), TL(1), TL(1), TL(2), TL(2), TL(2), K(3), K(3) ];
+tiePhantom.closing[5] = [ BL(1), TL(1), TL(1), TL(1), TL(1), TL(2), TL(2), TL(2), K(3), K(3) ];
 tiePhantom.closing[6] = [ TL(1), TL(1), TL(1), TL(1), TL(2), TL(2), TL(2), TL(2), K(3), K(3) ];
-tiePhantom.closing[7] = [ F(2), BL(2), BL(2), BL(2), BL(2), BL(3), BL(3), BL(3), TL(1), TL(1) ];
+tiePhantom.closing[7] = [ F(2), BL(1), BL(1), BL(1), BL(1), BL(2), BL(2), BL(2), TL(1), TL(1) ];
 
 tiePhantom.away = [];
 tiePhantom.away[0] = [ F(3), F(3), F(3), F(3), F(3), F(4), F(4), F(4), F(4), F(4) ];
@@ -3324,14 +3324,14 @@ tiePhantom.far[6] = [ TL(2), TL(2), TL(2), TL(2), TL(2), TL(3), TL(3), TL(3), TL
 tiePhantom.far[7] = [ BL(2), BL(2), BL(2), BL(2), BL(3), BL(3), BL(3), BL(3), TL(2), TL(3) ];
 
 tiePhantom.stressed = [];
-tiePhantom.stressed[0] = [ BL(2), F(2), F(2), F(2), F(3), F(3), F(3), F(4), F(4), BR(2) ];
-tiePhantom.stressed[1] = [ F(2), BR(2), BR(2), BR(2), BR(2), BR(3), BR(3), BR(3), TR(1), TR(2) ];
+tiePhantom.stressed[0] = [ BL(1), BL(3), F(2), F(2), F(2), F(3), F(3), F(3), F(4), F(4) ];
+tiePhantom.stressed[1] = [ F(2), BR(1), BR(1), BR(1), BR(2), BR(2), BR(3), BR(3), TR(1), TR(2) ];
 tiePhantom.stressed[2] = [ TR(1), TR(1), TR(1), TR(1), TR(2), TR(2), TR(2), TR(3), TR(3), TR(3) ];
 tiePhantom.stressed[3] = [ TR(1), TR(1), TR(1), TR(1), TR(2), TR(2), TR(2), TR(3), TR(3), TR(3) ];
 tiePhantom.stressed[4] = [ TL(1), TL(1), TL(2), TL(2), TL(3), TL(3), TR(1), TR(1), TR(2), TR(3) ];
 tiePhantom.stressed[5] = [ TL(1), TL(1), TL(1), TL(1), TL(2), TL(2), TL(2), TL(3), TL(3), TL(3) ];
 tiePhantom.stressed[6] = [ TL(1), TL(1), TL(1), TL(1), TL(2), TL(2), TL(2), TL(3), TL(3), TL(3) ];
-tiePhantom.stressed[7] = [ F(2), BL(2), BL(2), BL(2), BL(2), BL(3), BL(3), BL(3), TL(1), TL(2) ];
+tiePhantom.stressed[7] = [ F(2), BL(1), BL(1), BL(1), BL(2), BL(2), BL(3), BL(3), TL(1), TL(2) ];
 
 // ****************************************************************************
 // TIE/ca Punisher
@@ -3662,13 +3662,13 @@ tiesf.closing[0] = [ BL(1), F(1), F(1), F(1), F(1), F(2), F(2), F(2), SLL(3), SL
 tiesf.closing[1] = [ F(1), BR(1), BR(1), BR(1), BR(1), BR(2), BR(2), BR(2), TR(1), TR(1) ];
 tiesf.closing[2] = [ TR(1), TR(1), TR(1), TR(1), TR(2), TR(2), TR(2), TR(2), SLL(3), SLL(3) ];
 tiesf.closing[3] = [ BR(1), TR(1), TR(1), TR(1), TR(1), TR(2), TR(2), TR(2), SLL(3), SLL(3) ];
-tiesf.closing[4] = [ TL(3), F(4), TR(3), SLL(3), SLL(3), SLL(3), SLR(3), SLR(3), SLR(3), SLR(3) ];
+tiesf.closing[4] = [ TL(3), F(5), TR(3), SLL(3), SLL(3), SLL(3), SLR(3), SLR(3), SLR(3), SLR(3) ];
 tiesf.closing[5] = [ BL(1), TL(1), TL(1), TL(1), TL(1), TL(2), TL(2), TL(2), SLR(3), SLR(3) ];
 tiesf.closing[6] = [ TL(1), TL(1), TL(1), TL(1), TL(2), TL(2), TL(2), TL(2), SLR(3), SLR(3) ];
 tiesf.closing[7] = [ F(1), BL(1), BL(1), BL(1), BL(1), BL(2), BL(2), BL(2), TL(1), TL(1) ];
 
 tiesf.away = [];
-tiesf.away[0] = [ F(3), F(3), F(3), F(3), F(3), F(4), F(4), F(4), F(4), F(5) ];
+tiesf.away[0] = [ F(4), F(4), F(4), F(4), F(4), F(5), F(5), F(5), F(5), F(5) ];
 tiesf.away[1] = [ BR(2), BR(2), BR(2), BR(2), BR(3), BR(3), BR(3), BR(3), TR(2), TR(3) ];
 tiesf.away[2] = [ BR(2), BR(3), BR(3), TR(2), TR(2), TR(2), TR(3), TR(3), TR(3), TR(3) ];
 tiesf.away[3] = [ TR(2), TR(2), TR(2), TR(3), TR(3), TR(3), TR(3), SLL(3), SLR(3), SLR(3) ];
@@ -3678,7 +3678,7 @@ tiesf.away[6] = [ BL(2), BL(3), BL(3), TL(2), TL(2), TL(2), TL(3), TL(3), TL(3),
 tiesf.away[7] = [ BL(2), BL(2), BL(2), BL(2), BL(3), BL(3), BL(3), BL(3), TL(2), TL(3) ];
 
 tiesf.far = [];
-tiesf.far[0] = [ BL(3), F(3), F(4), F(4), F(4), F(4), F(5), F(5), F(5), BR(3) ];
+tiesf.far[0] = [ BL(3), F(4), F(4), F(4), F(4), F(5), F(5), F(5), F(5), BR(3) ];
 tiesf.far[1] = [ BR(2), BR(2), BR(2), BR(2), BR(3), BR(3), BR(3), BR(3), TR(2), TR(3) ];
 tiesf.far[2] = [ TR(2), TR(2), TR(2), TR(2), TR(2), TR(3), TR(3), TR(3), TR(3), TR(3) ];
 tiesf.far[3] = [ TR(2), TR(2), TR(2), TR(2), TR(2), TR(3), TR(3), TR(3), TR(3), TR(3) ];
@@ -3688,14 +3688,14 @@ tiesf.far[6] = [ TL(2), TL(2), TL(2), TL(2), TL(2), TL(3), TL(3), TL(3), TL(3), 
 tiesf.far[7] = [ BL(2), BL(2), BL(2), BL(2), BL(3), BL(3), BL(3), BL(3), TL(2), TL(3) ];
 
 tiesf.stressed = [];
-tiesf.stressed[0] = [ BL(1), BL(3), F(1), F(1), F(2), F(2), F(3), F(3), F(4), F(4) ];
-tiesf.stressed[1] = [ F(1), BR(1), BR(1), BR(1), BR(2), BR(2), BR(3), BR(3), TR(2), TR(2) ];
-tiesf.stressed[2] = [ TR(2), TR(2), TR(2), TR(2), TR(2), TR(2), TR(2), TR(2), TR(2), TR(2) ];
-tiesf.stressed[3] = [ TR(2), TR(2), TR(2), TR(2), TR(2), TR(2), TR(2), TR(2), TR(2), TR(2) ];
-tiesf.stressed[4] = [ TL(2), TL(2), TL(2), TL(2), TL(2), TR(2), TR(2), TR(2), TR(2), TR(2) ];
-tiesf.stressed[5] = [ TL(2), TL(2), TL(2), TL(2), TL(2), TL(2), TL(2), TL(2), TL(2), TL(2) ];
-tiesf.stressed[6] = [ TL(2), TL(2), TL(2), TL(2), TL(2), TL(2), TL(2), TL(2), TL(2), TL(2) ];
-tiesf.stressed[7] = [ F(1), BL(1), BL(1), BL(1), BL(2), BL(2), BL(3), BL(3), TL(2), TL(2) ];
+tiesf.stressed[0] = [ BL(1), BL(3), F(1), F(1), F(2), F(2), F(3), F(3), F(4), F(5) ];
+tiesf.stressed[1] = [ F(1), BR(1), BR(1), BR(1), BR(2), BR(2), BR(3), BR(3), TR(2), TR(3) ];
+tiesf.stressed[2] = [ TR(2), TR(2), TR(2), TR(2), TR(2), TR(3), TR(3), TR(3), TR(3), TR(3) ];
+tiesf.stressed[3] = [ TR(2), TR(2), TR(2), TR(2), TR(2), TR(3), TR(3), TR(3), TR(3), TR(3) ];
+tiesf.stressed[4] = [ TL(2), TL(2), TL(2), TL(3), TL(3), TL(3), TR(2), TR(2), TR(3), TR(3) ];
+tiesf.stressed[5] = [ TL(2), TL(2), TL(2), TL(2), TL(2), TL(3), TL(3), TL(3), TL(3), TL(3) ];
+tiesf.stressed[6] = [ TL(2), TL(2), TL(2), TL(2), TL(2), TL(3), TL(3), TL(3), TL(3), TL(3) ];
+tiesf.stressed[7] = [ F(1), BL(1), BL(1), BL(1), BL(2), BL(2), BL(3), BL(3), TL(2), TL(3) ];
 
 // ****************************************************************************
 // TIE/vn Silencer
