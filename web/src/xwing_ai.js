@@ -287,7 +287,7 @@ function set_ship( ship_id )
     // Set faction specific target images
     for( var idx=0; idx < 8; idx++ ) {
         var target = "target" + idx
-        var image  = "img/" + SHIP.faction + idx + ".png"
+        var image  = "img/" + SHIP.faction[0].toUpperCase() + SHIP.faction.substring(1) + idx + ".png"
         document.getElementById(target).src = image;
     }
 
