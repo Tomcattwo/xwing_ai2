@@ -34,19 +34,19 @@
 			<maneuver>BR1</maneuver>
 		</simple>
 		<normal>
-			<maneuver>TRL1</maneuver>
 			<maneuver>TL2</maneuver>
 			<maneuver>BL2</maneuver>
 			<maneuver>BR2</maneuver>
 			<maneuver>TR2</maneuver>
-			<maneuver>TRR1</maneuver>
 		</normal>
 		<difficult>
+			<maneuver>TRL1</maneuver>			
 			<maneuver>TL1</maneuver>
 			<maneuver>BL3</maneuver>
 			<maneuver>F4</maneuver>
 			<maneuver>BR3</maneuver>
 			<maneuver>TR1</maneuver>
+			<maneuver>TRR1</maneuver>			
 			<maneuver>K2</maneuver>
 		</difficult>
 	</bwing>
@@ -140,7 +140,7 @@
 			<maneuver>BL3</maneuver>
 			<maneuver>F4</maneuver>
 			<maneuver>BR2</maneuver>
-			<maneuver>BL3</maneuver>
+			<maneuver>BR3</maneuver>
 			<maneuver>TR2</maneuver>
 		</normal>
 		<difficult>

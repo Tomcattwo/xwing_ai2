@@ -25,11 +25,12 @@
 		</difficult>
 	</decimator>
 	<outrider actions=" 'TARGET_LOCK', 'FOCUS', 'ROTATE_ARC', 'BARREL_ROLL_D' " image="img/outrider.png" name="YT-2400 Light Freighter" faction="Rebel">
-	    <simple></simple>
+	    <simple>
 			<maneuver>F1</maneuver>
 			<maneuver>F2</maneuver>
 			<maneuver>BL1</maneuver>
 			<maneuver>BR1</maneuver>
+	    </simple>
 	    <normal>
 			<maneuver>TL1</maneuver>
 			<maneuver>TL2</maneuver>
