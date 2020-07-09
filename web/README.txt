@@ -1,7 +1,7 @@
 =========================================================================================================================================
    Star Wars X-Wing Miniatures: Ship AI Combined 1st and 2nd Edition and Heroes of the Aturi Cluster (HotAC) + Flight Grop Alpha (FGA) AI 2nd Edition
 
-            1st Edition AI v1.14.0 / 2nd Edition AI v2.0.2 / HoTAC+FGA 2nd Edition (2.07.04/205_001) AI v3.1.3
+            1st Edition AI v1.14.0 / 2nd Edition AI v2.0.2 / HoTAC+FGA 2nd Edition (2.07.04/205_001/AI7.2) AI v3.1.4
 =========================================================================================================================================
 
 -------------------
@@ -30,7 +30,7 @@ You can download HotAC 2nd Edition (v 2.07.04) at:
 
 https://drive.google.com/drive/folders/1FuTxsSqbqqsiPm7Ayo5aX2daVloQ3RhM
 
-You can download FGA 2nd Edition (Ver 205_001 with AI Ver 7.1) at:
+You can download FGA 2nd Edition (Ver 205_001 with AI Ver 7.2) at:
 
 https://boardgamegeek.com/filepage/161035/flight-group-alpha-imperial-co-operative-campaign
 
@@ -134,6 +134,8 @@ Files changed: index3.htm, info3.htm, style.css, xwing_ai3.js, xwing_ai.js, xwin
 
 6/29/2020 1.14.01/2.0.2/3.1.3 (Tomcattwo) Added Maneuver Tables for each HotAC and FGA ship on Main page and Ships page, with permission from sirjorj for use of screen grabs of the tables from http://xhud.sirjorj.com/xwing.cgi.
 Files changed: xwing_ai3.js, xwing_ships3.js and adding the new maneuver table images.
+
+7/9/2020 1.14.01/2.0.2/3.1.4 (Tomcattwo) Updated xwing_ships3.js and xwing_ai3.js for FGA AI Version 7.2. Minor changes to the readmes and help3.htm indicating AI update for FGA to version 7.2. No changes to ai 1 or 2 files.
 
 -------
 Contact
