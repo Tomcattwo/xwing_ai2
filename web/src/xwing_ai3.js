@@ -747,7 +747,7 @@ function format_actions( ship )
     	{
         	lockTest = 2;
         	labelTest = 2;
-        	rotateTest = 1;
+        	rotateTest = 2;
         	break;
     	}
     	case 'TIE Advanced x1':

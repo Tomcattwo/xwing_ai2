@@ -1,10 +1,11 @@
 // ****************************************************************************
 // X-Wing Miniatures Heroes of the Aturi Cluster (HotAC) + Flight Group Alpha (FGA) AI - Ships 2nd Edition
-// Generated: By hand on 18 June 2020, 2100
+// Generated: By hand on 9 July 2020, 2100
+// Update to FGA AI version 7.2
 // NOTE: FGA AI contains the 27 ships used in the FGA game and includes all the HotAC AI - Both campaigns can be played using this single app
 // NOTE: FGA AI only uses 6 maneuver possibilities (vice 10) and includes a NEW "Full Front Bullseye" location (9 possible target locations: 0-8 [8 is the Bullseye])
 
-var VERSION = "3.1.3";
+var VERSION = "3.1.4";
 
 // ****************************************************************************
 // TIE/ln Fighter
@@ -260,14 +261,14 @@ tieBomber.far[7] = [ BL(3), BL(3), BL(3), BL(3), F(4), F(4) ];
 tieBomber.far[8] = [ F(3), F(4), F(4), F(4), F(4), F(4) ];
 
 tieBomber.stressed = [];
-tieBomber.stressed[0] = [ BR(1), BR(1), BR(2), F(2), F(2), F(2) ];
-tieBomber.stressed[1] = [ BR(1), BR(1), TR(2), BR(2), BR(2), BR(2) ];
-tieBomber.stressed[2] = [ BR(1), TR(2), TR(2), BR(2), BR(2), BR(2) ];
-tieBomber.stressed[3] = [ BR(1), BR(1), BR(1), BR(2), BR(2), TR(3) ];
-tieBomber.stressed[4] = [ BL(1), BL(1), BL(1), BL(2), BL(2), TL(3) ];
-tieBomber.stressed[5] = [ BL(1), TL(2), TL(2), BL(2), BL(2), BL(2) ];
-tieBomber.stressed[6] = [ BL(1), BL(1), TL(2), BL(2), BL(2), BL(2) ];
-tieBomber.stressed[7] = [ BL(1), BL(1), BL(2), F(2), F(2), F(2) ];
+tieBomber.stressed[0] = [ BR(1), BR(2), BR(2), F(2), F(2), F(2) ];
+tieBomber.stressed[1] = [ BR(1), BR(2), BR(2), BR(2), BR(2), BR(2) ];
+tieBomber.stressed[2] = [ BR(1), TR(2), BR(2), BR(2), BR(2), BR(2) ];
+tieBomber.stressed[3] = [ BR(1), BR(2), BR(2), BR(2), BR(2), TR(3) ];
+tieBomber.stressed[4] = [ BL(1), BL(2), BL(2), BL(2), BL(2), TL(3) ];
+tieBomber.stressed[5] = [ BL(1), TL(2), BL(2), BL(2), BL(2), BL(2) ];
+tieBomber.stressed[6] = [ BL(1), BL(2), BL(2), BL(2), BL(2), BL(2) ];
+tieBomber.stressed[7] = [ BL(1), BL(2), BL(2), F(2), F(2), F(2) ];
 tieBomber.stressed[8] = [ F(1), F(1), F(1), F(2), F(2), F(2) ];
 
 // ****************************************************************************
@@ -790,10 +791,10 @@ awing.far[8] = [ F(4), F(5), F(5), F(5), F(5), F(5) ];
 awing.stressed = [];
 awing.stressed[0] = [ TR(2), BR(2), BR(2), BR(2), F(2), F(2) ];
 awing.stressed[1] = [ TR(2), TR(2), TR(2), BR(2), BR(2), TR(3) ];
-awing.stressed[2] = [ TR(2), TR(2), TR(2), BR(2), BR(2), BR(2) ];
+awing.stressed[2] = [ TR(1), TR(2), TR(2), BR(2), BR(2), BR(2) ];
 awing.stressed[3] = [ TR(2), TR(2), TR(2), TR(2), TR(3), F(5) ];
 awing.stressed[4] = [ TL(2), TL(2), TL(2), TL(2), TL(3), F(5) ];
-awing.stressed[5] = [ TL(2), TL(2), TL(2), BL(2), BL(2), BL(2) ];
+awing.stressed[5] = [ TL(1), TL(2), TL(2), BL(2), BL(2), BL(2) ];
 awing.stressed[6] = [ TL(2), TL(2), TL(2), BL(2), BL(2), TL(3) ];
 awing.stressed[7] = [ TL(2), BL(2), BL(2), BL(2), F(2), F(2) ];
 awing.stressed[8] = [ F(2), F(2), F(2), F(2), F(3), F(3) ];
@@ -921,12 +922,12 @@ outrider.far[8] = [ F(3), F(3), F(4), F(4), F(4), F(4) ];
 
 outrider.stressed = [];
 outrider.stressed[0] = [ BR(1), BR(1), F(1), F(1), F(2), F(2) ];
-outrider.stressed[1] = [ BR(1), BR(1), F(1), F(2), F(2), F(2) ];
-outrider.stressed[2] = [ TR(1), BR(1), BR(2), BR(2), BR(2), BR(2) ];
-outrider.stressed[3] = [ TR(1), BR(1), BR(1), BR(1), BR(2), BR(2) ];
-outrider.stressed[4] = [ TL(1), BL(1), BL(1), BL(1), BL(2), BL(2) ];
-outrider.stressed[5] = [ TL(1), BL(1), BL(2), BL(2), BL(2), BL(2) ];
-outrider.stressed[6] = [ BL(1), BL(1), F(1), F(2), F(2), F(2) ];
+outrider.stressed[1] = [ TR(1), BR(1), BR(1), BR(1), BR(1), F(1) ];
+outrider.stressed[2] = [ TR(1), BR(1), BR(1), BR(1), BR(1), TR(2) ];
+outrider.stressed[3] = [ TR(1), TR(1), BR(1), BR(1), BR(1), BR(1) ];
+outrider.stressed[4] = [ TL(1), TL(1), BL(1), BL(1), BL(1), BL(1) ];
+outrider.stressed[5] = [ TL(1), BL(1), BL(1), BL(1), BL(1), TL(2) ];
+outrider.stressed[6] = [ TL(1), BL(1), BL(1), BL(1), BL(1), F(1) ];
 outrider.stressed[7] = [ BL(1), BL(1), F(1), F(1), F(2), F(2) ];
 outrider.stressed[8] = [ F(1), F(1), F(1), F(2), F(2), F(2) ];
 
@@ -1053,12 +1054,12 @@ ghost.far[8] = [ F(3), F(4), F(4), F(4), F(4), F(4) ];
 
 ghost.stressed = [];
 ghost.stressed[0] = [ BR(1), BL(2), BR(2), BR(2), BR(2), BR(2) ];
-ghost.stressed[1] = [ BR(1), BR(1), TR(2), BR(2), BR(2), BR(2) ];
-ghost.stressed[2] = [ BR(1), TR(2), TR(2), BR(2), BR(2), BR(2) ];
-ghost.stressed[3] = [ BR(1), BR(1), BR(1), TR(2), BR(2), BR(2) ];
-ghost.stressed[4] = [ BL(1), BL(1), BL(1), TL(2), BL(2), BL(2) ];
-ghost.stressed[5] = [ BL(1), TL(2), TL(2), BL(2), BL(2), BL(2) ];
-ghost.stressed[6] = [ BL(1), BL(1), TL(2), BL(2), BL(2), BL(2) ];
+ghost.stressed[1] = [ TR(2), BR(2), BR(2), BR(2), BR(2), BR(2) ];
+ghost.stressed[2] = [ TR(2), TR(2), BR(2), BR(2), BR(2), BR(2) ];
+ghost.stressed[3] = [ TR(2), TR(2), TR(2), BR(2), BR(2), BR(2) ];
+ghost.stressed[4] = [ TL(2), TL(2), TL(2), BL(2), BL(2), BL(2) ];
+ghost.stressed[5] = [ TL(2), TL(2), BL(2), BL(2), BL(2), BL(2) ];
+ghost.stressed[6] = [ TL(2), BL(2), BL(2), BL(2), BL(2), BL(2) ];
 ghost.stressed[7] = [ BL(1), BR(2), BL(2), BL(2), BL(2), BL(2) ];
 ghost.stressed[8] = [ F(1), F(1), F(1), F(2), F(2), F(2) ];
 
@@ -1229,23 +1230,23 @@ m3a.closing[8] = [ K(5), K(5), K(3), K(3), BL(1), BR(1) ];
 
 m3a.away = [];
 m3a.away[0] = [ BR(2), BR(2), BR(2), BR(3), BR(3), F(3) ];
-m3a.away[1] = [ BR(1), TR(2), BR(2), BR(2), TR(2), TR(2) ];
+m3a.away[1] = [ TR(1), BR(1), TR(2), TR(2), TR(2), BR(2) ];
 m3a.away[2] = [ K(3), K(3), TR(1), TR(1), TR(2), TR(2) ];
 m3a.away[3] = [ K(3), K(3), K(3), TR(2), TR(2), TR(2) ];
 m3a.away[4] = [ K(3), K(3), K(3), TL(2), TL(2), TL(2) ];
 m3a.away[5] = [ K(3), K(3), TL(1), TL(1), TL(2), TL(2) ];
-m3a.away[6] = [ BL(1), TL(2), BL(2), BL(2), TL(2), TL(2) ];
+m3a.away[6] = [ TL(1), BL(1), TL(2), TL(2), TL(2), BL(2) ];
 m3a.away[7] = [ BL(2), BL(2), BL(2), BL(3), BL(3), F(3) ];
 m3a.away[8] = [ F(2), F(2), F(2), F(2), F(3), F(3) ];
 
 m3a.far = [];
 m3a.far[0] = [ BR(3), BR(3), BR(3), BR(3), F(4), F(4) ];
-m3a.far[1] = [ BR(3), BR(3), BR(3), TR(2), TR(2), TR(2) ];
+m3a.far[1] = [ TR(1), TR(1), TR(2), TR(2), TR(2), TR(2) ];
 m3a.far[2] = [ K(3), K(3), K(3), TR(1), TR(1), TR(1) ];
 m3a.far[3] = [ K(3), K(3), K(3), K(3), TR(1), TR(1) ];
 m3a.far[4] = [ K(3), K(3), K(3), K(3), TL(1), TL(1) ];
 m3a.far[5] = [ K(3), K(3), K(3), TL(1), TL(1), TL(1) ];
-m3a.far[6] = [ BL(3), BL(3), BL(3), TL(2), TL(2), TL(2) ];
+m3a.far[6] = [ TL(1), TL(1), TL(2), TL(2), TL(2), TL(2) ];
 m3a.far[7] = [ BL(3), BL(3), BL(3), BL(3), F(4), F(4) ];
 m3a.far[8] = [ F(4), F(5), F(5), F(5), F(5), F(5) ];
 
@@ -1253,8 +1254,8 @@ m3a.stressed = [];
 m3a.stressed[0] = [ BR(1), BR(1), BR(1), F(2), F(2), F(3) ];
 m3a.stressed[1] = [ TR(1), BR(1), BR(1), BR(1), BR(1), BR(1) ];
 m3a.stressed[2] = [ TR(1), TR(1), BR(1), BR(1), BR(1), BR(1) ];
-m3a.stressed[3] = [ F(2), F(2), TR(2), TR(2), F(3), F(3) ];
-m3a.stressed[4] = [ F(2), F(2), TL(2), TL(2), F(3), F(3) ];
+m3a.stressed[3] = [ BR(1), BR(1), TR(2), TR(2), F(3), F(3) ];
+m3a.stressed[4] = [ BL(1), BL(1), TL(2), TL(2), F(3), F(3) ];
 m3a.stressed[5] = [ TL(1), TL(1), BL(1), BL(1), BL(1), BL(1) ];
 m3a.stressed[6] = [ TL(1), BL(1), BL(1), BL(1), BL(1), BL(1) ];
 m3a.stressed[7] = [ BL(1), BL(1), BL(1), F(2), F(2), F(3) ];
@@ -1543,50 +1544,50 @@ firesprayS.stats = "stats_firespray_scum.png";
 firesprayS.icons = "icons_firespray_scum.png";
 firesprayS.table = "table_firespray_scum.png";
 firesprayS.ability = [ 'NONE' ];
-firesprayS.flee = [ '1F', '1F', '2BL', '2BR', '3F', '3F' ];
+firesprayS.flee = [ '1BL', '1BR', '2F', '2F', '3F', '3F' ];
 firesprayS.threshold = "3";
 
 firesprayS.closing = [];
 firesprayS.closing[0] = [ F(1), F(1), BR(1), BR(1), BR(1), BR(2) ];
-firesprayS.closing[1] = [ K(4), TRR(3), TRR(3), TR(2), TR(2), TR(2) ];
+firesprayS.closing[1] = [ K(4), TRR(3), TRR(3), TR(1), TR(1), TR(1) ];
 firesprayS.closing[2] = [ TRR(3), TRR(3), TRR(3), BR(1), TR(2), TR(2) ];
 firesprayS.closing[3] = [ K(4), K(4), TRR(3), TRR(3), TR(2), TR(2) ];
 firesprayS.closing[4] = [ K(4), K(4), TRL(3), TRL(3), TL(2), TL(2) ];
 firesprayS.closing[5] = [ TRL(3), TRL(3), TRL(3), BL(1), TL(2), TL(2) ];
-firesprayS.closing[6] = [ K(4), TRL(3), TRL(3), TL(2), TL(2), TL(2) ];
+firesprayS.closing[6] = [ K(4), TRL(3), TRL(3), TL(1), TL(1), TL(1) ];
 firesprayS.closing[7] = [ F(1), F(1), BL(1), BL(1), BL(1), BL(2) ];
 firesprayS.closing[8] = [ K(4), K(4), F(1), F(1), F(2), F(2) ];
 
 firesprayS.away = [];
 firesprayS.away[0] = [ BR(2), BR(2), BR(2), BR(3), BR(3), F(3) ];
-firesprayS.away[1] = [ TR(2), TR(2), BR(2), BR(2), BR(3), BR(3) ];
+firesprayS.away[1] = [ TR(1), TR(1), BR(1), BR(1), TR(2), TR(2) ];
 firesprayS.away[2] = [ K(4), TRR(3), TRR(3), TRR(3), TR(2), TR(2) ];
 firesprayS.away[3] = [ TRL(3), TRL(3), TRR(3), TRR(3), TRR(3), TRR(3) ];
 firesprayS.away[4] = [ TRR(3), TRR(3), TRL(3), TRL(3), TRL(3), TRL(3) ];
 firesprayS.away[5] = [ K(4), TRL(3), TRL(3), TRL(3), TL(2), TL(2) ];
-firesprayS.away[6] = [ TL(2), TL(2), BL(2), BL(2), BL(3), BL(3) ];
+firesprayS.away[6] = [ TL(1), TL(1), BL(1), BL(1), TL(2), TL(2) ];
 firesprayS.away[7] = [ BL(2), BL(2), BL(2), BL(3), BL(3), F(3) ];
 firesprayS.away[8] = [ F(1), F(2), F(2), F(2), F(3), F(3) ];
 
 firesprayS.far = [];
 firesprayS.far[0] = [ BR(3), BR(3), BR(3), BR(3), F(4), F(4) ];
-firesprayS.far[1] = [ TR(2), TR(2), TR(2), BR(3), BR(3), BR(3) ];
+firesprayS.far[1] = [ TR(1), TR(1), TR(1), TR(2), TR(2), TR(2) ];
 firesprayS.far[2] = [ TRR(3), TRR(3), TRR(3), TR(2), TR(2), TR(2) ];
 firesprayS.far[3] = [ TRR(3), TRR(3), TRR(3), TR(2), TR(2), TR(2) ];
 firesprayS.far[4] = [ TRL(3), TRL(3), TRL(3), TL(2), TL(2), TL(2) ];
 firesprayS.far[5] = [ TRL(3), TRL(3), TRL(3), TL(2), TL(2), TL(2) ];
-firesprayS.far[6] = [ TL(2), TL(2), TL(2), BL(3), BL(3), BL(3) ];
+firesprayS.far[6] = [ TL(1), TL(1), TL(1), TL(2), TL(2), TL(2) ];
 firesprayS.far[7] = [ BL(3), BL(3), BL(3), BL(3), F(4), F(4) ];
 firesprayS.far[8] = [ F(3), F(4), F(4), F(4), F(4), F(4) ];
 
 firesprayS.stressed = [];
 firesprayS.stressed[0] = [ BR(1), BR(1), BR(2), F(2), F(2), F(2) ];
-firesprayS.stressed[1] = [ BR(1), BR(1), TR(2), BR(2), BR(2), BR(2) ];
-firesprayS.stressed[2] = [ BR(1), TR(2), TR(2), BR(2), BR(2), BR(2) ];
-firesprayS.stressed[3] = [ BR(1), BR(1), BR(1), BR(2), BR(2), TR(2) ];
-firesprayS.stressed[4] = [ BL(1), BL(1), BL(1), BL(2), BL(2), TL(2) ];
-firesprayS.stressed[5] = [ BL(1), TL(2), TL(2), BL(2), BL(2), BL(2) ];
-firesprayS.stressed[6] = [ BL(1), BL(1), TL(2), BL(2), BL(2), BL(2) ];
+firesprayS.stressed[1] = [ TR(1), BL(1), BL(1), BR(1), BR(1), BR(1) ];
+firesprayS.stressed[2] = [ BL(1), BL(1), BR(1), BR(1), TR(2), TR(2) ];
+firesprayS.stressed[3] = [ BL(1), BL(1), BR(1), BR(1), BR(1), TR(2) ];
+firesprayS.stressed[4] = [ BR(1), BR(1), BL(1), BL(1), BL(1), TL(2) ];
+firesprayS.stressed[5] = [ BR(1), BR(1), BL(1), BL(1), TL(2), TL(2) ];
+firesprayS.stressed[6] = [ TL(1), BR(1), BR(1), BL(1), BL(1), BL(1) ];
 firesprayS.stressed[7] = [ BL(1), BL(1), BL(2), F(2), F(2), F(2) ];
 firesprayS.stressed[8] = [ F(1), F(1), F(1), F(2), F(2), F(2) ];
 
