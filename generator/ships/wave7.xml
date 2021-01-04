@@ -22,6 +22,8 @@
 			<maneuver>TL2</maneuver>
 			<maneuver>TR2</maneuver>
 		</difficult>
+		<force>
+		</force>
 	</houndstooth>
 	<kihraxz actions=" 'TARGET_LOCK', 'FOCUS', 'BARREL_ROLL' " image="img/kihraxz.png" name="Kihraxz Fighter" faction="Scum">
 		<simple>
@@ -46,6 +48,8 @@
 			<maneuver>TRR2</maneuver>
 			<maneuver>K4</maneuver>
 		</difficult>
+		<force>
+		</force>
 	</kihraxz>
 	<kwing actions=" 'TARGET_LOCK', 'FOCUS', 'ROTATE_ARC', 'SLAM', 'RELOAD' " image="img/kwing.png" name="BTL-S8 K-Wing" faction="Rebel">
 		<simple>
@@ -65,6 +69,8 @@
 		</normal>
 		<difficult>
 		</difficult>
+		<force>
+		</force>
 	</kwing>
 	<tiePunisher actions=" 'TARGET_LOCK', 'FOCUS', 'BOOST2LOCK_D', 'BARREL_ROLL_D', 'RELOAD' " image="img/tiePunisher.png" name="TIE/ca Punisher" faction="Empire">
 		<simple>
@@ -88,5 +94,7 @@
 			<maneuver>TR3</maneuver>
 			<maneuver>K4</maneuver>
 		</difficult>
+		<force>
+		</force>
 	</tiePunisher>	
 </ships>

@@ -25,6 +25,8 @@
 			<maneuver>K4</maneuver>
 			<maneuver>K5</maneuver>
 		</difficult>
+		<force>
+		</force>
 	</delta7>
 	<torrent actions=" 'TARGET_LOCK', 'FOCUS', 'BARREL_ROLL2EVADE_D', 'EVADE' " image="img/v-19.png" name="V-19 Torrent" faction="Republic">
 		<simple>
@@ -50,6 +52,8 @@
 			<maneuver>BR3</maneuver>
 			<maneuver>K3</maneuver>
 		</difficult>
+		<force>
+		</force>
 	</torrent>
         <belbullab actions=" 'TARGET_LOCK', 'FOCUS', 'BARREL_ROLL2FOCUS_D', 'BOOST2FOCUS_D' " image="img/belbullab-22.png" name="Belbullab-22 Heavy Starfighter" faction="Seperatist">
 		<simple>
@@ -76,6 +80,8 @@
 			<maneuver>SLL3</maneuver>
 			<maneuver>SLR3</maneuver>
 		</difficult>
+		<force>
+		</force>
 	</belbullab>
         <sithinf actions=" 'TARGET_LOCK', 'FOCUS', 'BARREL_ROLL_D' " image="img/sith_infiltrator.png" name="Sith Infiltrator" faction="Seperatist">
 		<simple>
@@ -103,6 +109,8 @@
 			<maneuver>SLR2</maneuver>
 			<maneuver>K5</maneuver>
 		</difficult>
+		<force>
+		</force>
 	</sithinf>
         <vulture actions=" 'TARGET_LOCK', 'CALCULATE', 'BARREL_ROLL2CALC' " image="img/vulture.png" name="Vulture Class (Droid Fighter)" faction="Seperatist">
 		<simple>
@@ -128,5 +136,7 @@
 			<maneuver>BL3</maneuver>
 			<maneuver>BR3</maneuver>
 		</difficult>
+		<force>
+		</force>
 	</vulture>
 </ships>

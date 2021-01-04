@@ -22,6 +22,8 @@
 			<maneuver>F4</maneuver>
 			<maneuver>K4</maneuver>
 		</difficult>
+		<force>
+		</force>
 	</ywingb>
 	<nantex actions=" 'FOCUS', 'EVADE' " image="img/Nantex.png" name="Nantex-class Starfighter" faction="Seperatist">
 		<simple>
@@ -49,5 +51,7 @@
 			<maneuver>SLR3</maneuver>
 			<maneuver>K5</maneuver>
 		</difficult>
+		<force>
+		</force>
 	</nantex>
 </ships>

@@ -23,6 +23,8 @@
 			<maneuver>SLR3</maneuver>
 			<maneuver>F4</maneuver>
 		</difficult>
+		<force>
+		</force>
 	</scavfalcon>
 	<rz2awing actions=" 'TARGET_LOCK', 'FOCUS', 'BARREL_ROLL', 'BOOST', 'EVADE' " image="img/rz-2_A-wing.png" name="RZ-2 A-Wing" faction="Resistance">
 		<simple>
@@ -48,6 +50,8 @@
 			<maneuver>SLR3</maneuver>
 			<maneuver>K5</maneuver>
 		</difficult>
+		<force>
+		</force>
 	</rz2awing>
         <tiemod actions=" 'FOCUS', 'BARREL_ROLL', 'EVADE' " image="img/tie_miner.png" name="Mod TIE/ln Fighter (Mining Guild)" faction="Scum">
 		<simple>
@@ -73,5 +77,7 @@
 			<maneuver>K3</maneuver>
 			<maneuver>F5</maneuver>
 		</difficult>
+		<force>
+		</force>
 	</tiemod>
 </ships>

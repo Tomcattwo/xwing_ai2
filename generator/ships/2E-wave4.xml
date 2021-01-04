@@ -25,6 +25,8 @@
 			<maneuver>K2</maneuver>
 			<maneuver>F5</maneuver>
 		</difficult>
+		<force>
+		</force>
 	</hyena>
 	<hyenadbs32c actions=" 'TARGET_LOCK', 'CALCULATE', 'BARREL_ROLL2LOCK_D', 'JAM_D' " image="img/hyena_droid_ bomber.png" name="Hyena Droid Bomber/DBS-32C" faction="Seperatist">
 			<simple>
@@ -51,6 +53,8 @@
 				<maneuver>K2</maneuver>
 				<maneuver>F5</maneuver>
 			</difficult>
+			<force>
+			</force>
 	</hyenadbs32c>
 	<n1 actions=" 'TARGET_LOCK', 'FOCUS', 'BARREL_ROLL', 'BOOST' " image="img/nabooN1.png" name="Naboo Royal N-1 Starfighter" faction="Republic">
 		<simple>
@@ -76,6 +80,8 @@
 			<maneuver>TRL3</maneuver>
 			<maneuver>TRR3</maneuver>
 		</difficult>
+		<force>
+		</force>
 	</n1>
         <restransport actions=" 'TARGET_LOCK', 'FOCUS', 'COORDINATE_D', 'JAM_D' " image="img/resistance_transport.png" name="Resistance Transport" faction="Resistance">
 		<simple>
@@ -101,6 +107,8 @@
 			<maneuver>RBL1</maneuver>
 			<maneuver>RBR1</maneuver>
 		</difficult>
+		<force>
+		</force>
 	</restransport>
         <respod actions=" 'FOCUS', 'TARGET_LOCK_D', 'BARREL_ROLL_D', 'JAM_D' " image="img/resistance_transport_pod.png" name="Resistance Transport Pod" faction="Resistance">
 		<simple>
@@ -124,6 +132,8 @@
 			<maneuver>F4</maneuver>
 			<maneuver>K3</maneuver>
 		</difficult>
+		<force>
+		</force>
 	</respod>
         <respodbb8 actions=" 'CALCULATE', 'TARGET_LOCK_D', 'BARREL_ROLL_D', 'JAM_D'" image="img/resistance_transport_pod.png" name="Resistance Transport Pod (BB8)" faction="Resistance">
 		<simple>
@@ -147,5 +157,7 @@
 			<maneuver>F4</maneuver>
 			<maneuver>K3</maneuver>
 		</difficult>
+		<force>
+		</force>
 	</respodbb8>
 </ships>

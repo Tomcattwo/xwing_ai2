@@ -22,6 +22,8 @@
 			<maneuver>F4</maneuver>
 			<maneuver>K4</maneuver>
 		</difficult>
+		<force>
+		</force>
 	</arc170>
 	<arc170R actions=" 'TARGET_LOCK', 'FOCUS', 'BARREL_ROLL_D' " image="img/arc170.png" name="ARC-170 Starfighter" faction="Republic">
 		<simple>
@@ -45,6 +47,8 @@
 			<maneuver>F4</maneuver>
 			<maneuver>K4</maneuver>
 		</difficult>
+		<force>
+		</force>
 	</arc170R>
 	<tiesf actions=" 'LOCK2ROTATE', 'FOCUS2ROTATE', 'BARREL_ROLL2ROTATE', 'EVADE2ROTATE' " image="img/ship_tiesf.png" name="TIE/sf Special Forces" faction="First Order">
 		<simple>
@@ -72,6 +76,8 @@
 			<maneuver>SLL3</maneuver>
 			<maneuver>SLR3</maneuver>
 		</difficult>
+		<force>
+		</force>
 	</tiesf>
 	<fang actions=" 'TARGET_LOCK', 'FOCUS', 'BARREL_ROLL2FOCUS_D', 'BOOST2FOCUS_D' " image="img/ship_protectorate.png" name="Fang Fighter (Protectorate)" faction="Scum">
 		<simple>
@@ -97,6 +103,8 @@
 			<maneuver>TRL2</maneuver>
 			<maneuver>TRR2</maneuver>
 		</difficult>
+		<force>
+		</force>
 	</fang>
 	<lancer actions=" 'TARGET_LOCK', 'FOCUS', 'ROTATE_ARC', 'EVADE' " image="img/ship_lancer.png" name="Lancer Class Pursuit Craft (Shadow Caster)" faction="Scum">
 		<simple>
@@ -121,5 +129,7 @@
 		<difficult>
 			<maneuver>K5</maneuver>
 		</difficult>
+		<force>
+		</force>
 	</lancer>
 </ships>

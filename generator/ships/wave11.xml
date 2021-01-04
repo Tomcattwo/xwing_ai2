@@ -22,6 +22,8 @@
 		<difficult>
 			<maneuver>STA0</maneuver>
 		</difficult>
+		<force>
+		</force>
 	</auzituck>
 	<tieAggressor actions=" 'TARGET_LOCK', 'FOCUS', 'BARREL_ROLL2EVADE_D' " image="img/tie_aggressor.png" name="TIE/ag Aggressor" faction="Empire">
 		<simple>
@@ -45,6 +47,8 @@
 		<difficult>
 			<maneuver>K4</maneuver>
 		</difficult>
+		<force>
+		</force>
 	</tieAggressor>
 	<scurrgs actions=" 'TARGET_LOCK', 'FOCUS', 'BARREL_ROLL_D' " image="img/scurrg.png" name="Scurrg H-6 Bomber (Scum)" faction="Scum">
 		<simple>
@@ -69,5 +73,7 @@
 			<maneuver>TRR3</maneuver>
 			<maneuver>F4</maneuver>
 		</difficult>
+		<force>
+		</force>
 	</scurrgs>
 </ships>

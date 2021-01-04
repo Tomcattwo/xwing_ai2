@@ -1,0 +1,87 @@
+<?xml version="1.0" ?>
+<ships>
+	<dtf actions=" 'TARGET_LOCK', 'BOOST2CALC', 'BARREL_ROLL2EVADE_D', 'CALCULATE', 'EVADE' " image="img/droid_tri-fighter.png" name="Droid Tri-Fighter" faction="Seperatist">
+		<simple>
+			<maneuver>TL2</maneuver>
+			<maneuver>F2</maneuver>
+			<maneuver>TR2</maneuver>
+			<maneuver>TL3</maneuver>
+			<maneuver>F3</maneuver>
+			<maneuver>TR3</maneuver>
+			<maneuver>F4</maneuver>
+		</simple>
+		<normal>
+			<maneuver>TL1</maneuver>
+			<maneuver>TR1</maneuver>
+			<maneuver>BL2</maneuver>
+			<maneuver>BR2</maneuver>
+			<maneuver>BL3</maneuver>
+			<maneuver>BR3</maneuver>			
+			<maneuver>F5</maneuver>
+			
+		</normal>
+		<difficult>				
+			<maneuver>TRL1</maneuver>
+			<maneuver>TRR1</maneuver>
+			<maneuver>K3</maneuver>
+			<maneuver>K5</maneuver>
+		</difficult>
+		<force>
+		</force>
+	</dtf>
+	<eta2 actions=" 'TARGET_LOCK', 'BARREL_ROLL', 'BOOST', 'FOCUS', 'EVADE' " image="img/eta-2.png" name="Eta-2 Actis" faction="Republic">
+		<simple>
+			<maneuver>BL2</maneuver>
+			<maneuver>F2</maneuver>
+			<maneuver>BR2</maneuver>
+			<maneuver>BL3</maneuver>
+			<maneuver>F3</maneuver>
+			<maneuver>BR3</maneuver>
+			<maneuver>F4</maneuver>	
+		</simple>
+		<normal>
+			<maneuver>TL1</maneuver>
+			<maneuver>TR1</maneuver>
+			<maneuver>TL2</maneuver>
+			<maneuver>TR2</maneuver>
+			<maneuver>TL3</maneuver>
+			<maneuver>TR3</maneuver>
+			<maneuver>F5</maneuver>
+		</normal>
+		<difficult>
+			<maneuver>K4</maneuver>
+		</difficult>
+		<force>
+			<maneuver>TRL2</maneuver>
+			<maneuver>TRR2</maneuver>
+		</force>		
+	</eta2>
+	<vwing actions=" 'TARGET_LOCK', 'BOOST2LOCK_D', 'BARREL_ROLL_D', 'FOCUS' " image="img/nimbus_vwing.png" name="Nimbus-Class V-Wing" faction="Republic">
+		<simple>
+			<maneuver>TL2</maneuver>
+			<maneuver>BL2</maneuver>
+			<maneuver>F2</maneuver>
+			<maneuver>BR2</maneuver>
+			<maneuver>TR2</maneuver>
+			<maneuver>F3</maneuver>
+		</simple>
+		<normal>
+			<maneuver>TL1</maneuver>
+			<maneuver>TR1</maneuver>
+			<maneuver>TL3</maneuver>
+			<maneuver>BL3</maneuver>
+			<maneuver>BR3</maneuver>
+			<maneuver>TR3</maneuver>
+			<maneuver>F4</maneuver>
+			<maneuver>F5</maneuver>
+		</normal>
+		<difficult>
+			<maneuver>BL1</maneuver>			
+			<maneuver>BR1</maneuver>
+			<maneuver>K2</maneuver>
+			<maneuver>K4</maneuver>
+		</difficult>
+		<force>
+		</force>
+	</vwing>
+</ships>

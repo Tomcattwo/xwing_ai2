@@ -21,6 +21,8 @@
 			<maneuver>BL3</maneuver>
 			<maneuver>BR3</maneuver>
 		</difficult>
+		<force>
+		</force>
 	</mg100>
 	<tiereaper actions=" 'FOCUS', 'COORDINATE_D', 'JAM', 'EVADE' " image="img/tie_reaper.png" name="TIE Reaper" faction="Empire">
 		<simple>
@@ -46,6 +48,8 @@
 			<maneuver>TR2</maneuver>
 			
 		</difficult>
+		<force>
+		</force>
 	</tiereaper>
 	<tiesilencer actions=" 'TARGET_LOCK', 'FOCUS', 'BARREL_ROLL', 'BOOST' " image="img/tie_silencer.png" name="TIE/vn Silencer" faction="First Order">
 		<simple>
@@ -71,5 +75,7 @@
 			<maneuver>SLR3</maneuver>
 			<maneuver>K4</maneuver>
 		</difficult>
+		<force>
+		</force>
 	</tiesilencer>
 </ships>

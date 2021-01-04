@@ -25,6 +25,8 @@
 			<maneuver>TRL3</maneuver>
 			<maneuver>TRR3</maneuver>
 		</difficult>
+		<force>
+		</force>
 	</fireball>
 	<tieba actions=" 'TARGET_LOCK', 'FOCUS', 'BARREL_ROLL', 'BOOST', 'EVADE' " image="img/tie_ba.png" name="TIE/ba Interceptor" faction="First Order">
 		<simple>
@@ -52,5 +54,7 @@
 			<maneuver>SLR2</maneuver>
 			<maneuver>K5</maneuver>
 		</difficult>
+		<force>
+		</force>
 	</tieba>
 </ships>

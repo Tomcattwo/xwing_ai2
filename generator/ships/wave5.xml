@@ -23,6 +23,8 @@
 		    <maneuver>TL1</maneuver>
 		    <maneuver>TR1</maneuver>
 		</difficult>
+		<force>
+		</force>
 	</decimator>
 	<outrider actions=" 'TARGET_LOCK', 'FOCUS', 'ROTATE_ARC', 'BARREL_ROLL_D' " image="img/outrider.png" name="YT-2400 Light Freighter" faction="Rebel">
 	    <simple>
@@ -48,5 +50,7 @@
 	    <difficult>
 	    	<maneuver>K4</maneuver>
 	    </difficult>
+	    <force>
+	    </force>
 	</outrider>
 </ships>

@@ -24,6 +24,8 @@
 			<maneuver>SLR3</maneuver>
 			<maneuver>K4</maneuver>
 		</difficult>
+		<force>
+		</force>
 	</ig2000>
 	<m3a actions=" 'TARGET_LOCK', 'FOCUS', 'BARREL_ROLL', 'EVADE' " image="img/m3aInterceptor.png" name="M3-A Interceptor" faction="Scum">
 		<simple>
@@ -48,6 +50,8 @@
 			<maneuver>K3</maneuver>
 			<maneuver>K5</maneuver>
 		</difficult>
+		<force>
+		</force>
 	</m3a>
 	<starviper actions=" 'TARGET_LOCK', 'FOCUS', 'BARREL_ROLL2FOCUS_D', 'BOOST2FOCUS_D' " image="img/starviper.png" name="StarViper" faction="Scum">
 		<simple>
@@ -72,6 +76,8 @@
 			<maneuver>SLL3</maneuver>
 			<maneuver>SLR3</maneuver>
 		</difficult>
+		<force>
+		</force>
 	</starviper>
 	<starviper_guri actions=" 'TARGET_LOCK', 'CALCULATE', 'BARREL_ROLL2CALC', 'BOOST2CALC' " image="img/starviper.png" name="StarViper (Guri)" faction="Scum">
 		<simple>
@@ -96,5 +102,7 @@
 			<maneuver>SLL3</maneuver>
 			<maneuver>SLR3</maneuver>
 		</difficult>
+		<force>
+		</force>
 	</starviper_guri>
 </ships>

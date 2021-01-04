@@ -23,6 +23,8 @@
 			<maneuver>K3</maneuver>
 			<maneuver>F4</maneuver>
 		</difficult>
+		<force>
+		</force>
 	</sheathipede>
 	<alpha actions=" 'TARGET_LOCK', 'FOCUS', 'SLAM', 'RELOAD' " image="img/alpha.png" name="Alpha-Class Star Wing" faction="Empire">
 		<simple>
@@ -45,6 +47,8 @@
 		<difficult>
 			<maneuver>F4</maneuver>
 		</difficult>
+		<force>
+		</force>
 	</alpha>
 	<kimogila actions=" 'TARGET_LOCK', 'FOCUS', 'BARREL_ROLL_D', 'RELOAD' " image="img/kimogila.png" name="M-12L Kimogila Fighter" faction="Scum">
 		<simple>
@@ -69,5 +73,7 @@
 			<maneuver>TR1</maneuver>
 			<maneuver>K4</maneuver>
 		</difficult>
+		<force>
+		</force>
 	</kimogila>
 </ships>

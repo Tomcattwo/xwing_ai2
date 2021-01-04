@@ -20,6 +20,8 @@
 		<difficult>
 			<maneuver>STA0</maneuver>
 		</difficult>
+		<force>
+		</force>
 	</uwing>
 	<uwingk2so actions=" 'TARGET_LOCK', 'CALCULATE', 'COORDINATE_D' " image="img/ship_uwing.png" name="UT-60D U-Wing (K2SO)" faction="Rebel">
 		<simple>
@@ -41,6 +43,8 @@
 		<difficult>
 			<maneuver>STA0</maneuver>
 		</difficult>
+		<force>
+		</force>
 	</uwingk2so>
 	<tieStriker actions=" 'FOCUS', 'BARREL_ROLL', 'EVADE' " image="img/ship_tieStriker.png" name="TIE/sk Striker" faction="Empire">
 		<simple>
@@ -65,6 +69,8 @@
 			<maneuver>SLL2</maneuver>
 			<maneuver>SLR2</maneuver>
 		</difficult>
+		<force>
+		</force>
 	</tieStriker>
 	<quadjumper actions=" 'FOCUS', 'BARREL_ROLL', 'EVADE_D' " image="img/ship_quadjumper.png" name="Quadrijet Transfer Spacetug (Quadjumper)" faction="Scum">
 		<simple>
@@ -91,6 +97,8 @@
 			<maneuver>R2</maneuver>
 			<maneuver>RBR1</maneuver>
 		</difficult>
+		<force>
+		</force>
 	</quadjumper>
 	<upsilon actions=" 'TARGET_LOCK', 'FOCUS', 'COORDINATE', 'REINFORCE', 'JAM' " image="img/ship_upsilon.png" name="Upsilon-class Command Shuttle" faction="First Order">
 		<simple>
@@ -115,5 +123,7 @@
 			<maneuver>TL3</maneuver>
 			<maneuver>TR3</maneuver>
 		</difficult>
+		<force>
+		</force>
 	</upsilon>
 </ships>

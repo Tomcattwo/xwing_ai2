@@ -24,6 +24,8 @@
 		    <maneuver>TRR3</maneuver>
 		    <maneuver>K4</maneuver>
 		</difficult>
+		<force>
+		</force>
 	</t70xwing>
 	<tiefo actions=" 'TARGET_LOCK', 'FOCUS', 'BARREL_ROLL', 'EVADE' " image="img/tiefo.png" name="TIE/fo Fighter" faction="First Order">
 		<simple>
@@ -48,6 +50,8 @@
 		    <maneuver>SLL2</maneuver>
 		    <maneuver>SLR2</maneuver>
    		    <maneuver>K4</maneuver>
-	    </difficult>
+	    	</difficult>
+	    	<force>
+	    	</force>
 	</tiefo>
 </ships>

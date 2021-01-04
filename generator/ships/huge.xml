@@ -21,6 +21,8 @@
 		    <maneuver>F4</maneuver>
 		    <maneuver>F5</maneuver>
 		</difficult>
+		<force>
+		</force>
 	</corvette>
 	<raider actions=" 'TARGET_LOCK', 'FOCUS', 'COORDINATE', 'REINFORCE', 'JAM' " image="img/raider.png" name="Imperial Raider-class Corvette" faction="Empire">
 		<simple>
@@ -43,6 +45,8 @@
  		    <maneuver>BR3</maneuver>
  	            <maneuver>F5</maneuver>
 		</difficult>
+		<force>
+		</force>
 	</raider>
 	<transport actions=" 'FOCUS', 'REINFORCE_D', 'COORDINATE', 'JAM', 'TARGET_LOCK_D' " image="img/transport.png" name="GR-75 Medium Transport" faction="Rebel">
 		<simple>
@@ -62,6 +66,8 @@
 		    <maneuver>F3</maneuver>
 		    <maneuver>F4</maneuver>
 		</difficult>
+		<force>
+		</force>
 	</transport>
 	<gozanti actions=" 'TARGET_LOCK', 'FOCUS', 'REINFORCE', 'COORDINATE', 'JAM' " image="img/gozanti.png" name="Gozanti-class Imperial Cruiser" faction="Empire">
 		<simple>
@@ -81,6 +87,8 @@
 		    <maneuver>BR2</maneuver>
 		    <maneuver>F4</maneuver>
 		</difficult>
+		<force>
+		</force>
 	</gozanti>
 	<gozantifo actions=" 'TARGET_LOCK', 'FOCUS', 'COORDINATE', 'REINFORCE', 'JAM' " image="img/gozanti.png" name="Gozanti-class Cruiser" faction="First Order">
 			<simple>
@@ -100,6 +108,8 @@
 			    <maneuver>BR2</maneuver>
 			    <maneuver>F4</maneuver>
 			</difficult>
+			<force>
+			</force>
 	</gozantifo>
 	<crocscum actions=" 'TARGET_LOCK', 'FOCUS', 'REINFORCE_D', 'COORDINATE_D', 'JAM' " image="img/croc.png" name="C-ROC Cruiser (Syndicate Smugglers)" faction="Scum">
 		<simple>
@@ -122,6 +132,8 @@
 		    <maneuver>F4</maneuver>
 		    <maneuver>F5</maneuver>
 		</difficult>
+		<force>
+		</force>
 	</crocscum>
 	<crocsep actions=" 'TARGET_LOCK', 'FOCUS', 'JAM', 'REINFORCE_D', 'COORDINATE_D' " image="img/croc.png" name="C-ROC Cruiser (Seperatist Privateers)" faction="Seperatist">
 		<simple>
@@ -144,5 +156,7 @@
 		    <maneuver>F4</maneuver>
 		    <maneuver>F5</maneuver>
 		</difficult>
+		<force>
+		</force>
 	</crocsep>
 </ships>

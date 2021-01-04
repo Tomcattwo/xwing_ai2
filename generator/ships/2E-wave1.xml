@@ -24,6 +24,8 @@
 				<maneuver>SLR3</maneuver>
 				<maneuver>K4</maneuver>
 			</difficult>
+			<force>
+			</force>
 	</custfalcon>	
 	<escape actions=" 'FOCUS', 'BARREL_ROLL', 'COORDINATE_D' " image="img/escape_craft.png" name="Escape Craft" faction="Scum">
 		<simple>
@@ -45,5 +47,7 @@
 			<maneuver>TR2</maneuver>
 			<maneuver>K3</maneuver>
 		</difficult>
+		<force>
+		</force>
 	</escape>
 </ships>
