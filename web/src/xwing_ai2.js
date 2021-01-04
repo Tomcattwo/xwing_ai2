@@ -1,6 +1,6 @@
 // ***************************************************************************
 // X-Wing Miniatures AI 2nd Edition - Javascript
-// Version: 2.0.2
+// Version: 2.0.3
 // ****************************************************************************
 // Constants
 
@@ -124,6 +124,7 @@ var REINFORCE_D_TEXT = 'If AI ship is in an enemy firing arc, gain 1 fore or aft
 
 var ROTATE_ARC_TEXT = 'If no target in AI Turret Arc, <img src="img/action_rotatearc.png" alt="Rotate Turret Arc" title="Rotate Turret Arc"> to target an enemy ship.';
 var ROTATE_ARC_D_TEXT = 'If no target in AI Turret Arc, <img src="img/action_rotatearc-red.png" alt="Rotate Turret Arc (Difficult)" title="Rotate Turret Arc (Difficult)"> to target an enemy ship.';
+var ROTATE2CALC_D_TEXT = 'OPTIONAL: Gain 1 <img src="img/action_calculate-red.png" alt="Calculate (Difficult)" title="Calculate (Difficult)"> token.';
 
 var SLAM_TEXT1 = 'Choose <img src="img/action_slam.png" alt="SLAM" title="SLAM"> if this will put target into AI ship\'s firing arc.';
 var SLAM_TEXT2 = 'Choose <img src="img/action_slam.png" alt="SLAM" title="SLAM"> if this will put the AI ship out of enemy ship firing arc.'
@@ -461,6 +462,11 @@ function format_maneuver( ship, maneuver )
         num = "<span style=color:red>" + maneuver.num + "</span>";
         img = '<img src="img/' + maneuver.name + '-red.png">';
     }
+    else if ( maneuverInList( maneuver, ship.force ) )
+    {
+        num = "<span style=color:purple>" + maneuver.num + "</span>";
+        img = '<img src="img/' + maneuver.name + '-purple.png">';
+    }
     else if ( maneuverInList( maneuver, ship.normal ) )
     {
         num = "<span>" + maneuver.num + "</span>";
@@ -756,6 +762,12 @@ function actionText( value, index, array )
  	    case 'ROTATE_ARC_D':
  	    {
  	        actions += "<li>" + ROTATE_ARC_D_TEXT + "</li>";
+ 	        break;
+ 	    }
+ 	    case 'ROTATE2CALC_D':
+ 	    {
+ 	        actions += "<li>" + ROTATE_ARC_TEXT + "</li>";
+ 	        actions += "<li>" + ROTATE2CALC_D_TEXT + "</li>";
  	        break;
  	    }
  		case 'SLAM':

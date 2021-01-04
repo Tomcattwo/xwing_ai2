@@ -1,8 +1,8 @@
 // ****************************************************************************
 // X-Wing Miniatures AI - Ships 2nd Generation 
-// Generated: 2020-06-29 14:36:29
+// Generated: 2021-01-03 19:39:14
 
-var VERSION = "2.0.2";
+var VERSION = "2.0.3";
 
 
 // ****************************************************************************
@@ -15,6 +15,7 @@ alpha.faction = "Empire";
 alpha.simple = [ F(1), BL(2), F(2), BR(2) ];
 alpha.normal = [ BL(1), BR(1), TL(2), TR(2), TL(3), BL(3), F(3), BR(3), TR(3) ];
 alpha.difficult = [ F(4) ];
+alpha.force = [  ];
 alpha.actions = [ 'TARGET_LOCK', 'FOCUS', 'SLAM', 'RELOAD' ];
 
 alpha.closing = [];
@@ -67,6 +68,7 @@ arc170.faction = "Rebel";
 arc170.simple = [ BL(1), F(1), BR(1), BL(2), F(2), BR(2) ];
 arc170.normal = [ TL(2), TR(2), BL(3), F(3), BR(3) ];
 arc170.difficult = [ TR(3), TL(3), F(4), K(4) ];
+arc170.force = [  ];
 arc170.actions = [ 'TARGET_LOCK', 'FOCUS', 'BARREL_ROLL_D' ];
 
 arc170.closing = [];
@@ -119,6 +121,7 @@ arc170R.faction = "Republic";
 arc170R.simple = [ BL(1), F(1), BR(1), BL(2), F(2), BR(2) ];
 arc170R.normal = [ TL(2), TR(2), BL(3), F(3), BR(3) ];
 arc170R.difficult = [ TR(3), TL(3), F(4), K(4) ];
+arc170R.force = [  ];
 arc170R.actions = [ 'TARGET_LOCK', 'FOCUS', 'BARREL_ROLL_D' ];
 
 arc170R.closing = [];
@@ -171,6 +174,7 @@ auzituck.faction = "Rebel";
 auzituck.simple = [ BL(1), F(1), BR(1), F(2), F(3) ];
 auzituck.normal = [ TL(2), BL(2), BR(2), TR(2), TL(3), BL(3), BR(3), TR(3), F(4) ];
 auzituck.difficult = [ STA(0) ];
+auzituck.force = [  ];
 auzituck.actions = [ 'FOCUS', 'BARREL_ROLL_D', 'REINFORCE' ];
 
 auzituck.closing = [];
@@ -223,6 +227,7 @@ awing.faction = "Rebel";
 awing.simple = [ F(2), F(3), F(4), F(5), TL(2), BL(2), BR(2), TR(2) ];
 awing.normal = [ TL(1), TL(3), BL(3), BR(3), TR(1), TR(3) ];
 awing.difficult = [ SLL(3), K(5), SLR(3) ];
+awing.force = [  ];
 awing.actions = [ 'TARGET_LOCK', 'FOCUS', 'BARREL_ROLL', 'BOOST', 'EVADE' ];
 
 awing.closing = [];
@@ -275,6 +280,7 @@ belbullab.faction = "Seperatist";
 belbullab.simple = [ BL(2), F(2), BR(2), F(3) ];
 belbullab.normal = [ TL(1), BL(1), BR(1), TR(1), TL(2), TR(2), BL(3), BR(3), F(4), F(5) ];
 belbullab.difficult = [ TL(3), TR(3), SLL(3), SLR(3) ];
+belbullab.force = [  ];
 belbullab.actions = [ 'TARGET_LOCK', 'FOCUS', 'BARREL_ROLL2FOCUS_D', 'BOOST2FOCUS_D' ];
 
 belbullab.closing = [];
@@ -327,6 +333,7 @@ bwing.faction = "Rebel";
 bwing.simple = [ BL(1), F(1), F(2), F(3), BR(1) ];
 bwing.normal = [ TL(2), BL(2), BR(2), TR(2) ];
 bwing.difficult = [ TRL(1), TL(1), BL(3), F(4), BR(3), TR(1), TRR(1), K(2) ];
+bwing.force = [  ];
 bwing.actions = [ 'TARGET_LOCK', 'BARREL_ROLL', 'FOCUS2BARREL_ROLL_D' ];
 
 bwing.closing = [];
@@ -379,6 +386,7 @@ corvette.faction = "Rebel";
 corvette.simple = [ BL(2), F(2), BR(2), F(3) ];
 corvette.normal = [ BL(1), F(1), BR(1) ];
 corvette.difficult = [ BL(0), STA(0), BR(0), BL(3), BR(3), F(4), F(5) ];
+corvette.force = [  ];
 corvette.actions = [ 'TARGET_LOCK', 'FOCUS', 'COORDINATE_D', 'REINFORCE', 'JAM' ];
 
 corvette.closing = [];
@@ -431,6 +439,7 @@ crocscum.faction = "Scum";
 crocscum.simple = [ F(1), F(2) ];
 crocscum.normal = [ BL(1), BR(1), BL(2), BR(2), F(3) ];
 crocscum.difficult = [ BL(0), STA(0), BR(0), BL(3), BR(3), F(4), F(5) ];
+crocscum.force = [  ];
 crocscum.actions = [ 'TARGET_LOCK', 'FOCUS', 'REINFORCE_D', 'COORDINATE_D', 'JAM' ];
 
 crocscum.closing = [];
@@ -483,6 +492,7 @@ crocsep.faction = "Seperatist";
 crocsep.simple = [ F(1), F(2) ];
 crocsep.normal = [ BL(1), BR(1), BL(2), BR(2), F(3) ];
 crocsep.difficult = [ BL(0), STA(0), BR(0), BL(3), BR(3), F(4), F(5) ];
+crocsep.force = [  ];
 crocsep.actions = [ 'TARGET_LOCK', 'FOCUS', 'JAM', 'REINFORCE_D', 'COORDINATE_D' ];
 
 crocsep.closing = [];
@@ -535,6 +545,7 @@ custfalcon.faction = "Scum";
 custfalcon.simple = [ BL(1), F(1), BR(1), F(2), F(3) ];
 custfalcon.normal = [ TL(2), BL(2), BR(2), TR(2), TL(3), BL(3), BR(3), TR(3), F(4) ];
 custfalcon.difficult = [ SLL(3), SLR(3), K(4) ];
+custfalcon.force = [  ];
 custfalcon.actions = [ 'TARGET_LOCK', 'FOCUS', 'ROTATE_ARC', 'BOOST_D' ];
 
 custfalcon.closing = [];
@@ -587,6 +598,7 @@ decimator.faction = "Empire";
 decimator.simple = [ BL(1), F(1), F(2), BR(1) ];
 decimator.normal = [ TL(2), TL(3), BL(2), BL(3), F(3), F(4), BR(2), BR(3), TR(2), TR(3) ];
 decimator.difficult = [ TL(1), TR(1) ];
+decimator.force = [  ];
 decimator.actions = [ 'TARGET_LOCK', 'FOCUS', 'ROTATE_ARC', 'COORDINATE_D', 'REINFORCE' ];
 
 decimator.closing = [];
@@ -639,6 +651,7 @@ delta7.faction = "Republic";
 delta7.simple = [ BL(1), BR(1), BL(2), F(2), BR(2), F(3) ];
 delta7.normal = [ TL(1), TR(1), TL(2), TR(2), BL(3), BR(3), F(4), F(5) ];
 delta7.difficult = [ SLL(2), SLR(2), K(4), K(5) ];
+delta7.force = [  ];
 delta7.actions = [ 'TARGET_LOCK', 'FOCUS', 'BARREL_ROLL', 'BOOST', 'EVADE_F' ];
 
 delta7.closing = [];
@@ -682,6 +695,59 @@ delta7.stressed[6] = [ TL(1), TL(1), TL(1), TL(1), TL(1), TL(2), TL(2), TL(2), T
 delta7.stressed[7] = [ F(2), BL(1), BL(1), BL(1), BL(2), BL(2), BL(3), BL(3), TL(1), TL(2) ];
 
 // ****************************************************************************
+// Droid Tri-Fighter
+
+var dtf = {};
+dtf.name = "Droid Tri-Fighter";
+dtf.image = "img/droid_tri-fighter.png";
+dtf.faction = "Seperatist";
+dtf.simple = [ TL(2), F(2), TR(2), TL(3), F(3), TR(3), F(4) ];
+dtf.normal = [ TL(1), TR(1), BL(2), BR(2), BL(3), BR(3), F(5) ];
+dtf.difficult = [ TRL(1), TRR(1), K(3), K(5) ];
+dtf.force = [  ];
+dtf.actions = [ 'TARGET_LOCK', 'BOOST2CALC', 'BARREL_ROLL2EVADE_D', 'CALCULATE', 'EVADE' ];
+
+dtf.closing = [];
+dtf.closing[0] = [ BL(2), F(2), F(2), F(2), F(2), F(3), F(3), F(3), K(3), TRR(1) ];
+dtf.closing[1] = [ F(2), BR(2), BR(2), BR(2), BR(2), BR(3), BR(3), BR(3), TR(1), TR(1) ];
+dtf.closing[2] = [ TR(1), TR(1), TR(1), TR(1), TR(2), TR(2), TR(2), TR(2), K(3), TRR(1) ];
+dtf.closing[3] = [ BR(2), TR(1), TR(1), TR(1), TR(1), TR(2), TR(2), TR(2), K(3), TRR(1) ];
+dtf.closing[4] = [ TL(3), F(5), TR(3), K(5), K(5), TRL(1), TRL(1), TRR(1), TRR(1), TRR(1) ];
+dtf.closing[5] = [ BL(2), TL(1), TL(1), TL(1), TL(1), TL(2), TL(2), TL(2), K(3), TRL(1) ];
+dtf.closing[6] = [ TL(1), TL(1), TL(1), TL(1), TL(2), TL(2), TL(2), TL(2), K(3), TRL(1) ];
+dtf.closing[7] = [ F(2), BL(2), BL(2), BL(2), BL(2), BL(3), BL(3), BL(3), TL(1), TL(1) ];
+
+dtf.away = [];
+dtf.away[0] = [ F(4), F(4), F(4), F(4), F(4), F(5), F(5), F(5), F(5), F(5) ];
+dtf.away[1] = [ BR(2), BR(2), BR(2), BR(2), BR(3), BR(3), BR(3), BR(3), TR(2), TR(3) ];
+dtf.away[2] = [ BR(2), BR(3), BR(3), TR(2), TR(2), TR(2), TR(3), TR(3), TR(3), TR(3) ];
+dtf.away[3] = [ TR(2), TR(2), TR(2), TR(3), TR(3), TR(3), TR(3), K(5), TRL(1), TRR(1) ];
+dtf.away[4] = [ TL(3), TR(3), TR(3), K(5), K(5), TRL(1), TRL(1), TRR(1), TRR(1), TRR(1) ];
+dtf.away[5] = [ TL(2), TL(2), TL(2), TL(3), TL(3), TL(3), TL(3), K(5), TRR(1), TRL(1) ];
+dtf.away[6] = [ BL(2), BL(3), BL(3), TL(2), TL(2), TL(2), TL(3), TL(3), TL(3), TL(3) ];
+dtf.away[7] = [ BL(2), BL(2), BL(2), BL(2), BL(3), BL(3), BL(3), BL(3), TL(2), TL(3) ];
+
+dtf.far = [];
+dtf.far[0] = [ BL(3), F(4), F(4), F(4), F(4), F(5), F(5), F(5), F(5), BR(3) ];
+dtf.far[1] = [ BR(2), BR(2), BR(2), BR(2), BR(3), BR(3), BR(3), BR(3), TR(2), TR(3) ];
+dtf.far[2] = [ TR(2), TR(2), TR(2), TR(2), TR(2), TR(3), TR(3), TR(3), TR(3), TR(3) ];
+dtf.far[3] = [ TR(2), TR(2), TR(2), TR(2), TR(2), TR(3), TR(3), TR(3), TR(3), TR(3) ];
+dtf.far[4] = [ TL(2), TL(2), TL(3), TL(3), TR(2), TR(2), TR(3), TR(3), K(5), TRR(1) ];
+dtf.far[5] = [ TL(2), TL(2), TL(2), TL(2), TL(2), TL(3), TL(3), TL(3), TL(3), TL(3) ];
+dtf.far[6] = [ TL(2), TL(2), TL(2), TL(2), TL(2), TL(3), TL(3), TL(3), TL(3), TL(3) ];
+dtf.far[7] = [ BL(2), BL(2), BL(2), BL(2), BL(3), BL(3), BL(3), BL(3), TL(2), TL(3) ];
+
+dtf.stressed = [];
+dtf.stressed[0] = [ BL(2), F(2), F(2), F(3), F(3), F(4), F(4), F(5), F(5), BR(2) ];
+dtf.stressed[1] = [ F(2), BR(2), BR(2), BR(2), BR(2), BR(3), BR(3), BR(3), TR(1), TR(2) ];
+dtf.stressed[2] = [ TR(1), TR(1), TR(1), TR(1), TR(2), TR(2), TR(2), TR(3), TR(3), TR(3) ];
+dtf.stressed[3] = [ TR(1), TR(1), TR(1), TR(1), TR(2), TR(2), TR(2), TR(3), TR(3), TR(3) ];
+dtf.stressed[4] = [ TL(1), TL(1), TL(2), TL(2), TL(3), TL(3), TR(1), TR(1), TR(2), TR(3) ];
+dtf.stressed[5] = [ TL(1), TL(1), TL(1), TL(1), TL(2), TL(2), TL(2), TL(3), TL(3), TL(3) ];
+dtf.stressed[6] = [ TL(1), TL(1), TL(1), TL(1), TL(2), TL(2), TL(2), TL(3), TL(3), TL(3) ];
+dtf.stressed[7] = [ F(2), BL(2), BL(2), BL(2), BL(2), BL(3), BL(3), BL(3), TL(1), TL(2) ];
+
+// ****************************************************************************
 // Escape Craft
 
 var escape = {};
@@ -691,6 +757,7 @@ escape.faction = "Scum";
 escape.simple = [ BL(1), F(1), BR(1), F(2) ];
 escape.normal = [ BL(2), BR(2), BL(3), F(3), BR(3) ];
 escape.difficult = [ STA(0), TL(2), TR(2), K(3) ];
+escape.force = [  ];
 escape.actions = [ 'FOCUS', 'BARREL_ROLL', 'COORDINATE_D' ];
 
 escape.closing = [];
@@ -734,6 +801,59 @@ escape.stressed[6] = [ BL(1), BL(1), BL(1), BL(1), BL(2), BL(2), BL(2), BL(3), B
 escape.stressed[7] = [ F(1), F(2), BL(1), BL(1), BL(1), BL(2), BL(2), BL(2), BL(3), BL(3) ];
 
 // ****************************************************************************
+// Eta-2 Actis
+
+var eta2 = {};
+eta2.name = "Eta-2 Actis";
+eta2.image = "img/eta-2.png";
+eta2.faction = "Republic";
+eta2.simple = [ BL(2), F(2), BR(2), BL(3), F(3), BR(3), F(4) ];
+eta2.normal = [ TL(1), TR(1), TL(2), TR(2), TL(3), TR(3), F(5) ];
+eta2.difficult = [ K(4) ];
+eta2.force = [ TRL(2), TRR(2) ];
+eta2.actions = [ 'TARGET_LOCK', 'BARREL_ROLL', 'BOOST', 'FOCUS', 'EVADE' ];
+
+eta2.closing = [];
+eta2.closing[0] = [ BL(2), F(2), F(2), F(2), F(2), F(3), F(3), F(3), K(4), TRR(2) ];
+eta2.closing[1] = [ F(2), BR(2), BR(2), BR(2), BR(2), BR(3), BR(3), BR(3), TR(1), TR(1) ];
+eta2.closing[2] = [ TR(1), TR(1), TR(1), TR(1), TR(2), TR(2), TR(2), TR(2), K(4), TRR(2) ];
+eta2.closing[3] = [ BR(2), TR(1), TR(1), TR(1), TR(1), TR(2), TR(2), TR(2), K(4), TRR(2) ];
+eta2.closing[4] = [ TL(3), F(5), TR(3), K(4), K(4), TRL(2), TRL(2), TRR(2), TRR(2), TRR(2) ];
+eta2.closing[5] = [ BL(2), TL(1), TL(1), TL(1), TL(1), TL(2), TL(2), TL(2), K(4), TRL(2) ];
+eta2.closing[6] = [ TL(1), TL(1), TL(1), TL(1), TL(2), TL(2), TL(2), TL(2), K(4), TRL(2) ];
+eta2.closing[7] = [ F(2), BL(2), BL(2), BL(2), BL(2), BL(3), BL(3), BL(3), TL(1), TL(1) ];
+
+eta2.away = [];
+eta2.away[0] = [ F(4), F(4), F(4), F(4), F(4), F(5), F(5), F(5), F(5), F(5) ];
+eta2.away[1] = [ BR(2), BR(2), BR(2), BR(2), BR(3), BR(3), BR(3), BR(3), TR(2), TR(3) ];
+eta2.away[2] = [ BR(2), BR(3), BR(3), TR(2), TR(2), TR(2), TR(3), TR(3), TR(3), TR(3) ];
+eta2.away[3] = [ TR(2), TR(2), TR(2), TR(3), TR(3), TR(3), TR(3), K(4), TRL(2), TRR(2) ];
+eta2.away[4] = [ TL(3), TR(3), TR(3), K(4), K(4), TRL(2), TRL(2), TRR(2), TRR(2), TRR(2) ];
+eta2.away[5] = [ TL(2), TL(2), TL(2), TL(3), TL(3), TL(3), TL(3), K(4), TRR(2), TRL(2) ];
+eta2.away[6] = [ BL(2), BL(3), BL(3), TL(2), TL(2), TL(2), TL(3), TL(3), TL(3), TL(3) ];
+eta2.away[7] = [ BL(2), BL(2), BL(2), BL(2), BL(3), BL(3), BL(3), BL(3), TL(2), TL(3) ];
+
+eta2.far = [];
+eta2.far[0] = [ BL(3), F(4), F(4), F(4), F(4), F(5), F(5), F(5), F(5), BR(3) ];
+eta2.far[1] = [ BR(2), BR(2), BR(2), BR(2), BR(3), BR(3), BR(3), BR(3), TR(2), TR(3) ];
+eta2.far[2] = [ TR(2), TR(2), TR(2), TR(2), TR(2), TR(3), TR(3), TR(3), TR(3), TR(3) ];
+eta2.far[3] = [ TR(2), TR(2), TR(2), TR(2), TR(2), TR(3), TR(3), TR(3), TR(3), TR(3) ];
+eta2.far[4] = [ TL(2), TL(2), TL(3), TL(3), TR(2), TR(2), TR(3), TR(3), K(4), TRR(2) ];
+eta2.far[5] = [ TL(2), TL(2), TL(2), TL(2), TL(2), TL(3), TL(3), TL(3), TL(3), TL(3) ];
+eta2.far[6] = [ TL(2), TL(2), TL(2), TL(2), TL(2), TL(3), TL(3), TL(3), TL(3), TL(3) ];
+eta2.far[7] = [ BL(2), BL(2), BL(2), BL(2), BL(3), BL(3), BL(3), BL(3), TL(2), TL(3) ];
+
+eta2.stressed = [];
+eta2.stressed[0] = [ BL(2), F(2), F(2), F(3), F(3), F(4), F(4), F(5), F(5), BR(2) ];
+eta2.stressed[1] = [ F(2), BR(2), BR(2), BR(2), BR(2), BR(3), BR(3), BR(3), TR(1), TR(2) ];
+eta2.stressed[2] = [ TR(1), TR(1), TR(1), TR(1), TR(2), TR(2), TR(2), TR(3), TR(3), TR(3) ];
+eta2.stressed[3] = [ TR(1), TR(1), TR(1), TR(1), TR(2), TR(2), TR(2), TR(3), TR(3), TR(3) ];
+eta2.stressed[4] = [ TL(1), TL(1), TL(2), TL(2), TL(3), TL(3), TR(1), TR(1), TR(2), TR(3) ];
+eta2.stressed[5] = [ TL(1), TL(1), TL(1), TL(1), TL(2), TL(2), TL(2), TL(3), TL(3), TL(3) ];
+eta2.stressed[6] = [ TL(1), TL(1), TL(1), TL(1), TL(2), TL(2), TL(2), TL(3), TL(3), TL(3) ];
+eta2.stressed[7] = [ F(2), BL(2), BL(2), BL(2), BL(2), BL(3), BL(3), BL(3), TL(1), TL(2) ];
+
+// ****************************************************************************
 // E-Wing
 
 var ewing = {};
@@ -743,6 +863,7 @@ ewing.faction = "Rebel";
 ewing.simple = [ F(1), BL(1), F(2), BR(1), F(3), F(4) ];
 ewing.normal = [ BL(2), BR(2), TL(2), TR(2), BL(3), BR(3), TL(3), TR(3), F(5) ];
 ewing.difficult = [ TL(1), TR(1), SLL(3), SLR(3), K(4) ];
+ewing.force = [  ];
 ewing.actions = [ 'TARGET_LOCK', 'FOCUS', 'BARREL_ROLL2LOCK_D', 'BOOST2LOCK_D', 'EVADE' ];
 
 ewing.closing = [];
@@ -795,6 +916,7 @@ falcon.faction = "Rebel";
 falcon.simple = [ F(1), F(2), F(3), BL(2), BR(2) ];
 falcon.normal = [ TL(2), TL(3), BL(1), BL(3), F(4), BR(1), BR(3), TR(2), TR(3) ];
 falcon.difficult = [ SLL(3), SLR(3), K(4) ];
+falcon.force = [  ];
 falcon.actions = [ 'TARGET_LOCK', 'FOCUS', 'BOOST_D', 'ROTATE_ARC' ];
 
 falcon.closing = [];
@@ -847,6 +969,7 @@ fang.faction = "Scum";
 fang.simple = [ TL(2), BL(2), F(2), BR(2), TR(2), F(3) ];
 fang.normal = [ TL(1), TR(1), TL(3), BL(3), BR(3), TR(3), F(4), F(5) ];
 fang.difficult = [ K(4), TRL(2), TRR(2) ];
+fang.force = [  ];
 fang.actions = [ 'TARGET_LOCK', 'FOCUS', 'BARREL_ROLL2FOCUS_D', 'BOOST2FOCUS_D' ];
 
 fang.closing = [];
@@ -899,6 +1022,7 @@ fireball.faction = "Resistance";
 fireball.simple = [ BL(1), F(1), BR(1), F(2) ];
 fireball.normal = [ TL(1), TR(1), TL(2), BL(2), BR(2), TR(2), BL(3), F(3), BR(3) ];
 fireball.difficult = [ TL(3), TR(3), F(4), TRL(3), TRR(3) ];
+fireball.force = [  ];
 fireball.actions = [ 'FOCUS', 'BARREL_ROLL', 'SLAM', 'EVADE' ];
 
 fireball.closing = [];
@@ -951,6 +1075,7 @@ firesprays.faction = "Scum";
 firesprays.simple = [ F(1), F(2), F(3), BL(1), BR(1) ];
 firesprays.normal = [ TL(1), TL(2), BL(2), BL(3), F(4), BR(2), BR(3), TR(1), TR(2) ];
 firesprays.difficult = [ K(4), TRL(3), TRR(3) ];
+firesprays.force = [  ];
 firesprays.actions = [ 'TARGET_LOCK', 'FOCUS', 'BOOST', 'REINFORCE_D' ];
 
 firesprays.closing = [];
@@ -1003,6 +1128,7 @@ ghost.faction = "Rebel";
 ghost.simple = [ F(1), BR(2), BL(2), F(2) ];
 ghost.normal = [ BR(1), BL(1), BL(3), BR(3), TR(2), TL(2), F(3), F(4) ];
 ghost.difficult = [ TL(1), TR(1), TR(3), TL(3), K(4) ];
+ghost.force = [  ];
 ghost.actions = [ 'TARGET_LOCK', 'FOCUS', 'REINFORCE' ];
 
 ghost.closing = [];
@@ -1055,6 +1181,7 @@ gozanti.faction = "Empire";
 gozanti.simple = [ F(1), F(2), F(3) ];
 gozanti.normal = [ BL(1), BR(1) ];
 gozanti.difficult = [ BL(0), STA(0), BR(0), BL(2), BR(2), F(4) ];
+gozanti.force = [  ];
 gozanti.actions = [ 'TARGET_LOCK', 'FOCUS', 'REINFORCE', 'COORDINATE', 'JAM' ];
 
 gozanti.closing = [];
@@ -1107,6 +1234,7 @@ gozantifo.faction = "First Order";
 gozantifo.simple = [ F(1), F(2), F(3) ];
 gozantifo.normal = [ BL(1), BR(1) ];
 gozantifo.difficult = [ BL(0), STA(0), BR(0), BL(2), BR(2), F(4) ];
+gozantifo.force = [  ];
 gozantifo.actions = [ 'TARGET_LOCK', 'FOCUS', 'COORDINATE', 'REINFORCE', 'JAM' ];
 
 gozantifo.closing = [];
@@ -1159,6 +1287,7 @@ hmp.faction = "Seperatist";
 hmp.simple = [ F(1), TL(2), F(2), TR(2) ];
 hmp.normal = [ BL(2), BR(2), TL(3), F(3), TR(3) ];
 hmp.difficult = [ STA(0), BL(1), BR(1), BL(3), BR(3), F(4), F(5) ];
+hmp.force = [  ];
 hmp.actions = [ 'TARGET_LOCK', 'CALCULATE', 'BARREL_ROLL_D', 'RELOAD2CALC' ];
 
 hmp.closing = [];
@@ -1211,6 +1340,7 @@ houndstooth.faction = "Scum";
 houndstooth.simple = [ BL(1), F(1), BR(1), F(2), F(3) ];
 houndstooth.normal = [ BL(2), BR(2), TL(3), BL(3), BR(3), TR(3), F(4) ];
 houndstooth.difficult = [ STA(0), TL(2), TR(2) ];
+houndstooth.force = [  ];
 houndstooth.actions = [ 'TARGET_LOCK', 'FOCUS', 'REINFORCE' ];
 
 houndstooth.closing = [];
@@ -1263,6 +1393,7 @@ hwk290.faction = "Rebel";
 hwk290.simple = [ BL(1), F(1), F(2), F(3), BR(1) ];
 hwk290.normal = [ TL(2), BL(2), BL(3), F(4), BR(2), BL(3), TR(2) ];
 hwk290.difficult = [ STA(0), TL(3), TR(3) ];
+hwk290.force = [  ];
 hwk290.actions = [ 'LOCK2ROTATE_D', 'FOCUS2ROTATE_D', 'ROTATE_ARC', 'BOOST_D', 'JAM_D' ];
 
 hwk290.closing = [];
@@ -1315,6 +1446,7 @@ hwk290S.faction = "Scum";
 hwk290S.simple = [ BL(1), F(1), F(2), F(3), BR(1) ];
 hwk290S.normal = [ TL(2), BL(2), BL(3), F(4), BR(2), BR(3), TR(2) ];
 hwk290S.difficult = [ STA(0), TL(3), TR(3) ];
+hwk290S.force = [  ];
 hwk290S.actions = [ 'LOCK2ROTATE_D', 'FOCUS2ROTATE_D', 'ROTATE_ARC', 'BOOST_D', 'JAM_D' ];
 
 hwk290S.closing = [];
@@ -1367,6 +1499,7 @@ hyena.faction = "Seperatist";
 hyena.simple = [ TL(2), F(2), TR(2), F(3) ];
 hyena.normal = [ TL(1), F(1), TR(1), BL(2), BR(2), TL(3), TR(3), F(4) ];
 hyena.difficult = [ BL(1), BR(1), TRL(2), TRR(2), K(2), F(5) ];
+hyena.force = [  ];
 hyena.actions = [ 'TARGET_LOCK', 'CALCULATE', 'BARREL_ROLL2LOCK_D', 'RELOAD_D' ];
 
 hyena.closing = [];
@@ -1419,6 +1552,7 @@ hyenadbs32c.faction = "Seperatist";
 hyenadbs32c.simple = [ TL(2), F(2), TR(2), F(3) ];
 hyenadbs32c.normal = [ TL(1), F(1), TR(1), BL(2), BR(2), TL(3), TR(3), F(4) ];
 hyenadbs32c.difficult = [ BL(1), BR(1), TRL(2), TRR(2), K(2), F(5) ];
+hyenadbs32c.force = [  ];
 hyenadbs32c.actions = [ 'TARGET_LOCK', 'CALCULATE', 'BARREL_ROLL2LOCK_D', 'JAM_D' ];
 
 hyenadbs32c.closing = [];
@@ -1471,6 +1605,7 @@ ig2000.faction = "Scum";
 ig2000.simple = [ BL(1), F(1), BR(1), BL(2), F(2), BR(2), BL(3), F(3), BR(3) ];
 ig2000.normal = [ TL(1), TR(1), TL(2), TR(2), F(4) ];
 ig2000.difficult = [ SLL(3), SLR(3), K(4) ];
+ig2000.force = [  ];
 ig2000.actions = [ 'TARGET_LOCK', 'CALCULATE', 'BOOST', 'EVADE' ];
 
 ig2000.closing = [];
@@ -1523,6 +1658,7 @@ kihraxz.faction = "Scum";
 kihraxz.simple = [ BL(1), BR(1), BL(2), F(2), BR(2), F(3) ];
 kihraxz.normal = [ TL(1), TR(1), TL(2), TR(2), BL(3), BR(3), F(4) ];
 kihraxz.difficult = [ TRL(2), TRR(2), K(4) ];
+kihraxz.force = [  ];
 kihraxz.actions = [ 'TARGET_LOCK', 'FOCUS', 'BARREL_ROLL' ];
 
 kihraxz.closing = [];
@@ -1575,6 +1711,7 @@ kimogila.faction = "Scum";
 kimogila.simple = [ F(1), BL(2), F(2), BR(2), F(3) ];
 kimogila.normal = [ BL(1), BR(1), TL(2), TR(2), TL(3), BL(3), BR(3), TR(3) ];
 kimogila.difficult = [ TL(1), TR(1), K(4) ];
+kimogila.force = [  ];
 kimogila.actions = [ 'TARGET_LOCK', 'FOCUS', 'BARREL_ROLL_D', 'RELOAD' ];
 
 kimogila.closing = [];
@@ -1627,6 +1764,7 @@ kwing.faction = "Rebel";
 kwing.simple = [ BL(1), BL(2), F(1), F(2) ];
 kwing.normal = [ BR(2), TL(2), BR(2), TR(2), BL(3), F(3), BR(3) ];
 kwing.difficult = [  ];
+kwing.force = [  ];
 kwing.actions = [ 'TARGET_LOCK', 'FOCUS', 'ROTATE_ARC', 'SLAM', 'RELOAD' ];
 
 kwing.closing = [];
@@ -1679,6 +1817,7 @@ laati.faction = "Republic";
 laati.simple = [ F(1), F(2) ];
 laati.normal = [ BL(1), BR(1), TL(2), BL(2), BR(2), TR(2), BL(3), F(3), BR(3) ];
 laati.difficult = [ STA(0), TL(3), TR(3), F(4) ];
+laati.force = [  ];
 laati.actions = [ 'TARGET_LOCK', 'FOCUS', 'ROTATE_ARC', 'REINFORCE_D', 'RELOAD' ];
 
 laati.closing = [];
@@ -1731,6 +1870,7 @@ lambda.faction = "Empire";
 lambda.simple = [ BL(1), F(1), F(2), BR(1) ];
 lambda.normal = [ BL(2), F(3), BR(2) ];
 lambda.difficult = [ TL(2), BL(3), STA(0), BR(3), TR(2) ];
+lambda.force = [  ];
 lambda.actions = [ 'FOCUS', 'COORDINATE', 'REINFORCE', 'JAM_D' ];
 
 lambda.closing = [];
@@ -1783,6 +1923,7 @@ lancer.faction = "Scum";
 lancer.simple = [ F(2), TL(2), BL(2), F(3), BR(2), TR(2), F(4) ];
 lancer.normal = [ BL(1), F(1), BR(1), TL(2), BL(2), BR(2), TR(2), F(5) ];
 lancer.difficult = [ K(5) ];
+lancer.force = [  ];
 lancer.actions = [ 'TARGET_LOCK', 'FOCUS', 'ROTATE_ARC', 'EVADE' ];
 
 lancer.closing = [];
@@ -1835,6 +1976,7 @@ m3a.faction = "Scum";
 m3a.simple = [ BL(1), BR(1), F(2), F(3) ];
 m3a.normal = [ TL(1), TR(1), BL(2), BR(2), TL(2), TR(2), BL(3), BR(3), F(4), F(5) ];
 m3a.difficult = [ K(3), K(5) ];
+m3a.force = [  ];
 m3a.actions = [ 'TARGET_LOCK', 'FOCUS', 'BARREL_ROLL', 'EVADE' ];
 
 m3a.closing = [];
@@ -1887,6 +2029,7 @@ mg100.faction = "Resistance";
 mg100.simple = [ BL(1), F(1), BR(1), F(2) ];
 mg100.normal = [ TL(2), BL(2), BR(2), TR(2), F(3) ];
 mg100.difficult = [ STA(0), TL(1), TR(1), BL(3), BR(3) ];
+mg100.force = [  ];
 mg100.actions = [ 'TARGET_LOCK', 'FOCUS', 'ROTATE_ARC', 'RELOAD' ];
 
 mg100.closing = [];
@@ -1939,6 +2082,7 @@ mistHunter.faction = "Scum";
 mistHunter.simple = [ BL(1), F(1), BR(1), F(2) ];
 mistHunter.normal = [ TL(2), BL(2), BR(2), TR(2), F(3) ];
 mistHunter.difficult = [ STA(0), TL(1), TR(1), BL(3), BR(3), K(2), F(4), K(4) ];
+mistHunter.force = [  ];
 mistHunter.actions = [ 'TARGET_LOCK', 'CALCULATE', 'JAM' ];
 
 mistHunter.closing = [];
@@ -1991,6 +2135,7 @@ n1.faction = "Republic";
 n1.simple = [ BL(2), BR(2), F(2), BL(3), BR(3), F(3) ];
 n1.normal = [ BL(1), F(1), BR(1), TL(2), TR(2), TL(3), TR(3), F(4), F(5) ];
 n1.difficult = [ TRL(3), TRR(3) ];
+n1.force = [  ];
 n1.actions = [ 'TARGET_LOCK', 'FOCUS', 'BARREL_ROLL', 'BOOST' ];
 
 n1.closing = [];
@@ -2043,6 +2188,7 @@ nantex.faction = "Seperatist";
 nantex.simple = [ BL(1), BR(1), BL(2), F(2), BR(2), BL(3), F(3), BR(3) ];
 nantex.normal = [ TL(1), TR(1), TL(2), TR(2), TL(3), TR(3), F(4), F(5) ];
 nantex.difficult = [ SLL(3), SLR(3), K(5) ];
+nantex.force = [  ];
 nantex.actions = [ 'FOCUS', 'EVADE' ];
 
 nantex.closing = [];
@@ -2095,6 +2241,7 @@ outrider.faction = "Rebel";
 outrider.simple = [ F(1), F(2), BL(1), BR(1) ];
 outrider.normal = [ TL(1), TL(2), TL(3), BL(2), BL(3), F(3), F(4), BR(2), BR(3), TR(1), TR(2), TR(3) ];
 outrider.difficult = [ K(4) ];
+outrider.force = [  ];
 outrider.actions = [ 'TARGET_LOCK', 'FOCUS', 'ROTATE_ARC', 'BARREL_ROLL_D' ];
 
 outrider.closing = [];
@@ -2147,6 +2294,7 @@ phantom.faction = "Rebel";
 phantom.simple = [ BL(1), F(1), BR(1), F(2) ];
 phantom.normal = [ TL(2), BL(2), BR(2), TR(2), BL(3), F(3), BR(3), F(4) ];
 phantom.difficult = [ TL(1), TR(1), TL(3), TR(3), K(4) ];
+phantom.force = [  ];
 phantom.actions = [ 'FOCUS', 'BARREL_ROLL2EVADE_D', 'EVADE' ];
 
 phantom.closing = [];
@@ -2199,6 +2347,7 @@ punishingOne.faction = "Scum";
 punishingOne.simple = [ F(1), BL(1), BL(2), BL(3), F(2), F(3) ];
 punishingOne.normal = [ BR(1), BR(2), BR(3), TL(1), TL(2), F(4) ];
 punishingOne.difficult = [ TR(1), TR(2), SLL(3), K(4) ];
+punishingOne.force = [  ];
 punishingOne.actions = [ 'LOCK2ROTATE_D', 'FOCUS2ROTATE_D', 'BARREL_ROLL_D' ];
 
 punishingOne.closing = [];
@@ -2251,6 +2400,7 @@ quadjumper.faction = "Scum";
 quadjumper.simple = [ BL(2), F(2), BR(2), F(3) ];
 quadjumper.normal = [ TL(1), BL(1), F(1), BR(1), TR(1), TL(2), TR(2), BL(3), BR(3) ];
 quadjumper.difficult = [ SLL(2), SLR(2), RBL(1), R(2), RBR(1) ];
+quadjumper.force = [  ];
 quadjumper.actions = [ 'FOCUS', 'BARREL_ROLL', 'EVADE_D' ];
 
 quadjumper.closing = [];
@@ -2303,6 +2453,7 @@ raider.faction = "Empire";
 raider.simple = [ BL(1), BR(1), F(2), F(3) ];
 raider.normal = [ F(1), BL(2), BR(2), F(4) ];
 raider.difficult = [ BL(0), STA(0), BR(0), BL(3), BR(3), F(5) ];
+raider.force = [  ];
 raider.actions = [ 'TARGET_LOCK', 'FOCUS', 'COORDINATE', 'REINFORCE', 'JAM' ];
 
 raider.closing = [];
@@ -2355,6 +2506,7 @@ respod.faction = "Resistance";
 respod.simple = [ BL(1), F(1), BR(1), F(2) ];
 respod.normal = [ TL(2), BL(2), BR(2), TR(2), F(3) ];
 respod.difficult = [ TL(1), TR(1), BL(3), BR(3), F(4), K(3) ];
+respod.force = [  ];
 respod.actions = [ 'FOCUS', 'TARGET_LOCK_D', 'BARREL_ROLL_D', 'JAM_D' ];
 
 respod.closing = [];
@@ -2407,6 +2559,7 @@ respodbb8.faction = "Resistance";
 respodbb8.simple = [ BL(1), F(1), BR(1), F(2) ];
 respodbb8.normal = [ TL(2), BL(2), BR(2), TR(2), F(3) ];
 respodbb8.difficult = [ TL(1), TR(1), BL(3), BR(3), F(4), K(3) ];
+respodbb8.force = [  ];
 respodbb8.actions = [ 'CALCULATE', 'TARGET_LOCK_D', 'BARREL_ROLL_D', 'JAM_D'];
 
 respodbb8.closing = [];
@@ -2459,6 +2612,7 @@ restransport.faction = "Resistance";
 restransport.simple = [ BL(1), F(1), BR(1), F(2) ];
 restransport.normal = [ TL(2), BL(2), BR(2), TR(2), F(3) ];
 restransport.difficult = [ TL(1), TR(1), BL(3), BR(3), F(4), STA(0), RBL(1), RBR(1) ];
+restransport.force = [  ];
 restransport.actions = [ 'TARGET_LOCK', 'FOCUS', 'COORDINATE_D', 'JAM_D' ];
 
 restransport.closing = [];
@@ -2511,6 +2665,7 @@ rz2awing.faction = "Resistance";
 rz2awing.simple = [ TL(2), BL(2), F(2), BR(2), TR(2), BL(3), F(3), BR(3), F(4), F(5) ];
 rz2awing.normal = [ TL(1), TR(1), TL(3), TR(3) ];
 rz2awing.difficult = [ SLL(3), SLR(3), K(5) ];
+rz2awing.force = [  ];
 rz2awing.actions = [ 'TARGET_LOCK', 'FOCUS', 'BARREL_ROLL', 'BOOST', 'EVADE' ];
 
 rz2awing.closing = [];
@@ -2563,6 +2718,7 @@ scavfalcon.faction = "Resistance";
 scavfalcon.simple = [ F(1), BL(2), F(2), BR(2) ];
 scavfalcon.normal = [ BL(1), BR(1), TL(2), TR(2), TL(3), BL(3), F(3), BR(3), TR(3) ];
 scavfalcon.difficult = [ SLL(3), SLR(3), F(4) ];
+scavfalcon.force = [  ];
 scavfalcon.actions = [ 'TARGET_LOCK', 'FOCUS', 'ROTATE_ARC_D', 'BOOST_D' ];
 
 scavfalcon.closing = [];
@@ -2615,6 +2771,7 @@ scurrgs.faction = "Scum";
 scurrgs.simple = [ BL(1), F(1), BR(1), F(2) ];
 scurrgs.normal = [ TL(2), BL(2), BR(2), TR(2), BL(3), F(3), BR(3) ];
 scurrgs.difficult = [ TL(3), TR(3), TRL(3), TRR(3), F(4) ];
+scurrgs.force = [  ];
 scurrgs.actions = [ 'TARGET_LOCK', 'FOCUS', 'BARREL_ROLL_D' ];
 
 scurrgs.closing = [];
@@ -2667,6 +2824,7 @@ sheathipede.faction = "Rebel";
 sheathipede.simple = [ F(1), BL(2), F(2), BR(2), F(3) ];
 sheathipede.normal = [ BL(1), BR(1), TL(2), TR(2), BL(3), BR(3) ];
 sheathipede.difficult = [ R(1), TL(3), TR(3), K(3), F(4) ];
+sheathipede.force = [  ];
 sheathipede.actions = [ 'FOCUS', 'COORDINATE' ];
 
 sheathipede.closing = [];
@@ -2719,6 +2877,7 @@ sithinf.faction = "Seperatist";
 sithinf.simple = [ BL(1), F(1), BR(1), BL(2), F(2), BR(2), F(3) ];
 sithinf.normal = [ TL(2), TR(2), TL(3), BL(3), BR(3), TR(3), F(4) ];
 sithinf.difficult = [ TL(1), TR(1), SLL(2), SLR(2), K(5) ];
+sithinf.force = [  ];
 sithinf.actions = [ 'TARGET_LOCK', 'FOCUS', 'BARREL_ROLL_D' ];
 
 sithinf.closing = [];
@@ -2771,6 +2930,7 @@ starviper.faction = "Scum";
 starviper.simple = [ BL(1), F(1), BR(1), BL(2), F(2), BR(2), F(3) ];
 starviper.normal = [ TL(1), TR(1), TL(2), TR(2), BL(3), BR(3), F(4) ];
 starviper.difficult = [ SLL(3), SLR(3) ];
+starviper.force = [  ];
 starviper.actions = [ 'TARGET_LOCK', 'FOCUS', 'BARREL_ROLL2FOCUS_D', 'BOOST2FOCUS_D' ];
 
 starviper.closing = [];
@@ -2823,6 +2983,7 @@ starviper_guri.faction = "Scum";
 starviper_guri.simple = [ BL(1), F(1), BR(1), BL(2), F(2), BR(2), F(3) ];
 starviper_guri.normal = [ TL(1), TR(1), TL(2), TR(2), BL(3), BR(3), F(4) ];
 starviper_guri.difficult = [ SLL(3), SLR(3) ];
+starviper_guri.force = [  ];
 starviper_guri.actions = [ 'TARGET_LOCK', 'CALCULATE', 'BARREL_ROLL2CALC', 'BOOST2CALC' ];
 
 starviper_guri.closing = [];
@@ -2875,6 +3036,7 @@ t70xwing.faction = "Resistance";
 t70xwing.simple = [ BL(1), F(1), BR(1), BL(2), F(2), BR(2), F(3) ];
 t70xwing.normal = [ TL(2), TR(2), TL(3), BL(3), BR(3), TR(3), F(4) ];
 t70xwing.difficult = [ TRL(3), TRR(3), K(4) ];
+t70xwing.force = [  ];
 t70xwing.actions = [ 'TARGET_LOCK', 'FOCUS', 'BOOST' ];
 
 t70xwing.closing = [];
@@ -2927,6 +3089,7 @@ tie.faction = "Empire";
 tie.simple = [ F(2), BL(2), BR(2), F(3) ];
 tie.normal = [ TL(1), TL(2), TL(3), BL(3), F(4), F(5), BR(3), TR(1), TR(2), TR(3) ];
 tie.difficult = [ K(3), K(4) ];
+tie.force = [  ];
 tie.actions = [ 'FOCUS', 'BARREL_ROLL', 'EVADE' ];
 
 tie.closing = [];
@@ -2979,6 +3142,7 @@ tieAdvanced.faction = "Empire";
 tieAdvanced.simple = [ BL(1), BL(2), F(2), F(3), BR(1), BR(2) ];
 tieAdvanced.normal = [ TL(2), TL(3), BL(3), F(1), F(4), F(5), BR(3), TR(2), TR(3) ];
 tieAdvanced.difficult = [ K(4), TRL(3), TRR(3) ];
+tieAdvanced.force = [  ];
 tieAdvanced.actions = [ 'TARGET_LOCK', 'FOCUS2BARREL_ROLL_D', 'BARREL_ROLL' ];
 
 tieAdvanced.closing = [];
@@ -3031,6 +3195,7 @@ tieAggressor.faction = "Empire";
 tieAggressor.simple = [ F(1), BL(2), F(2), BR(2), F(3) ];
 tieAggressor.normal = [ BL(1), BR(1), TL(2), TR(2), TL(3), BL(3), BR(3), TR(3), F(4) ];
 tieAggressor.difficult = [ K(4) ];
+tieAggressor.force = [  ];
 tieAggressor.actions = [ 'TARGET_LOCK', 'FOCUS', 'BARREL_ROLL2EVADE_D' ];
 
 tieAggressor.closing = [];
@@ -3083,6 +3248,7 @@ tieBomber.faction = "Empire";
 tieBomber.simple = [ F(1), F(2), F(3), BL(2), BR(2) ];
 tieBomber.normal = [ TL(2), TL(3), BL(1), BL(3), F(4), BR(1), BR(3), TR(2), TR(3) ];
 tieBomber.difficult = [ K(3), K(5) ];
+tieBomber.force = [  ];
 tieBomber.actions = [ 'TARGET_LOCK', 'FOCUS', 'BARREL_ROLL2LOCK_D', 'RELOAD_D' ];
 
 tieBomber.closing = [];
@@ -3135,6 +3301,7 @@ tieDefender.faction = "Empire";
 tieDefender.simple = [ BL(1), BR(1), F(2), F(3), F(4), F(5) ];
 tieDefender.normal = [ BL(2), BR(2), TL(3), BL(3), BR(3), TR(3), K(4) ];
 tieDefender.difficult = [ TL(1), TR(1), TL(2), TR(2), K(2) ];
+tieDefender.force = [  ];
 tieDefender.actions = [ 'TARGET_LOCK', 'FOCUS', 'BARREL_ROLL', 'BOOST', 'EVADE' ];
 
 tieDefender.closing = [];
@@ -3187,6 +3354,7 @@ tieInquisitor.faction = "Empire";
 tieInquisitor.simple = [ TL(1), BL(1), BR(1), TR(1), F(2), F(3) ];
 tieInquisitor.normal = [ TL(2), BL(2), BR(2), TR(2), TL(3), BL(3), BR(3), TR(3), F(4), F(5) ];
 tieInquisitor.difficult = [ TRL(2), TRR(2), K(4) ];
+tieInquisitor.force = [  ];
 tieInquisitor.actions = [ 'TARGET_LOCK', 'FOCUS', 'BARREL_ROLL2FOCUS_D', 'BOOST2FOCUS_D', 'EVADE' ];
 
 tieInquisitor.closing = [];
@@ -3239,6 +3407,7 @@ tieInterceptor.faction = "Empire";
 tieInterceptor.simple = [ F(2), F(3), F(4), TL(2), BL(2), BR(2), TR(2) ];
 tieInterceptor.normal = [ TL(1), TL(3), BL(3), F(5), BR(3), TR(1), TR(3) ];
 tieInterceptor.difficult = [ SLL(3), SLR(3), K(4) ];
+tieInterceptor.force = [  ];
 tieInterceptor.actions = [ 'FOCUS', 'BARREL_ROLL', 'BOOST', 'EVADE' ];
 
 tieInterceptor.closing = [];
@@ -3291,6 +3460,7 @@ tiePhantom.faction = "Empire";
 tiePhantom.simple = [ BL(2), F(2), BR(2), F(3) ];
 tiePhantom.normal = [ TL(1), BL(1), BR(1), TR(1), TL(2), TR(2), TL(3), BL(3), BR(3), TR(3), F(4) ];
 tiePhantom.difficult = [ K(3), K(4) ];
+tiePhantom.force = [  ];
 tiePhantom.actions = [ 'CLOAKING', 'FOCUS', 'BARREL_ROLL', 'EVADE' ];
 
 tiePhantom.closing = [];
@@ -3343,6 +3513,7 @@ tiePunisher.faction = "Empire";
 tiePunisher.simple = [ BL(1), F(1), BR(1), F(2) ];
 tiePunisher.normal = [ BL(2), BR(2), TL(2), BL(3), F(3), BR(3), TR(2) ];
 tiePunisher.difficult = [ STA(0), TL(3), TR(3), K(4) ];
+tiePunisher.force = [  ];
 tiePunisher.actions = [ 'TARGET_LOCK', 'FOCUS', 'BOOST2LOCK_D', 'BARREL_ROLL_D', 'RELOAD' ];
 
 tiePunisher.closing = [];
@@ -3395,6 +3566,7 @@ tieStriker.faction = "Empire";
 tieStriker.simple = [ BL(1), F(1), BR(1), BL(2), F(2), BR(2), F(3) ];
 tieStriker.normal = [ TL(1), TR(1), TL(2), TR(2), BL(3), BR(3) ];
 tieStriker.difficult = [ K(1), SLL(2), SLR(2) ];
+tieStriker.force = [  ];
 tieStriker.actions = [ 'FOCUS', 'BARREL_ROLL', 'EVADE' ];
 
 tieStriker.closing = [];
@@ -3447,6 +3619,7 @@ tieba.faction = "First Order";
 tieba.simple = [ TL(1), BL(1), BR(1), TR(1), BL(2), F(2), BR(2), F(3), F(4) ];
 tieba.normal = [ TL(2), TR(2), TL(3), BL(3), BR(3), TR(3), F(5) ];
 tieba.difficult = [ SLL(2), SLR(2), K(5) ];
+tieba.force = [  ];
 tieba.actions = [ 'TARGET_LOCK', 'FOCUS', 'BARREL_ROLL', 'BOOST', 'EVADE' ];
 
 tieba.closing = [];
@@ -3490,6 +3663,59 @@ tieba.stressed[6] = [ TL(1), TL(1), TL(1), TL(1), TL(2), TL(2), TL(2), TL(3), TL
 tieba.stressed[7] = [ F(2), BL(1), BL(1), BL(1), BL(2), BL(2), BL(3), BL(3), TL(1), TL(2) ];
 
 // ****************************************************************************
+// TIE rb Heavy (Brute)
+
+var tiebrute = {};
+tiebrute.name = "TIE rb Heavy (Brute)";
+tiebrute.image = "img/tie_brute.png";
+tiebrute.faction = "Empire";
+tiebrute.simple = [ F(1), BL(2), F(2), BR(2) ];
+tiebrute.normal = [ BL(1), BR(1), TL(2), TR(2), BL(3), F(3), BR(3), F(4) ];
+tiebrute.difficult = [ TL(1), TR(1), TL(3), TR(3), TRL(3), TRR(3) ];
+tiebrute.force = [  ];
+tiebrute.actions = [ 'TARGET_LOCK', 'ROTATE2CALC_D', 'FOCUS', 'REINFORCE', 'BARREL_ROLL_D' ];
+
+tiebrute.closing = [];
+tiebrute.closing[0] = [ BL(1), F(1), F(1), F(1), F(1), F(2), F(2), F(2), TRL(3), TRL(3) ];
+tiebrute.closing[1] = [ F(1), BR(1), BR(1), BR(1), BR(1), BR(2), BR(2), BR(2), TR(1), TR(1) ];
+tiebrute.closing[2] = [ TR(1), TR(1), TR(1), TR(1), TR(2), TR(2), TR(2), TR(2), TRL(3), TRL(3) ];
+tiebrute.closing[3] = [ BR(1), TR(1), TR(1), TR(1), TR(1), TR(2), TR(2), TR(2), TRL(3), TRL(3) ];
+tiebrute.closing[4] = [ TL(3), BL(2), BL(3), BL(3), F(4), BR(2), BR(2), BR(3), BR(3), TR(3) ];
+tiebrute.closing[5] = [ BL(1), TL(1), TL(1), TL(1), TL(1), TL(2), TL(2), TL(2), TRR(3), TRR(3) ];
+tiebrute.closing[6] = [ TL(1), TL(1), TL(1), TL(1), TL(2), TL(2), TL(2), TL(2), TRR(3), TRR(3) ];
+tiebrute.closing[7] = [ F(1), BL(1), BL(1), BL(1), BL(1), BL(2), BL(2), BL(2), TL(1), TL(1) ];
+
+tiebrute.away = [];
+tiebrute.away[0] = [ F(3), F(3), F(3), F(3), F(3), F(4), F(4), F(4), F(4), F(4) ];
+tiebrute.away[1] = [ BR(2), BR(2), BR(2), BR(2), BR(3), BR(3), BR(3), BR(3), TR(2), TR(3) ];
+tiebrute.away[2] = [ BR(2), BR(3), BR(3), TR(2), TR(2), TR(2), TR(3), TR(3), TR(3), TR(3) ];
+tiebrute.away[3] = [ TR(2), TR(2), TR(2), TR(3), TR(3), TR(3), TR(3), TRL(3), TRR(3), TRR(3) ];
+tiebrute.away[4] = [ TL(3), BL(2), BL(3), BL(3), BR(2), BR(2), BR(3), BR(3), TR(3), TR(3) ];
+tiebrute.away[5] = [ TL(2), TL(2), TL(2), TL(3), TL(3), TL(3), TL(3), TRR(3), TRL(3), TRL(3) ];
+tiebrute.away[6] = [ BL(2), BL(3), BL(3), TL(2), TL(2), TL(2), TL(3), TL(3), TL(3), TL(3) ];
+tiebrute.away[7] = [ BL(2), BL(2), BL(2), BL(2), BL(3), BL(3), BL(3), BL(3), TL(2), TL(3) ];
+
+tiebrute.far = [];
+tiebrute.far[0] = [ BL(3), F(3), F(3), F(3), F(3), F(4), F(4), F(4), F(4), BR(3) ];
+tiebrute.far[1] = [ BR(2), BR(2), BR(2), BR(2), BR(3), BR(3), BR(3), BR(3), TR(2), TR(3) ];
+tiebrute.far[2] = [ TR(2), TR(2), TR(2), TR(2), TR(2), TR(3), TR(3), TR(3), TR(3), TR(3) ];
+tiebrute.far[3] = [ TR(2), TR(2), TR(2), TR(2), TR(2), TR(3), TR(3), TR(3), TR(3), TR(3) ];
+tiebrute.far[4] = [ TL(2), TL(2), TL(3), TL(3), TR(2), TR(2), TR(2), TR(3), TR(3), TR(3) ];
+tiebrute.far[5] = [ TL(2), TL(2), TL(2), TL(2), TL(2), TL(3), TL(3), TL(3), TL(3), TL(3) ];
+tiebrute.far[6] = [ TL(2), TL(2), TL(2), TL(2), TL(2), TL(3), TL(3), TL(3), TL(3), TL(3) ];
+tiebrute.far[7] = [ BL(2), BL(2), BL(2), BL(2), BL(3), BL(3), BL(3), BL(3), TL(2), TL(3) ];
+
+tiebrute.stressed = [];
+tiebrute.stressed[0] = [ BL(1), BL(3), F(1), F(1), F(2), F(2), F(3), F(3), F(4), F(4) ];
+tiebrute.stressed[1] = [ F(1), BR(1), BR(1), BR(1), BR(2), BR(2), BR(3), BR(3), TR(2), TR(2) ];
+tiebrute.stressed[2] = [ TR(2), TR(2), TR(2), TR(2), TR(2), TR(2), TR(2), TR(2), TR(2), TR(2) ];
+tiebrute.stressed[3] = [ TR(2), TR(2), TR(2), TR(2), TR(2), TR(2), TR(2), TR(2), TR(2), TR(2) ];
+tiebrute.stressed[4] = [ BL(1), BL(1), BL(2), BL(2), BL(3), BL(3), BR(1), BR(1), BR(2), BR(3) ];
+tiebrute.stressed[5] = [ TL(2), TL(2), TL(2), TL(2), TL(2), TL(2), TL(2), TL(2), TL(2), TL(2) ];
+tiebrute.stressed[6] = [ TL(2), TL(2), TL(2), TL(2), TL(2), TL(2), TL(2), TL(2), TL(2), TL(2) ];
+tiebrute.stressed[7] = [ F(1), BL(1), BL(1), BL(1), BL(2), BL(2), BL(3), BL(3), TL(2), TL(2) ];
+
+// ****************************************************************************
 // TIE/fo Fighter
 
 var tiefo = {};
@@ -3499,6 +3725,7 @@ tiefo.faction = "First Order";
 tiefo.simple = [ TL(2), BL(2), F(2), BR(2), TR(2), F(3) ];
 tiefo.normal = [ TL(1), TR(1), TL(3), BL(3), BR(3), TR(3), F(4), F(5) ];
 tiefo.difficult = [ SLL(2), SLR(2), K(4) ];
+tiefo.force = [  ];
 tiefo.actions = [ 'TARGET_LOCK', 'FOCUS', 'BARREL_ROLL', 'EVADE' ];
 
 tiefo.closing = [];
@@ -3551,6 +3778,7 @@ tiemod.faction = "Scum";
 tiemod.simple = [ BL(2), F(2), BR(2), F(3) ];
 tiemod.normal = [ TL(1), TR(1), TL(2), TR(2), TL(3), BL(3), BR(3), TR(3), F(4) ];
 tiemod.difficult = [ K(3), F(5) ];
+tiemod.force = [  ];
 tiemod.actions = [ 'FOCUS', 'BARREL_ROLL', 'EVADE' ];
 
 tiemod.closing = [];
@@ -3603,6 +3831,7 @@ tiereaper.faction = "Empire";
 tiereaper.simple = [ BL(1), F(1), BR(1), F(2), F(3) ];
 tiereaper.normal = [ BL(2), BR(2), BL(3), BR(3) ];
 tiereaper.difficult = [ STA(0), TL(1), TR(1), SLL(1), SLR(1), TL(2), TR(2) ];
+tiereaper.force = [  ];
 tiereaper.actions = [ 'FOCUS', 'COORDINATE_D', 'JAM', 'EVADE' ];
 
 tiereaper.closing = [];
@@ -3655,6 +3884,7 @@ tiesf.faction = "First Order";
 tiesf.simple = [ BL(1), F(1), BR(1), BL(2), F(2), BR(2), F(3) ];
 tiesf.normal = [ TL(2), TR(2), TL(3), BL(3), BR(3), TR(3), F(4), F(5) ];
 tiesf.difficult = [ TL(1), TR(1), SLL(3), SLR(3) ];
+tiesf.force = [  ];
 tiesf.actions = [ 'LOCK2ROTATE', 'FOCUS2ROTATE', 'BARREL_ROLL2ROTATE', 'EVADE2ROTATE' ];
 
 tiesf.closing = [];
@@ -3707,6 +3937,7 @@ tiesilencer.faction = "First Order";
 tiesilencer.simple = [ TL(2), BL(2), F(2), BR(2), TR(2), F(3), F(4), F(5) ];
 tiesilencer.normal = [ TL(1), TR(1), TL(3), BL(3), BR(3), TR(3) ];
 tiesilencer.difficult = [ SLL(3), SLR(3), K(4) ];
+tiesilencer.force = [  ];
 tiesilencer.actions = [ 'TARGET_LOCK', 'FOCUS', 'BARREL_ROLL', 'BOOST' ];
 
 tiesilencer.closing = [];
@@ -3759,6 +3990,7 @@ torrent.faction = "Republic";
 torrent.simple = [ BL(1), F(1), BR(1), F(2), F(3) ];
 torrent.normal = [ TL(2), BL(2), BR(2), TR(2), F(4) ];
 torrent.difficult = [ TL(1), TR(1), TRL(2), TRR(2), BL(3), BR(3), K(3) ];
+torrent.force = [  ];
 torrent.actions = [ 'TARGET_LOCK', 'FOCUS', 'BARREL_ROLL2EVADE_D', 'EVADE' ];
 
 torrent.closing = [];
@@ -3811,6 +4043,7 @@ transport.faction = "Rebel";
 transport.simple = [ BL(1), F(1), BR(1) ];
 transport.normal = [ BL(2), F(2), BR(2) ];
 transport.difficult = [ BL(0), STA(0), BR(0), F(3), F(4) ];
+transport.force = [  ];
 transport.actions = [ 'FOCUS', 'REINFORCE_D', 'COORDINATE', 'JAM', 'TARGET_LOCK_D' ];
 
 transport.closing = [];
@@ -3863,6 +4096,7 @@ upsilon.faction = "First Order";
 upsilon.simple = [ F(1), BL(2), F(2), BR(2) ];
 upsilon.normal = [ BL(1), BR(1), TL(2), TR(2), BL(3), F(3), BR(3) ];
 upsilon.difficult = [ STA(0), TL(1), TR(1), TL(3), TR(3) ];
+upsilon.force = [  ];
 upsilon.actions = [ 'TARGET_LOCK', 'FOCUS', 'COORDINATE', 'REINFORCE', 'JAM' ];
 
 upsilon.closing = [];
@@ -3915,6 +4149,7 @@ uwing.faction = "Rebel";
 uwing.simple = [ BL(1), F(1), BR(1), BL(2), F(2), BR(2) ];
 uwing.normal = [ TL(2), TR(2), BL(3), F(3), BR(3), F(4) ];
 uwing.difficult = [ STA(0) ];
+uwing.force = [  ];
 uwing.actions = [ 'TARGET_LOCK', 'FOCUS', 'COORDINATE_D' ];
 
 uwing.closing = [];
@@ -3967,6 +4202,7 @@ uwingk2so.faction = "Rebel";
 uwingk2so.simple = [ BL(1), F(1), BR(1), BL(2), F(2), BR(2) ];
 uwingk2so.normal = [ TL(2), TR(2), BL(3), F(3), BR(3), F(4) ];
 uwingk2so.difficult = [ STA(0) ];
+uwingk2so.force = [  ];
 uwingk2so.actions = [ 'TARGET_LOCK', 'CALCULATE', 'COORDINATE_D' ];
 
 uwingk2so.closing = [];
@@ -4019,6 +4255,7 @@ vulture.faction = "Seperatist";
 vulture.simple = [ TL(2), F(2), TR(2), F(3), F(4) ];
 vulture.normal = [ TL(1), TR(1), BL(2), BR(2), TL(3), TR(3), F(5) ];
 vulture.difficult = [ K(1), TRL(2), TRR(2), BL(3), BR(3) ];
+vulture.force = [  ];
 vulture.actions = [ 'TARGET_LOCK', 'CALCULATE', 'BARREL_ROLL2CALC' ];
 
 vulture.closing = [];
@@ -4062,6 +4299,59 @@ vulture.stressed[6] = [ TL(1), TL(1), TL(1), TL(1), TL(2), TL(2), TL(2), TL(3), 
 vulture.stressed[7] = [ F(2), BL(2), BL(2), BL(2), BL(2), BL(2), BL(2), BL(2), TL(1), TL(2) ];
 
 // ****************************************************************************
+// Nimbus-Class V-Wing
+
+var vwing = {};
+vwing.name = "Nimbus-Class V-Wing";
+vwing.image = "img/nimbus_vwing.png";
+vwing.faction = "Republic";
+vwing.simple = [ TL(2), BL(2), F(2), BR(2), TR(2), F(3) ];
+vwing.normal = [ TL(1), TR(1), TL(3), BL(3), BR(3), TR(3), F(4), F(5) ];
+vwing.difficult = [ BL(1), BR(1), K(2), K(4) ];
+vwing.force = [  ];
+vwing.actions = [ 'TARGET_LOCK', 'BOOST2LOCK_D', 'BARREL_ROLL_D', 'FOCUS' ];
+
+vwing.closing = [];
+vwing.closing[0] = [ BL(1), F(2), F(2), F(2), F(2), F(3), F(3), F(3), K(2), K(2) ];
+vwing.closing[1] = [ F(2), BR(1), BR(1), BR(1), BR(1), BR(2), BR(2), BR(2), TR(1), TR(1) ];
+vwing.closing[2] = [ TR(1), TR(1), TR(1), TR(1), TR(2), TR(2), TR(2), TR(2), K(2), K(2) ];
+vwing.closing[3] = [ BR(1), TR(1), TR(1), TR(1), TR(1), TR(2), TR(2), TR(2), K(2), K(2) ];
+vwing.closing[4] = [ TL(3), F(5), TR(3), K(4), K(4), K(4), K(4), K(4), K(4), K(4) ];
+vwing.closing[5] = [ BL(1), TL(1), TL(1), TL(1), TL(1), TL(2), TL(2), TL(2), K(2), K(2) ];
+vwing.closing[6] = [ TL(1), TL(1), TL(1), TL(1), TL(2), TL(2), TL(2), TL(2), K(2), K(2) ];
+vwing.closing[7] = [ F(2), BL(1), BL(1), BL(1), BL(1), BL(2), BL(2), BL(2), TL(1), TL(1) ];
+
+vwing.away = [];
+vwing.away[0] = [ F(4), F(4), F(4), F(4), F(4), F(5), F(5), F(5), F(5), F(5) ];
+vwing.away[1] = [ BR(2), BR(2), BR(2), BR(2), BR(3), BR(3), BR(3), BR(3), TR(2), TR(3) ];
+vwing.away[2] = [ BR(2), BR(3), BR(3), TR(2), TR(2), TR(2), TR(3), TR(3), TR(3), TR(3) ];
+vwing.away[3] = [ TR(2), TR(2), TR(2), TR(3), TR(3), TR(3), TR(3), K(4), K(4), K(4) ];
+vwing.away[4] = [ TL(3), TR(3), TR(3), K(4), K(4), K(4), K(4), K(4), K(4), K(4) ];
+vwing.away[5] = [ TL(2), TL(2), TL(2), TL(3), TL(3), TL(3), TL(3), K(4), K(4), K(4) ];
+vwing.away[6] = [ BL(2), BL(3), BL(3), TL(2), TL(2), TL(2), TL(3), TL(3), TL(3), TL(3) ];
+vwing.away[7] = [ BL(2), BL(2), BL(2), BL(2), BL(3), BL(3), BL(3), BL(3), TL(2), TL(3) ];
+
+vwing.far = [];
+vwing.far[0] = [ BL(3), F(4), F(4), F(4), F(4), F(5), F(5), F(5), F(5), BR(3) ];
+vwing.far[1] = [ BR(2), BR(2), BR(2), BR(2), BR(3), BR(3), BR(3), BR(3), TR(2), TR(3) ];
+vwing.far[2] = [ TR(2), TR(2), TR(2), TR(2), TR(2), TR(3), TR(3), TR(3), TR(3), TR(3) ];
+vwing.far[3] = [ TR(2), TR(2), TR(2), TR(2), TR(2), TR(3), TR(3), TR(3), TR(3), TR(3) ];
+vwing.far[4] = [ TL(2), TL(2), TL(3), TL(3), TR(2), TR(2), TR(3), TR(3), K(4), K(4) ];
+vwing.far[5] = [ TL(2), TL(2), TL(2), TL(2), TL(2), TL(3), TL(3), TL(3), TL(3), TL(3) ];
+vwing.far[6] = [ TL(2), TL(2), TL(2), TL(2), TL(2), TL(3), TL(3), TL(3), TL(3), TL(3) ];
+vwing.far[7] = [ BL(2), BL(2), BL(2), BL(2), BL(3), BL(3), BL(3), BL(3), TL(2), TL(3) ];
+
+vwing.stressed = [];
+vwing.stressed[0] = [ BL(2), F(2), F(2), F(3), F(3), F(4), F(4), F(5), F(5), BR(2) ];
+vwing.stressed[1] = [ F(2), BR(2), BR(2), BR(2), BR(2), BR(3), BR(3), BR(3), TR(1), TR(2) ];
+vwing.stressed[2] = [ TR(1), TR(1), TR(1), TR(1), TR(2), TR(2), TR(2), TR(3), TR(3), TR(3) ];
+vwing.stressed[3] = [ TR(1), TR(1), TR(1), TR(1), TR(2), TR(2), TR(2), TR(3), TR(3), TR(3) ];
+vwing.stressed[4] = [ TL(1), TL(1), TL(2), TL(2), TL(3), TL(3), TR(1), TR(1), TR(2), TR(3) ];
+vwing.stressed[5] = [ TL(1), TL(1), TL(1), TL(1), TL(2), TL(2), TL(2), TL(3), TL(3), TL(3) ];
+vwing.stressed[6] = [ TL(1), TL(1), TL(1), TL(1), TL(2), TL(2), TL(2), TL(3), TL(3), TL(3) ];
+vwing.stressed[7] = [ F(2), BL(2), BL(2), BL(2), BL(2), BL(3), BL(3), BL(3), TL(1), TL(2) ];
+
+// ****************************************************************************
 // Xi-class Light Shuttle
 
 var xi = {};
@@ -4071,6 +4361,7 @@ xi.faction = "First Order";
 xi.simple = [ BL(1), F(1), BR(1), BL(2), F(2), BR(2) ];
 xi.normal = [ TL(2), TR(2), BL(3), F(3), BR(3), F(4) ];
 xi.difficult = [ STA(0), TL(3), TR(3) ];
+xi.force = [  ];
 xi.actions = [ 'FOCUS', 'COORDINATE_D', 'JAM', 'TARGET_LOCK_D' ];
 
 xi.closing = [];
@@ -4123,6 +4414,7 @@ xwing.faction = "Rebel";
 xwing.simple = [ F(1), BL(1), BR(1), F(2), BL(2), BR(2) ];
 xwing.normal = [ TL(2), TL(3), BL(3), F(3), F(4), BR(3), TR(2), TR(3) ];
 xwing.difficult = [ TRL(3), TRR(3), K(4) ];
+xwing.force = [  ];
 xwing.actions = [ 'TARGET_LOCK', 'FOCUS', 'BARREL_ROLL' ];
 
 xwing.closing = [];
@@ -4175,6 +4467,7 @@ ywinga4.faction = "Rebel";
 ywinga4.simple = [ BL(1), BR(1), F(1), F(2) ];
 ywinga4.normal = [ TL(2), BL(2), BL(3), F(3), BR(2), BR(3), TR(2) ];
 ywinga4.difficult = [ TL(3), TR(3), F(4), K(4) ];
+ywinga4.force = [  ];
 ywinga4.actions = [ 'TARGET_LOCK', 'FOCUS', 'BARREL_ROLL_D', 'RELOAD_D' ];
 
 ywinga4.closing = [];
@@ -4227,6 +4520,7 @@ ywinga4S.faction = "Scum";
 ywinga4S.simple = [ BL(1), BR(1), F(1), F(2) ];
 ywinga4S.normal = [ TL(2), BL(2), BL(3), F(3), BR(2), BR(3), TR(2) ];
 ywinga4S.difficult = [ TL(3), TR(3), F(4), K(4) ];
+ywinga4S.force = [  ];
 ywinga4S.actions = [ 'TARGET_LOCK', 'FOCUS', 'BARREL_ROLL_D', 'RELOAD_D' ];
 
 ywinga4S.closing = [];
@@ -4279,6 +4573,7 @@ ywingb.faction = "Republic";
 ywingb.simple = [ F(1), F(2) ];
 ywingb.normal = [ BL(1), BR(1), TL(2), BL(2), BR(2), TR(2), BL(3), F(3), BR(3) ];
 ywingb.difficult = [ TL(3), TR(3), F(4), K(4) ];
+ywingb.force = [  ];
 ywingb.actions = [ 'TARGET_LOCK', 'FOCUS', 'BARREL_ROLL_D', 'RELOAD_D' ];
 
 ywingb.closing = [];
@@ -4331,6 +4626,7 @@ z95.faction = "Rebel";
 z95.simple = [ F(1), F(2), F(3), BL(2), BR(2) ];
 z95.normal = [ BL(1), BR(1), TL(2), TR(2), TL(3), BL(3), BR(3), TR(3), F(4) ];
 z95.difficult = [ K(3), K(4) ];
+z95.force = [  ];
 z95.actions = [ 'TARGET_LOCK', 'FOCUS', 'BARREL_ROLL_D' ];
 
 z95.closing = [];
@@ -4383,6 +4679,7 @@ z95S.faction = "Scum";
 z95S.simple = [ F(1), F(2), F(3), BL(2), BR(2) ];
 z95S.normal = [ BL(1), BR(1), TL(2), TR(2), TL(3), BL(3), BR(3), TR(3), F(4) ];
 z95S.difficult = [ K(3), K(4) ];
+z95S.force = [  ];
 z95S.actions = [ 'TARGET_LOCK', 'FOCUS', 'BARREL_ROLL_D' ];
 
 z95S.closing = [];
@@ -4429,4 +4726,4 @@ z95S.stressed[7] = [ F(1), BL(1), BL(1), BL(1), BL(2), BL(2), BL(3), BL(3), TL(2
 // ****************************************************************************
 // Ships
 
-var ships = [ alpha, arc170, arc170R, auzituck, awing, belbullab, bwing, corvette, crocscum, crocsep, custfalcon, decimator, delta7, escape, ewing, falcon, fang, fireball, firesprays, ghost, gozanti, gozantifo, hmp, houndstooth, hwk290, hwk290S, hyena, hyenadbs32c, ig2000, kihraxz, kimogila, kwing, laati, lambda, lancer, m3a, mg100, mistHunter, n1, nantex, outrider, phantom, punishingOne, quadjumper, raider, respod, respodbb8, restransport, rz2awing, scavfalcon, scurrgs, sheathipede, sithinf, starviper, starviper_guri, t70xwing, tie, tieAdvanced, tieAggressor, tieBomber, tieDefender, tieInquisitor, tieInterceptor, tiePhantom, tiePunisher, tieStriker, tieba, tiefo, tiemod, tiereaper, tiesf, tiesilencer, torrent, transport, upsilon, uwing, uwingk2so, vulture, xi, xwing, ywinga4, ywinga4S, ywingb, z95, z95S ];
+var ships = [ alpha, arc170, arc170R, auzituck, awing, belbullab, bwing, corvette, crocscum, crocsep, custfalcon, decimator, delta7, dtf, escape, eta2, ewing, falcon, fang, fireball, firesprays, ghost, gozanti, gozantifo, hmp, houndstooth, hwk290, hwk290S, hyena, hyenadbs32c, ig2000, kihraxz, kimogila, kwing, laati, lambda, lancer, m3a, mg100, mistHunter, n1, nantex, outrider, phantom, punishingOne, quadjumper, raider, respod, respodbb8, restransport, rz2awing, scavfalcon, scurrgs, sheathipede, sithinf, starviper, starviper_guri, t70xwing, tie, tieAdvanced, tieAggressor, tieBomber, tieDefender, tieInquisitor, tieInterceptor, tiePhantom, tiePunisher, tieStriker, tieba, tiebrute, tiefo, tiemod, tiereaper, tiesf, tiesilencer, torrent, transport, upsilon, uwing, uwingk2so, vulture, vwing, xi, xwing, ywinga4, ywinga4S, ywingb, z95, z95S ];
