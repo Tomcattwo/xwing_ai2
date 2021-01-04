@@ -21,6 +21,7 @@ class Ship:
         self.simple = []
         self.normal = []
         self.difficult = []
+        self.force = []
 
         self.limits = {}
 
@@ -35,7 +36,7 @@ class Ship:
         Return: single list of all valid moves for this ship
         """
         if self.maneuvers == []:
-            self.maneuvers = self.simple + self.normal + self.difficult
+            self.maneuvers = self.simple + self.normal + self.difficult + self.force
             self.maneuvers.sort()
 
         return self.maneuvers
@@ -74,6 +75,10 @@ class Ship:
 
     def isDifficult( self, maneuver ):
         return maneuver in self.difficult
+        
+        
+    def isForce( self, maneuver ):
+        return maneuver in self.force
 
 
     def isFast( self, maneuver ):
@@ -134,6 +139,7 @@ class Ship:
         code.append( self.__gen_js_maneuver_list( "simple", self.simple ) )
         code.append( self.__gen_js_maneuver_list( "normal", self.normal ) )
         code.append( self.__gen_js_maneuver_list( "difficult", self.difficult ) )
+        code.append( self.__gen_js_maneuver_list( "force", self.force ) )
 
         code.append( '%s.actions = [%s];' % ( self.name, self.actions ) )
 
@@ -169,6 +175,7 @@ class Ship:
         print( "   Simple: %s" % self.simple )
         print( "   Normal: %s" % self.normal )
         print( "   Difficult: %s" % self.difficult )
+        print( "   Force: %s" % self.force )
 
         print( "   All: %s" % self.maneuvers )
 
@@ -358,7 +365,7 @@ class Ship:
         #      away: K*, TR, TL
         #       far: K, TR*, TL*
         self.label = "6 o'clock"
-        if self.name in [ "lambda", "houndstooth", "kwing", "uwing", "uwingk2so", "upsilon", "auzituck", "alpha", "mg100", "tiereaper", "escape", "scavfalcon", "belbullab", "n1", "restransport", "hmp", "laati", "xi" ]:
+        if self.name in [ "lambda", "houndstooth", "kwing", "uwing", "uwingk2so", "upsilon", "auzituck", "alpha", "mg100", "tiereaper", "escape", "scavfalcon", "belbullab", "n1", "restransport", "hmp", "laati", "tiebrute", "xi" ]:
             # Special case as this ship does not support Koiogran Turn
             self.closing.append( self.generate_row( [BL,BR], [TL,TR,F], [], "fast" ) )
             self.away.append( self.generate_row( [BL,BR], [TL,TR], [], "fast" ) )

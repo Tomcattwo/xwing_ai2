@@ -19,7 +19,7 @@ from version import VERSION
 DEBUG=False
 VEBOSE=False
 
-ACTIONS = ( "'BARREL_ROLL'", "'BARREL_ROLL_D'", "'BARREL_ROLL2CALC'", "'BARREL_ROLL2EVADE'", "'BARREL_ROLL2EVADE_D'", "'BARREL_ROLL_D2EVADE_D'", "'BARREL_ROLL2FOCUS'", "'BARREL_ROLL2FOCUS_D'", "'BARREL_ROLL2LOCK'", "'BARREL_ROLL2LOCK_D'", "'BARREL_ROLL2ROTATE'", "'BARREL_ROLL2ROTATE_D'", "'BOOST'", "'BOOST_D'", "'BOOST2CALC'", "'BOOST2FOCUS'", "'BOOST2FOCUS_D'", "'BOOST2LOCK'", "'BOOST2LOCK_D'", "'CALCULATE'", "'CLOAKING'", "'COORDINATE'", "'COORDINATE_D'", "'EVADE'", "'EVADE_D'", "'EVADE_F'", "'EVADE2ROTATE'", "'EVADE2ROTATE_D'", "'FOCUS'", "'FOCUS2BARREL_ROLL'", "'FOCUS2BARREL_ROLL_D'", "'FOCUS2ROTATE'", "'FOCUS2ROTATE_D'", "'JAM'", "'JAM_D'", "'RELOAD'", "'RELOAD_D'", "'RELOAD2CALC'", "'REINFORCE'", "'REINFORCE_D'", "'ROTATE_ARC'", "'ROTATE_ARC_D'", "'SLAM'", "'TARGET_LOCK'", "'TARGET_LOCK_D'", "'LOCK2ROTATE'", "'LOCK2ROTATE_D'" )
+ACTIONS = ( "'BARREL_ROLL'", "'BARREL_ROLL_D'", "'BARREL_ROLL2CALC'", "'BARREL_ROLL2EVADE'", "'BARREL_ROLL2EVADE_D'", "'BARREL_ROLL_D2EVADE_D'", "'BARREL_ROLL2FOCUS'", "'BARREL_ROLL2FOCUS_D'", "'BARREL_ROLL2LOCK'", "'BARREL_ROLL2LOCK_D'", "'BARREL_ROLL2ROTATE'", "'BARREL_ROLL2ROTATE_D'", "'BOOST'", "'BOOST_D'", "'BOOST2CALC'", "'BOOST2FOCUS'", "'BOOST2FOCUS_D'", "'BOOST2LOCK'", "'BOOST2LOCK_D'", "'CALCULATE'", "'CLOAKING'", "'COORDINATE'", "'COORDINATE_D'", "'EVADE'", "'EVADE_D'", "'EVADE_F'", "'EVADE2ROTATE'", "'EVADE2ROTATE_D'", "'FOCUS'", "'FOCUS2BARREL_ROLL'", "'FOCUS2BARREL_ROLL_D'", "'FOCUS2ROTATE'", "'FOCUS2ROTATE_D'", "'JAM'", "'JAM_D'", "'RELOAD'", "'RELOAD_D'", "'RELOAD2CALC'", "'REINFORCE'", "'REINFORCE_D'", "'ROTATE_ARC'", "'ROTATE_ARC_D'", "'ROTATE2CALC_D'", "'SLAM'", "'TARGET_LOCK'", "'TARGET_LOCK_D'", "'LOCK2ROTATE'", "'LOCK2ROTATE_D'" )
 FACTIONS = ( 'Rebel', 'Empire', 'Scum', 'Resistance', 'First Order', 'Republic', 'Seperatist' )
 
 # ******************************************************************************
@@ -148,6 +148,13 @@ class XWingGenerator:
                 bearing = m[:-1]
                 speed = int( m[-1] )
                 self.ships[name].difficult.append( Maneuver( bearing, speed ) )
+                
+            force = s.find( 'force' )
+            for man in list(force):
+                m = man.text.strip()
+                bearing = m[:-1]
+                speed = int( m[-1] )
+                self.ships[name].force.append( Maneuver( bearing, speed ) )            
 
         print( "Parsing complete." )
 
