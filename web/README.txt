@@ -137,6 +137,12 @@ Files changed: xwing_ai3.js, xwing_ships3.js and adding the new maneuver table i
 
 7/9/2020 1.14.01/2.0.2/3.1.4 (Tomcattwo) Updated xwing_ships3.js and xwing_ai3.js for FGA AI Version 7.2. Minor changes to the readmes and help3.htm indicating AI update for FGA to version 7.2. No changes to ai 1 or 2 files.
 
+1/3/2021 1.14.01/2.0.3/3.1.4 (Tomcattwo) Updated xwing_ai2.js, xwing_ships2.js, generate.py, ship.py, version.py, all ship .xml files and added new 2E-wave8.xml including new Wave 7 ship TIE br Brute and new Wave 8 ships (Droid Tri-Fighter, Eta-2 Actis and Nimbus-Class V-Wing). 
+Rewrote generate.py and ship.py to include a NEW category of maneuver called force. So now ships can generate with simple, normal, difficult or force maneuvers.
+This was to allow for this new maneuver type on the Eta-2 Actis (TRL2 and TRR2 Force maneuvers). All ship.xml files had to be updated for each ship to include an "empty" maneuver set for each <force></force> set of tags to allow compiling properly. 
+xwing-ai2.js also updated to include the new force maneuvers and display them in purple in the ships table page and main AI page. Added new img files also. These changes affect 2nd Edition AI ONLY!!
+No changes were made to HOTAS/FGA or 1E AI.
+
 -------
 Contact
 -------
